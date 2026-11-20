@@ -1,0 +1,726 @@
+{
+	"version": 1,
+	"site": {
+		"url": "https://example.com/site/",
+		"apiRoot": "https://example.com/site/wp-json/",
+		"name": "Harbor Light Consulting",
+		"tagline": "Plain advice for small firms",
+		"wpVersion": "6.8.3",
+		"locales": [
+			{
+				"code": "en-US",
+				"default": true
+			}
+		],
+		"theme": "astra"
+	},
+	"levels": [
+		1,
+		2
+	],
+	"coverage": [
+		{
+			"area": "rest",
+			"source": "rest",
+			"status": "complete",
+			"detail": "Read 5 namespaces; every list paged to the end."
+		},
+		{
+			"area": "type:team",
+			"source": "rest",
+			"status": "not-visible",
+			"detail": "team is not in the REST API (show_in_rest is off)."
+		},
+		{
+			"area": "sitemaps",
+			"source": "sitemap",
+			"status": "complete",
+			"detail": "Read /site/wp-sitemap.xml and 7 child sitemaps."
+		},
+		{
+			"area": "html",
+			"source": "html",
+			"status": "partial",
+			"detail": "Read 10 of 31 pages."
+		},
+		{
+			"area": "wxr",
+			"source": "wxr",
+			"status": "complete",
+			"detail": "Read the export: 31 items, 214 meta rows. Media files are not in the export."
+		},
+		{
+			"area": "plugins",
+			"source": "html",
+			"status": "partial",
+			"detail": "Found from asset paths only; level 3 gives the full list."
+		}
+	],
+	"types": [
+		{
+			"slug": "page",
+			"label": "Pages",
+			"count": 9,
+			"byStatus": {
+				"publish": 8,
+				"draft": 1
+			},
+			"hierarchical": true,
+			"restBase": "pages",
+			"inRest": true,
+			"fields": [
+				{
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"shape": "text",
+					"source": "wxr",
+					"filled": 9,
+					"total": 9,
+					"samples": [
+						"Pricing"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"shape": "html",
+					"source": "wxr",
+					"filled": 9,
+					"total": 9,
+					"samples": [
+						"<p>Our plans.</p>"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "_yoast_wpseo_title",
+					"label": "SEO title",
+					"owner": "seo",
+					"shape": "text",
+					"source": "wxr",
+					"filled": 6,
+					"total": 9,
+					"samples": [
+						"Pricing | Harbor Light"
+					],
+					"confidence": "high"
+				}
+			],
+			"taxonomies": [],
+			"sources": [
+				"rest",
+				"sitemap",
+				"wxr"
+			]
+		},
+		{
+			"slug": "service",
+			"label": "Services",
+			"count": 6,
+			"byStatus": {
+				"publish": 6
+			},
+			"hierarchical": false,
+			"restBase": "service",
+			"inRest": true,
+			"fields": [
+				{
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"shape": "text",
+					"source": "wxr",
+					"filled": 6,
+					"total": 6,
+					"samples": [
+						"Bookkeeping"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"shape": "html",
+					"source": "wxr",
+					"filled": 6,
+					"total": 6,
+					"samples": [
+						"<p>Monthly books.</p>"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "tagline",
+					"label": "Tagline",
+					"group": "Service details",
+					"owner": "acf",
+					"shape": "text",
+					"source": "wxr",
+					"filled": 6,
+					"total": 6,
+					"samples": [
+						"Books done by the 5th"
+					],
+					"confidence": "high",
+					"order": 0
+				},
+				{
+					"key": "hero_image",
+					"label": "Hero image",
+					"group": "Service details",
+					"owner": "acf",
+					"shape": "image",
+					"source": "wxr",
+					"filled": 5,
+					"total": 6,
+					"samples": [
+						"412"
+					],
+					"confidence": "high",
+					"order": 1
+				},
+				{
+					"key": "related_services",
+					"label": "Related services",
+					"group": "Service details",
+					"owner": "acf",
+					"shape": "relation",
+					"source": "wxr",
+					"filled": 4,
+					"total": 6,
+					"samples": [
+						"a:2:{i:0;s:2:\"21\";i:1;s:2:\"22\";}"
+					],
+					"confidence": "low",
+					"note": "Values are WordPress post IDs.",
+					"order": 2,
+					"targets": [
+						"service"
+					]
+				},
+				{
+					"key": "award",
+					"label": "Award",
+					"group": "Service details",
+					"owner": "acf",
+					"shape": "text",
+					"source": "wxr",
+					"filled": 1,
+					"total": 6,
+					"samples": [
+						"Best of Bay County 2025"
+					],
+					"confidence": "low",
+					"note": "Filled on 1 of 6.",
+					"order": 3
+				},
+				{
+					"key": "steps",
+					"label": "Steps",
+					"group": "Service details",
+					"owner": "acf",
+					"shape": "repeater",
+					"source": "wxr",
+					"filled": 6,
+					"total": 6,
+					"samples": [
+						"3"
+					],
+					"confidence": "low",
+					"subfields": [
+						{
+							"key": "step_title",
+							"label": "Step title",
+							"owner": "acf",
+							"shape": "text",
+							"source": "wxr",
+							"filled": 18,
+							"total": 18,
+							"samples": [
+								"Call us"
+							],
+							"confidence": "high"
+						},
+						{
+							"key": "step_body",
+							"label": "Step body",
+							"owner": "acf",
+							"shape": "text",
+							"source": "wxr",
+							"filled": 17,
+							"total": 18,
+							"samples": [
+								"We talk for 20 minutes."
+							],
+							"confidence": "medium"
+						}
+					],
+					"order": 4
+				},
+				{
+					"key": "price_band",
+					"label": "Price band",
+					"group": "Service details",
+					"owner": "acf",
+					"shape": "text",
+					"source": "wxr",
+					"order": 5,
+					"options": [
+						"Under $500",
+						"$500 to $2,000",
+						"Over $2,000"
+					],
+					"filled": 6,
+					"total": 6,
+					"samples": [
+						"$500 to $2,000"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "sections",
+					"label": "Sections",
+					"group": "Service details",
+					"owner": "acf",
+					"shape": "flexible",
+					"source": "wxr",
+					"order": 6,
+					"filled": 3,
+					"total": 6,
+					"samples": [
+						"a:2:{i:0;s:5:\"quote\";i:1;s:7:\"gallery\";}"
+					],
+					"confidence": "low",
+					"note": "Flexible content with 2 layouts.",
+					"layouts": [
+						{
+							"name": "quote",
+							"label": "Quote",
+							"subfields": [
+								{
+									"key": "quote_text",
+									"label": "Quote",
+									"owner": "acf",
+									"shape": "text",
+									"source": "wxr",
+									"order": 0,
+									"filled": 3,
+									"total": 3,
+									"samples": [
+										"They saved us hours."
+									],
+									"confidence": "high"
+								},
+								{
+									"key": "quote_by",
+									"label": "By",
+									"owner": "acf",
+									"shape": "text",
+									"source": "wxr",
+									"order": 1,
+									"filled": 2,
+									"total": 3,
+									"samples": [
+										"A client"
+									],
+									"confidence": "medium"
+								}
+							]
+						},
+						{
+							"name": "gallery",
+							"label": "Gallery",
+							"subfields": [
+								{
+									"key": "images",
+									"label": "Images",
+									"owner": "acf",
+									"shape": "list",
+									"source": "wxr",
+									"order": 0,
+									"filled": 2,
+									"total": 2,
+									"samples": [
+										"a:2:{i:0;i:412;i:1;i:413;}"
+									],
+									"confidence": "low"
+								}
+							]
+						}
+					]
+				}
+			],
+			"taxonomies": [
+				"service_area"
+			],
+			"sources": [
+				"rest",
+				"sitemap",
+				"wxr"
+			]
+		},
+		{
+			"slug": "team",
+			"label": "Team",
+			"count": 4,
+			"byStatus": {
+				"publish": 4
+			},
+			"hierarchical": false,
+			"inRest": false,
+			"fields": [
+				{
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"shape": "text",
+					"source": "wxr",
+					"filled": 4,
+					"total": 4,
+					"samples": [
+						"Dana Whitfield"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "role",
+					"label": "Role",
+					"owner": "acf",
+					"shape": "text",
+					"source": "wxr",
+					"filled": 4,
+					"total": 4,
+					"samples": [
+						"Partner"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "email",
+					"label": "Email",
+					"owner": "acf",
+					"shape": "email",
+					"source": "wxr",
+					"filled": 3,
+					"total": 4,
+					"samples": [
+						"dana@example.com"
+					],
+					"confidence": "medium"
+				}
+			],
+			"taxonomies": [],
+			"sources": [
+				"sitemap",
+				"wxr"
+			]
+		}
+	],
+	"taxonomies": [
+		{
+			"slug": "service_area",
+			"label": "Service areas",
+			"hierarchical": false,
+			"count": 3,
+			"types": [
+				"service"
+			],
+			"sources": [
+				"rest",
+				"wxr"
+			]
+		}
+	],
+	"plugins": [
+		{
+			"slug": "secure-custom-fields",
+			"name": "Secure Custom Fields",
+			"category": "fields",
+			"source": "wxr",
+			"confidence": "high"
+		},
+		{
+			"slug": "contact-form-7",
+			"name": "Contact Form 7",
+			"category": "forms",
+			"source": "html",
+			"confidence": "high"
+		},
+		{
+			"slug": "flamingo",
+			"name": "Flamingo",
+			"category": "form-storage",
+			"source": "wxr",
+			"confidence": "medium"
+		},
+		{
+			"slug": "wordpress-seo",
+			"name": "Yoast SEO",
+			"category": "seo",
+			"source": "html",
+			"confidence": "high"
+		}
+	],
+	"builders": [],
+	"shortcodes": [
+		{
+			"name": "contact-form-7",
+			"count": 1,
+			"samples": [
+				"https://example.com/site/contact/"
+			]
+		}
+	],
+	"blocks": [
+		{
+			"name": "core/paragraph",
+			"count": 14,
+			"samples": [
+				"https://example.com/site/about/"
+			]
+		}
+	],
+	"menus": [
+		{
+			"name": "Main",
+			"location": "primary",
+			"source": "wxr",
+			"items": [
+				{
+					"id": 301,
+					"title": "Services",
+					"url": "https://example.com/site/service/",
+					"target": {
+						"kind": "archive",
+						"type": "service"
+					},
+					"order": 1
+				},
+				{
+					"id": 302,
+					"title": "Plans",
+					"url": "https://example.com/site/plans/",
+					"target": {
+						"kind": "page",
+						"type": "page",
+						"id": 10
+					},
+					"order": 2
+				},
+				{
+					"id": 303,
+					"title": "Pricing",
+					"url": "https://example.com/site/plans/pricing/",
+					"target": {
+						"kind": "page",
+						"type": "page",
+						"id": 11
+					},
+					"parent": 302,
+					"order": 3
+				},
+				{
+					"id": 304,
+					"title": "Contact",
+					"url": "https://example.com/site/contact/",
+					"target": {
+						"kind": "page",
+						"type": "page",
+						"id": 14
+					},
+					"order": 4
+				}
+			],
+			"id": 3
+		}
+	],
+	"authors": {
+		"count": 2,
+		"source": "wxr"
+	},
+	"media": {
+		"count": 38,
+		"source": "wxr"
+	},
+	"permalinks": {
+		"structure": "/%postname%/",
+		"source": "html",
+		"confidence": "medium"
+	},
+	"urls": [
+		{
+			"url": "https://example.com/site/",
+			"kind": "home",
+			"source": [
+				"html"
+			],
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://example.com/site/plans/",
+			"kind": "page",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"id": 10,
+			"slug": "plans",
+			"path": "plans",
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://example.com/site/plans/pricing/",
+			"kind": "page",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"id": 11,
+			"slug": "pricing",
+			"parentId": 10,
+			"path": "plans/pricing",
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://example.com/site/support/",
+			"kind": "page",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"id": 12,
+			"slug": "support",
+			"path": "support",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://example.com/site/support/pricing/",
+			"kind": "page",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"id": 13,
+			"slug": "pricing",
+			"parentId": 12,
+			"path": "support/pricing",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://example.com/site/support/pricing/faq/",
+			"kind": "page",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"id": 15,
+			"slug": "faq",
+			"parentId": 13,
+			"path": "support/pricing/faq",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://example.com/site/contact/",
+			"kind": "page",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"id": 14,
+			"slug": "contact",
+			"path": "contact",
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://example.com/site/service/bookkeeping/",
+			"kind": "custom",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "service",
+			"id": 21,
+			"slug": "bookkeeping",
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://example.com/site/service/payroll/",
+			"kind": "custom",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "service",
+			"id": 22,
+			"slug": "payroll",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://example.com/site/team/dana-whitfield/",
+			"kind": "custom",
+			"source": [
+				"sitemap",
+				"wxr"
+			],
+			"type": "team",
+			"id": 31,
+			"slug": "dana-whitfield",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://example.com/site/service-area/coastal/",
+			"kind": "term",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"taxonomy": "service_area",
+			"termId": 7,
+			"slug": "coastal",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://example.com/site/?page_id=11",
+			"kind": "query",
+			"source": [
+				"wxr"
+			],
+			"type": "page",
+			"id": 11,
+			"evidence": "listed"
+		},
+		{
+			"url": "https://example.com/site/service/",
+			"kind": "archive",
+			"source": [
+				"html"
+			],
+			"type": "service",
+			"evidence": "resolved"
+		}
+	],
+	"storedElsewhere": [
+		{
+			"plugin": "flamingo",
+			"what": "form messages"
+		}
+	]
+}

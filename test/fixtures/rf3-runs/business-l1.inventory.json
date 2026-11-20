@@ -1,0 +1,1388 @@
+{
+	"version": 1,
+	"authors": {
+		"count": 1,
+		"source": "rest"
+	},
+	"blocks": [
+		{
+			"count": 24,
+			"name": "core/paragraph",
+			"samples": [
+				"http://localhost:4602/site/",
+				"http://localhost:4602/site/company/",
+				"http://localhost:4602/site/company/about-us/"
+			]
+		}
+	],
+	"builders": [],
+	"comments": {
+		"count": 0,
+		"source": "rest"
+	},
+	"coverage": [
+		{
+			"area": "comments",
+			"detail": "0 approved comments in all. The REST API shows approved comments only, and does not split them by type.",
+			"source": "rest",
+			"status": "partial"
+		},
+		{
+			"area": "html",
+			"detail": "Read a sample of 13 pages: the home page and up to 3 pages of each type, at most 30. Pages outside the sample are not read. Builders, shortcodes and blocks are counted from the REST content of 24 items, not from this sample.",
+			"source": "html",
+			"status": "partial"
+		},
+		{
+			"area": "menus",
+			"detail": "Menus are not read at level 1; names, items and locations need level 2 or 3.",
+			"source": "html",
+			"status": "not-visible"
+		},
+		{
+			"area": "plugins",
+			"detail": "Found from asset paths, SEO comments and REST namespaces only; plugins with no front-end trace do not show. The full list needs level 3.",
+			"source": "html",
+			"status": "partial"
+		},
+		{
+			"area": "rest",
+			"detail": "Read 6 namespaces; 8 lists paged to the end.",
+			"source": "rest",
+			"status": "complete"
+		},
+		{
+			"area": "settings",
+			"detail": "Site settings need level 3.",
+			"source": "html",
+			"status": "not-visible"
+		},
+		{
+			"area": "sitemaps",
+			"detail": "Read 7 sitemaps listed in the index at /site/wp-sitemap.xml.",
+			"source": "sitemap",
+			"status": "complete"
+		},
+		{
+			"area": "taxonomy:category",
+			"detail": "1 term.",
+			"source": "rest",
+			"status": "complete"
+		},
+		{
+			"area": "taxonomy:post_tag",
+			"detail": "0 terms.",
+			"source": "rest",
+			"status": "complete"
+		},
+		{
+			"area": "taxonomy:service_area",
+			"detail": "4 terms.",
+			"source": "rest",
+			"status": "complete"
+		},
+		{
+			"area": "type:attachment",
+			"detail": "Media items listed; files are not downloaded.",
+			"source": "rest",
+			"status": "partial"
+		},
+		{
+			"area": "type:page",
+			"detail": "13 published items, every page read; drafts and private items need level 3.",
+			"source": "rest",
+			"status": "partial"
+		},
+		{
+			"area": "type:post",
+			"detail": "3 published items, every page read; drafts and private items need level 3.",
+			"source": "rest",
+			"status": "partial"
+		},
+		{
+			"area": "type:service",
+			"detail": "8 published items, every page read; drafts and private items need level 3.",
+			"source": "rest",
+			"status": "partial"
+		},
+		{
+			"area": "type:team",
+			"detail": "The REST API does not list it. Seen in the sitemap and the HTML sample (5 URLs), so there is no count or field data.",
+			"source": "sitemap",
+			"status": "partial"
+		},
+		{
+			"area": "users",
+			"detail": "Only authors with published posts are listed; user counts by role need level 3.",
+			"source": "rest",
+			"status": "partial"
+		}
+	],
+	"levels": [
+		1
+	],
+	"media": {
+		"count": 6,
+		"source": "rest"
+	},
+	"menus": [],
+	"permalinks": {
+		"confidence": "medium",
+		"source": "rest",
+		"structure": "/%postname%/"
+	},
+	"plugins": [
+		{
+			"category": "fields",
+			"confidence": "low",
+			"name": "Advanced Custom Fields or Secure Custom Fields",
+			"slug": "advanced-custom-fields",
+			"source": "rest"
+		},
+		{
+			"category": "forms",
+			"confidence": "high",
+			"name": "Contact Form 7",
+			"slug": "contact-form-7",
+			"source": "html"
+		}
+	],
+	"shortcodes": [],
+	"site": {
+		"apiRoot": "http://localhost:4602/site/wp-json/",
+		"locales": [
+			{
+				"code": "en-US",
+				"default": true
+			}
+		],
+		"name": "Harbor Light Home Services",
+		"tagline": "Repairs and upkeep for homes and shops",
+		"theme": "twentytwentyfive",
+		"url": "http://localhost:4602/site/",
+		"wpVersion": "7.1.4"
+	},
+	"storedElsewhere": [],
+	"taxonomies": [
+		{
+			"count": 1,
+			"hierarchical": true,
+			"label": "Categories",
+			"slug": "category",
+			"sources": [
+				"rest",
+				"sitemap"
+			],
+			"types": [
+				"post"
+			]
+		},
+		{
+			"count": 0,
+			"hierarchical": false,
+			"label": "Tags",
+			"slug": "post_tag",
+			"sources": [
+				"rest"
+			],
+			"types": [
+				"post"
+			]
+		},
+		{
+			"count": 4,
+			"hierarchical": true,
+			"label": "Service areas",
+			"slug": "service_area",
+			"sources": [
+				"rest",
+				"sitemap"
+			],
+			"types": [
+				"service"
+			]
+		}
+	],
+	"types": [
+		{
+			"byStatus": {
+				"publish": 13
+			},
+			"count": 13,
+			"fields": [
+				{
+					"confidence": "low",
+					"filled": 0,
+					"key": "_thumbnail_id",
+					"label": "Featured image",
+					"owner": "core",
+					"samples": [],
+					"shape": "image",
+					"source": "rest",
+					"total": 13
+				},
+				{
+					"confidence": "low",
+					"filled": 0,
+					"key": "footnotes",
+					"owner": "meta",
+					"samples": [],
+					"shape": "unknown",
+					"source": "rest",
+					"total": 13
+				},
+				{
+					"confidence": "high",
+					"filled": 13,
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"samples": [
+						"<p class=\"wp-block-paragraph\">Repairs and upkeep for homes and shops on the coast.</p>",
+						"<p class=\"wp-block-paragraph\">What we do at Harbor Light.</p>"
+					],
+					"shape": "html",
+					"source": "rest",
+					"total": 13
+				},
+				{
+					"confidence": "medium",
+					"filled": 13,
+					"key": "post_excerpt",
+					"label": "Excerpt",
+					"note": "WordPress fills an empty excerpt from the content, so this count can be high.",
+					"owner": "core",
+					"samples": [
+						"<p>Repairs and upkeep for homes and shops on the coast.</p>",
+						"<p>What we do at Harbor Light.</p>"
+					],
+					"shape": "html",
+					"source": "rest",
+					"total": 13
+				},
+				{
+					"confidence": "high",
+					"filled": 13,
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"samples": [
+						"Home",
+						"What we do"
+					],
+					"shape": "text",
+					"source": "rest",
+					"total": 13
+				}
+			],
+			"hierarchical": true,
+			"inRest": true,
+			"label": "Pages",
+			"restBase": "pages",
+			"slug": "page",
+			"sources": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"taxonomies": []
+		},
+		{
+			"byStatus": {
+				"publish": 3
+			},
+			"count": 3,
+			"fields": [
+				{
+					"confidence": "low",
+					"filled": 0,
+					"key": "_thumbnail_id",
+					"label": "Featured image",
+					"owner": "core",
+					"samples": [],
+					"shape": "image",
+					"source": "rest",
+					"total": 3
+				},
+				{
+					"confidence": "low",
+					"filled": 0,
+					"key": "footnotes",
+					"owner": "meta",
+					"samples": [],
+					"shape": "unknown",
+					"source": "rest",
+					"total": 3
+				},
+				{
+					"confidence": "high",
+					"filled": 3,
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"samples": [
+						"<p class=\"wp-block-paragraph\">Spring checklist for older homes.</p>",
+						"<p class=\"wp-block-paragraph\">We now serve Bayview.</p>"
+					],
+					"shape": "html",
+					"source": "rest",
+					"total": 3
+				},
+				{
+					"confidence": "medium",
+					"filled": 3,
+					"key": "post_excerpt",
+					"label": "Excerpt",
+					"note": "WordPress fills an empty excerpt from the content, so this count can be high.",
+					"owner": "core",
+					"samples": [
+						"<p>Spring checklist for older homes.</p>",
+						"<p>We now serve Bayview.</p>"
+					],
+					"shape": "html",
+					"source": "rest",
+					"total": 3
+				},
+				{
+					"confidence": "high",
+					"filled": 3,
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"samples": [
+						"Spring checklist for older homes",
+						"We now serve Bayview"
+					],
+					"shape": "text",
+					"source": "rest",
+					"total": 3
+				}
+			],
+			"hierarchical": false,
+			"inRest": true,
+			"label": "Posts",
+			"restBase": "posts",
+			"slug": "post",
+			"sources": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"taxonomies": [
+				"category",
+				"post_tag"
+			]
+		},
+		{
+			"byStatus": {
+				"publish": 8
+			},
+			"count": 8,
+			"fields": [
+				{
+					"confidence": "high",
+					"filled": 8,
+					"key": "_thumbnail_id",
+					"label": "Featured image",
+					"owner": "core",
+					"samples": [
+						"7",
+						"8"
+					],
+					"shape": "image",
+					"source": "rest",
+					"total": 8
+				},
+				{
+					"confidence": "low",
+					"filled": 8,
+					"key": "faq",
+					"label": "Questions",
+					"note": "Field type \"repeater\" as the REST API reports it.",
+					"owner": "acf",
+					"samples": [
+						"[{\"question\":\"Question 0 about Leak repair?\",\"answer\":\"Answer 0.\"}]",
+						"[{\"question\":\"Question 0 about Water heater service?\",\"answer\":\"Answer 0.\"},{\"question\":\"Question 1 about Water heater s…"
+					],
+					"shape": "repeater",
+					"source": "rest",
+					"subfields": [
+						{
+							"confidence": "medium",
+							"filled": 15,
+							"key": "answer",
+							"owner": "acf",
+							"samples": [
+								"Answer 0.",
+								"Answer 1."
+							],
+							"shape": "text",
+							"source": "rest",
+							"total": 15
+						},
+						{
+							"confidence": "medium",
+							"filled": 15,
+							"key": "question",
+							"owner": "acf",
+							"samples": [
+								"Question 0 about Leak repair?",
+								"Question 0 about Water heater service?"
+							],
+							"shape": "text",
+							"source": "rest",
+							"total": 15
+						}
+					],
+					"total": 8
+				},
+				{
+					"confidence": "medium",
+					"filled": 8,
+					"key": "hero_image",
+					"label": "Hero image",
+					"note": "Field type \"image\" as the REST API reports it.",
+					"owner": "acf",
+					"samples": [
+						"8",
+						"9"
+					],
+					"shape": "image",
+					"source": "rest",
+					"total": 8
+				},
+				{
+					"confidence": "high",
+					"filled": 8,
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"samples": [
+						"<p class=\"wp-block-paragraph\">Leak repair for the Harbor Light area.</p>",
+						"<p class=\"wp-block-paragraph\">Water heater service for the Harbor Light area.</p>"
+					],
+					"shape": "html",
+					"source": "rest",
+					"total": 8
+				},
+				{
+					"confidence": "medium",
+					"filled": 8,
+					"key": "post_excerpt",
+					"label": "Excerpt",
+					"note": "WordPress fills an empty excerpt from the content, so this count can be high.",
+					"owner": "core",
+					"samples": [
+						"<p>Leak repair, done right.</p>",
+						"<p>Water heater service, done right.</p>"
+					],
+					"shape": "html",
+					"source": "rest",
+					"total": 8
+				},
+				{
+					"confidence": "high",
+					"filled": 8,
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"samples": [
+						"Leak repair",
+						"Water heater service"
+					],
+					"shape": "text",
+					"source": "rest",
+					"total": 8
+				},
+				{
+					"confidence": "low",
+					"filled": 8,
+					"key": "related_services",
+					"label": "Related services",
+					"note": "Field type \"relationship\" as the REST API reports it.",
+					"owner": "acf",
+					"samples": [
+						"[45,46]",
+						"[46,47]"
+					],
+					"shape": "relation",
+					"source": "rest",
+					"total": 8
+				},
+				{
+					"confidence": "medium",
+					"filled": 8,
+					"key": "tagline",
+					"label": "Tagline",
+					"note": "Field type \"text\" as the REST API reports it.",
+					"owner": "acf",
+					"samples": [
+						"Leak repair without the wait",
+						"Water heater service without the wait"
+					],
+					"shape": "text",
+					"source": "rest",
+					"total": 8
+				},
+				{
+					"confidence": "medium",
+					"filled": 1,
+					"key": "warranty_note",
+					"label": "Warranty note",
+					"note": "Field type \"textarea\" as the REST API reports it.",
+					"owner": "acf",
+					"samples": [
+						"Parts and labor covered for one year."
+					],
+					"shape": "text",
+					"source": "rest",
+					"total": 8
+				}
+			],
+			"hierarchical": false,
+			"inRest": true,
+			"label": "Services",
+			"restBase": "services",
+			"slug": "service",
+			"sources": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"taxonomies": [
+				"service_area"
+			]
+		},
+		{
+			"byStatus": {},
+			"fields": [],
+			"inRest": false,
+			"slug": "team",
+			"sources": [
+				"html",
+				"sitemap"
+			],
+			"taxonomies": []
+		}
+	],
+	"urls": [
+		{
+			"evidence": "resolved",
+			"id": 13,
+			"kind": "home",
+			"slug": "home",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/"
+		},
+		{
+			"evidence": "listed",
+			"kind": "query",
+			"slug": "dana-whitlock",
+			"source": [
+				"rest"
+			],
+			"url": "http://localhost:4602/site/?author=2"
+		},
+		{
+			"evidence": "listed",
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"taxonomy": "category",
+			"termId": 1,
+			"url": "http://localhost:4602/site/?cat=1"
+		},
+		{
+			"evidence": "listed",
+			"id": 26,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "post",
+			"url": "http://localhost:4602/site/?p=26"
+		},
+		{
+			"evidence": "listed",
+			"id": 27,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "post",
+			"url": "http://localhost:4602/site/?p=27"
+		},
+		{
+			"evidence": "listed",
+			"id": 28,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "post",
+			"url": "http://localhost:4602/site/?p=28"
+		},
+		{
+			"evidence": "listed",
+			"id": 44,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=44"
+		},
+		{
+			"evidence": "listed",
+			"id": 45,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=45"
+		},
+		{
+			"evidence": "listed",
+			"id": 46,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=46"
+		},
+		{
+			"evidence": "listed",
+			"id": 47,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=47"
+		},
+		{
+			"evidence": "listed",
+			"id": 48,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=48"
+		},
+		{
+			"evidence": "listed",
+			"id": 49,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=49"
+		},
+		{
+			"evidence": "listed",
+			"id": 50,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=50"
+		},
+		{
+			"evidence": "listed",
+			"id": 51,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=51"
+		},
+		{
+			"evidence": "listed",
+			"id": 13,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=13"
+		},
+		{
+			"evidence": "listed",
+			"id": 14,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=14"
+		},
+		{
+			"evidence": "listed",
+			"id": 15,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=15"
+		},
+		{
+			"evidence": "listed",
+			"id": 16,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=16"
+		},
+		{
+			"evidence": "listed",
+			"id": 17,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=17"
+		},
+		{
+			"evidence": "listed",
+			"id": 18,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=18"
+		},
+		{
+			"evidence": "listed",
+			"id": 19,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=19"
+		},
+		{
+			"evidence": "listed",
+			"id": 20,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=20"
+		},
+		{
+			"evidence": "listed",
+			"id": 21,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=21"
+		},
+		{
+			"evidence": "listed",
+			"id": 22,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=22"
+		},
+		{
+			"evidence": "listed",
+			"id": 23,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=23"
+		},
+		{
+			"evidence": "listed",
+			"id": 24,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=24"
+		},
+		{
+			"evidence": "listed",
+			"id": 25,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=25"
+		},
+		{
+			"evidence": "listed",
+			"kind": "author",
+			"slug": "dana-whitlock",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"url": "http://localhost:4602/site/author/dana-whitlock/"
+		},
+		{
+			"count": 3,
+			"evidence": "listed",
+			"kind": "category",
+			"slug": "uncategorized",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"taxonomy": "category",
+			"termId": 1,
+			"url": "http://localhost:4602/site/category/uncategorized/"
+		},
+		{
+			"evidence": "linked",
+			"kind": "feed",
+			"source": [
+				"html"
+			],
+			"url": "http://localhost:4602/site/comments/feed/"
+		},
+		{
+			"evidence": "listed",
+			"id": 20,
+			"kind": "page",
+			"path": "company",
+			"slug": "company",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/company/"
+		},
+		{
+			"evidence": "listed",
+			"id": 21,
+			"kind": "page",
+			"parentId": 20,
+			"path": "company/about-us",
+			"slug": "about-us",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/company/about-us/"
+		},
+		{
+			"evidence": "listed",
+			"id": 22,
+			"kind": "page",
+			"parentId": 21,
+			"path": "company/about-us/history",
+			"slug": "history",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/company/about-us/history/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 23,
+			"kind": "page",
+			"parentId": 20,
+			"path": "company/careers",
+			"slug": "careers",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/company/careers/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 24,
+			"kind": "page",
+			"path": "contact",
+			"slug": "contact",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/contact/"
+		},
+		{
+			"evidence": "linked",
+			"kind": "feed",
+			"source": [
+				"html"
+			],
+			"url": "http://localhost:4602/site/feed/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 28,
+			"kind": "post",
+			"slug": "how-to-winterize-an-outdoor-faucet",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "post",
+			"url": "http://localhost:4602/site/how-to-winterize-an-outdoor-faucet/"
+		},
+		{
+			"evidence": "linked",
+			"kind": "feed",
+			"source": [
+				"html"
+			],
+			"url": "http://localhost:4602/site/how-to-winterize-an-outdoor-faucet/feed/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 25,
+			"kind": "page",
+			"path": "news",
+			"slug": "news",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/news/"
+		},
+		{
+			"count": 3,
+			"evidence": "listed",
+			"kind": "term",
+			"slug": "commercial",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"taxonomy": "service_area",
+			"termId": 3,
+			"url": "http://localhost:4602/site/service-area/commercial/"
+		},
+		{
+			"count": 0,
+			"evidence": "listed",
+			"kind": "term",
+			"slug": "emergency",
+			"source": [
+				"rest"
+			],
+			"taxonomy": "service_area",
+			"termId": 4,
+			"url": "http://localhost:4602/site/service-area/emergency/"
+		},
+		{
+			"count": 4,
+			"evidence": "listed",
+			"kind": "term",
+			"slug": "residential",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"taxonomy": "service_area",
+			"termId": 2,
+			"url": "http://localhost:4602/site/service-area/residential/"
+		},
+		{
+			"count": 1,
+			"evidence": "listed",
+			"kind": "term",
+			"parentId": 4,
+			"path": "emergency/same-day",
+			"slug": "same-day",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"taxonomy": "service_area",
+			"termId": 5,
+			"url": "http://localhost:4602/site/service-area/same-day/"
+		},
+		{
+			"evidence": "listed",
+			"id": 46,
+			"kind": "custom",
+			"slug": "drywall-patching",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/drywall-patching/"
+		},
+		{
+			"evidence": "listed",
+			"id": 10,
+			"kind": "attachment",
+			"parentId": 46,
+			"slug": "harbor-light-photo-4",
+			"source": [
+				"rest"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4602/site/services/drywall-patching/harbor-light-photo-4/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 50,
+			"kind": "custom",
+			"slug": "gutter-cleaning",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/gutter-cleaning/"
+		},
+		{
+			"evidence": "listed",
+			"id": 44,
+			"kind": "custom",
+			"slug": "leak-repair",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/leak-repair/"
+		},
+		{
+			"evidence": "listed",
+			"id": 8,
+			"kind": "attachment",
+			"parentId": 44,
+			"slug": "harbor-light-photo-2",
+			"source": [
+				"rest"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4602/site/services/leak-repair/harbor-light-photo-2/"
+		},
+		{
+			"evidence": "listed",
+			"id": 48,
+			"kind": "custom",
+			"slug": "lighting-retrofits",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/lighting-retrofits/"
+		},
+		{
+			"evidence": "listed",
+			"id": 12,
+			"kind": "attachment",
+			"parentId": 48,
+			"slug": "harbor-light-photo-6",
+			"source": [
+				"rest"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4602/site/services/lighting-retrofits/harbor-light-photo-6/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 49,
+			"kind": "custom",
+			"slug": "roof-tarping",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/roof-tarping/"
+		},
+		{
+			"evidence": "listed",
+			"id": 7,
+			"kind": "attachment",
+			"parentId": 49,
+			"slug": "harbor-light-photo-1",
+			"source": [
+				"rest"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4602/site/services/roof-tarping/harbor-light-photo-1/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 51,
+			"kind": "custom",
+			"slug": "snow-removal",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/snow-removal/"
+		},
+		{
+			"evidence": "listed",
+			"id": 47,
+			"kind": "custom",
+			"slug": "storefront-doors",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/storefront-doors/"
+		},
+		{
+			"evidence": "listed",
+			"id": 11,
+			"kind": "attachment",
+			"parentId": 47,
+			"slug": "harbor-light-photo-5",
+			"source": [
+				"rest"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4602/site/services/storefront-doors/harbor-light-photo-5/"
+		},
+		{
+			"evidence": "listed",
+			"id": 45,
+			"kind": "custom",
+			"slug": "water-heater-service",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/water-heater-service/"
+		},
+		{
+			"evidence": "listed",
+			"id": 9,
+			"kind": "attachment",
+			"parentId": 45,
+			"slug": "harbor-light-photo-3",
+			"source": [
+				"rest"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4602/site/services/water-heater-service/harbor-light-photo-3/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 26,
+			"kind": "post",
+			"slug": "spring-checklist-for-older-homes",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "post",
+			"url": "http://localhost:4602/site/spring-checklist-for-older-homes/"
+		},
+		{
+			"evidence": "linked",
+			"kind": "feed",
+			"source": [
+				"html"
+			],
+			"url": "http://localhost:4602/site/spring-checklist-for-older-homes/feed/"
+		},
+		{
+			"evidence": "resolved",
+			"kind": "custom",
+			"slug": "hana-sato",
+			"source": [
+				"html",
+				"sitemap"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/team/hana-sato/"
+		},
+		{
+			"evidence": "resolved",
+			"kind": "custom",
+			"slug": "ines-duarte",
+			"source": [
+				"html",
+				"sitemap"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/team/ines-duarte/"
+		},
+		{
+			"evidence": "resolved",
+			"kind": "custom",
+			"slug": "marcus-bell",
+			"source": [
+				"html",
+				"sitemap"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/team/marcus-bell/"
+		},
+		{
+			"evidence": "listed",
+			"kind": "custom",
+			"slug": "owen-price",
+			"source": [
+				"sitemap"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/team/owen-price/"
+		},
+		{
+			"evidence": "listed",
+			"kind": "custom",
+			"slug": "rosa-lind",
+			"source": [
+				"sitemap"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/team/rosa-lind/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 27,
+			"kind": "post",
+			"slug": "we-now-serve-bayview",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "post",
+			"url": "http://localhost:4602/site/we-now-serve-bayview/"
+		},
+		{
+			"evidence": "linked",
+			"kind": "feed",
+			"source": [
+				"html"
+			],
+			"url": "http://localhost:4602/site/we-now-serve-bayview/feed/"
+		},
+		{
+			"evidence": "listed",
+			"id": 14,
+			"kind": "page",
+			"path": "what-we-do",
+			"slug": "what-we-do",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/what-we-do/"
+		},
+		{
+			"evidence": "listed",
+			"id": 16,
+			"kind": "page",
+			"parentId": 14,
+			"path": "what-we-do/commercial",
+			"slug": "commercial",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/what-we-do/commercial/"
+		},
+		{
+			"evidence": "listed",
+			"id": 18,
+			"kind": "page",
+			"parentId": 16,
+			"path": "what-we-do/commercial/pricing",
+			"slug": "pricing",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/what-we-do/commercial/pricing/"
+		},
+		{
+			"evidence": "listed",
+			"id": 15,
+			"kind": "page",
+			"parentId": 14,
+			"path": "what-we-do/residential",
+			"slug": "residential",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/what-we-do/residential/"
+		},
+		{
+			"evidence": "listed",
+			"id": 17,
+			"kind": "page",
+			"parentId": 15,
+			"path": "what-we-do/residential/pricing",
+			"slug": "pricing",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/what-we-do/residential/pricing/"
+		},
+		{
+			"evidence": "listed",
+			"id": 19,
+			"kind": "page",
+			"parentId": 15,
+			"path": "what-we-do/residential/repairs",
+			"slug": "repairs",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/what-we-do/residential/repairs/"
+		}
+	]
+}

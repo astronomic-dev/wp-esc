@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="WordPress 6.8.3">
+<link rel='https://api.w.org/' href='http://localhost:4702/site/wp-json/' />
+<link rel="stylesheet" href="/site/wp-content/themes/kadence/style.css">
+</head>
+<body class="home">
+
+</body>
+</html>

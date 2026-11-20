@@ -1,0 +1,449 @@
+{
+	"version": 1,
+	"site": {
+		"url": "https://blog.example.com/",
+		"apiRoot": "https://blog.example.com/wp-json/",
+		"name": "Field Notes",
+		"tagline": "Notes from the trail",
+		"wpVersion": "6.8.3",
+		"locales": [
+			{
+				"code": "en-US",
+				"default": true
+			}
+		],
+		"theme": "twentytwentyfour"
+	},
+	"levels": [
+		1
+	],
+	"coverage": [
+		{
+			"area": "rest",
+			"source": "rest",
+			"status": "complete",
+			"detail": "Read 4 namespaces; every list paged to the end."
+		},
+		{
+			"area": "sitemaps",
+			"source": "sitemap",
+			"status": "complete",
+			"detail": "Read /wp-sitemap.xml and 6 child sitemaps."
+		},
+		{
+			"area": "html",
+			"source": "html",
+			"status": "partial",
+			"detail": "Read 7 of 128 pages (the cap is 3 per type)."
+		},
+		{
+			"area": "type:post",
+			"source": "rest",
+			"status": "partial",
+			"detail": "Published posts only; drafts and private posts need level 3."
+		},
+		{
+			"area": "menus",
+			"source": "html",
+			"status": "partial",
+			"detail": "Menus read from page HTML; names and locations need level 2 or 3."
+		},
+		{
+			"area": "plugins",
+			"source": "html",
+			"status": "partial",
+			"detail": "Found from asset paths only; plugins with no front-end files do not show."
+		}
+	],
+	"types": [
+		{
+			"slug": "post",
+			"label": "Posts",
+			"count": 120,
+			"byStatus": {
+				"publish": 120
+			},
+			"hierarchical": false,
+			"restBase": "posts",
+			"inRest": true,
+			"fields": [
+				{
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"shape": "text",
+					"source": "rest",
+					"filled": 120,
+					"total": 120,
+					"samples": [
+						"Up the north ridge",
+						"Ten days on the coast"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"shape": "html",
+					"source": "rest",
+					"filled": 120,
+					"total": 120,
+					"samples": [
+						"<p>We left at dawn.</p>"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "post_excerpt",
+					"label": "Excerpt",
+					"owner": "core",
+					"shape": "text",
+					"source": "rest",
+					"filled": 64,
+					"total": 120,
+					"samples": [
+						"A short trip report."
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "_thumbnail_id",
+					"label": "Featured image",
+					"owner": "core",
+					"shape": "image",
+					"source": "rest",
+					"filled": 110,
+					"total": 120,
+					"samples": [
+						"https://blog.example.com/wp-content/uploads/2026/03/ridge.jpg"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "_yoast_wpseo_title",
+					"label": "SEO title",
+					"owner": "seo",
+					"shape": "text",
+					"source": "rest",
+					"filled": 7,
+					"total": 7,
+					"samples": [
+						"Up the north ridge | Field Notes"
+					],
+					"confidence": "medium",
+					"note": "Read from yoast_head on 7 pages."
+				}
+			],
+			"taxonomies": [
+				"category",
+				"post_tag"
+			],
+			"sources": [
+				"rest",
+				"sitemap",
+				"html"
+			]
+		},
+		{
+			"slug": "page",
+			"label": "Pages",
+			"count": 4,
+			"byStatus": {
+				"publish": 4
+			},
+			"hierarchical": true,
+			"restBase": "pages",
+			"inRest": true,
+			"fields": [
+				{
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"shape": "text",
+					"source": "rest",
+					"filled": 4,
+					"total": 4,
+					"samples": [
+						"About"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"shape": "html",
+					"source": "rest",
+					"filled": 4,
+					"total": 4,
+					"samples": [
+						"<p>Hi, I write here.</p>"
+					],
+					"confidence": "high"
+				}
+			],
+			"taxonomies": [],
+			"sources": [
+				"rest",
+				"sitemap"
+			]
+		}
+	],
+	"taxonomies": [
+		{
+			"slug": "category",
+			"label": "Categories",
+			"hierarchical": true,
+			"count": 6,
+			"types": [
+				"post"
+			],
+			"sources": [
+				"rest",
+				"sitemap"
+			]
+		},
+		{
+			"slug": "post_tag",
+			"label": "Tags",
+			"hierarchical": false,
+			"count": 25,
+			"types": [
+				"post"
+			],
+			"sources": [
+				"rest",
+				"sitemap"
+			]
+		}
+	],
+	"plugins": [
+		{
+			"slug": "wordpress-seo",
+			"name": "Yoast SEO",
+			"category": "seo",
+			"source": "html",
+			"confidence": "high"
+		}
+	],
+	"builders": [],
+	"shortcodes": [],
+	"blocks": [
+		{
+			"name": "core/paragraph",
+			"count": 7,
+			"samples": [
+				"https://blog.example.com/2026/03/up-the-north-ridge/"
+			]
+		},
+		{
+			"name": "core/image",
+			"count": 5,
+			"samples": [
+				"https://blog.example.com/2026/03/up-the-north-ridge/"
+			]
+		}
+	],
+	"menus": [
+		{
+			"name": "primary",
+			"source": "html",
+			"items": [
+				{
+					"id": 201,
+					"title": "Home",
+					"url": "https://blog.example.com/",
+					"target": {
+						"kind": "home"
+					},
+					"order": 1
+				},
+				{
+					"id": 202,
+					"title": "Trips",
+					"url": "https://blog.example.com/category/trips/",
+					"target": {
+						"kind": "category"
+					},
+					"order": 2
+				},
+				{
+					"id": 203,
+					"title": "Coast",
+					"url": "https://blog.example.com/category/trips/coast/",
+					"target": {
+						"kind": "category"
+					},
+					"parent": 202,
+					"order": 3
+				},
+				{
+					"id": 204,
+					"title": "About",
+					"url": "https://blog.example.com/about/",
+					"target": {
+						"kind": "page",
+						"type": "page",
+						"id": 2
+					},
+					"order": 4
+				}
+			]
+		}
+	],
+	"authors": {
+		"count": 2,
+		"source": "rest"
+	},
+	"media": {
+		"count": 210,
+		"source": "rest"
+	},
+	"permalinks": {
+		"structure": "/%year%/%monthnum%/%postname%/",
+		"source": "html",
+		"confidence": "medium"
+	},
+	"urls": [
+		{
+			"url": "https://blog.example.com/",
+			"kind": "home",
+			"source": [
+				"html"
+			],
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://blog.example.com/2026/03/up-the-north-ridge/",
+			"kind": "post",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "post",
+			"id": 118,
+			"slug": "up-the-north-ridge",
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://blog.example.com/2026/02/ten-days-on-the-coast/",
+			"kind": "post",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "post",
+			"id": 117,
+			"slug": "ten-days-on-the-coast",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://blog.example.com/?p=118",
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "post",
+			"id": 118,
+			"evidence": "listed"
+		},
+		{
+			"url": "https://blog.example.com/about/",
+			"kind": "page",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"id": 2,
+			"slug": "about",
+			"path": "about",
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://blog.example.com/category/trips/",
+			"kind": "category",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"taxonomy": "category",
+			"termId": 3,
+			"slug": "trips",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://blog.example.com/category/trips/coast/",
+			"kind": "category",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"taxonomy": "category",
+			"termId": 4,
+			"slug": "coast",
+			"parentId": 3,
+			"path": "trips/coast",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://blog.example.com/tag/gear/",
+			"kind": "tag",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"taxonomy": "post_tag",
+			"termId": 12,
+			"slug": "gear",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://blog.example.com/author/ruth/",
+			"kind": "author",
+			"source": [
+				"sitemap"
+			],
+			"slug": "ruth",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://blog.example.com/2026/03/",
+			"kind": "date",
+			"source": [
+				"html"
+			],
+			"evidence": "linked"
+		},
+		{
+			"url": "https://blog.example.com/feed/",
+			"kind": "feed",
+			"source": [
+				"html"
+			],
+			"evidence": "linked"
+		},
+		{
+			"url": "https://blog.example.com/page/2/",
+			"kind": "paged",
+			"source": [
+				"html"
+			],
+			"evidence": "linked"
+		},
+		{
+			"url": "https://blog.example.com/2026/03/up-the-north-ridge/ridge-view/",
+			"kind": "attachment",
+			"source": [
+				"rest"
+			],
+			"type": "attachment",
+			"id": 140,
+			"slug": "ridge-view",
+			"parentId": 118,
+			"evidence": "listed"
+		}
+	],
+	"storedElsewhere": []
+}

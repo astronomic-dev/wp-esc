@@ -1,0 +1,368 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://astronomic.dev/schema/wp-esc/model.schema.json",
+	"title": "Proposed content model",
+	"description": "The new site's collections, taxonomies, menus and routes, each mapped from WordPress with `from`. Mirrors src/contracts/model.ts.",
+	"type": "object",
+	"properties": {
+		"version": {
+			"const": 1
+		},
+		"site": {
+			"type": "object",
+			"properties": {
+				"url": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"tagline": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"url"
+			],
+			"additionalProperties": false
+		},
+		"locales": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/Locale"
+			}
+		},
+		"collections": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/Collection"
+			}
+		},
+		"taxonomies": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/ModelTaxonomy"
+			}
+		},
+		"menus": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/ModelMenu"
+			}
+		},
+		"routes": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/Route"
+			}
+		},
+		"leftOut": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		}
+	},
+	"required": [
+		"version",
+		"site",
+		"locales",
+		"collections",
+		"taxonomies",
+		"menus",
+		"routes"
+	],
+	"additionalProperties": false,
+	"$defs": {
+		"ModelFieldType": {
+			"type": "string",
+			"enum": [
+				"string",
+				"text",
+				"url",
+				"number",
+				"integer",
+				"boolean",
+				"datetime",
+				"select",
+				"multiSelect",
+				"image",
+				"file",
+				"reference",
+				"slug",
+				"repeater",
+				"portableText",
+				"json"
+			]
+		},
+		"Locale": {
+			"type": "object",
+			"properties": {
+				"code": {
+					"type": "string"
+				},
+				"prefix": {
+					"type": "string"
+				},
+				"default": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"code"
+			],
+			"additionalProperties": false
+		},
+		"CollectionSupport": {
+			"type": "string",
+			"enum": [
+				"drafts",
+				"revisions",
+				"preview",
+				"scheduling",
+				"search",
+				"seo"
+			]
+		},
+		"RouteKind": {
+			"type": "string",
+			"enum": [
+				"home",
+				"blog",
+				"archive",
+				"feed",
+				"author",
+				"search"
+			]
+		},
+		"Collection": {
+			"type": "object",
+			"properties": {
+				"slug": {
+					"type": "string",
+					"pattern": "^[a-z][a-z0-9_]{0,62}$"
+				},
+				"from": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"labelSingular": {
+					"type": "string"
+				},
+				"hierarchical": {
+					"type": "boolean"
+				},
+				"route": {
+					"description": "URL pattern with {slug} or {path}; null when entries have no page.",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				"supports": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/CollectionSupport"
+					},
+					"uniqueItems": true
+				},
+				"taxonomies": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"uniqueItems": true
+				},
+				"fields": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/ModelField"
+					}
+				},
+				"check": {
+					"type": "string"
+				},
+				"leftOut": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"required": [
+				"slug",
+				"from",
+				"label",
+				"route",
+				"supports",
+				"taxonomies",
+				"fields"
+			],
+			"additionalProperties": false
+		},
+		"ModelField": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string",
+					"pattern": "^[a-z][a-z0-9_]*$"
+				},
+				"from": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"type": {
+					"$ref": "#/$defs/ModelFieldType"
+				},
+				"required": {
+					"type": "boolean"
+				},
+				"searchable": {
+					"type": "boolean"
+				},
+				"target": {
+					"type": "string"
+				},
+				"options": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"subfields": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/ModelField"
+					}
+				},
+				"check": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"name",
+				"from",
+				"label",
+				"type",
+				"required"
+			],
+			"additionalProperties": false
+		},
+		"ModelTaxonomy": {
+			"type": "object",
+			"properties": {
+				"slug": {
+					"type": "string"
+				},
+				"from": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"labelSingular": {
+					"type": "string"
+				},
+				"hierarchical": {
+					"type": "boolean"
+				},
+				"collections": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"uniqueItems": true
+				},
+				"route": {
+					"type": "string"
+				},
+				"check": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"slug",
+				"from",
+				"label",
+				"hierarchical",
+				"collections"
+			],
+			"additionalProperties": false
+		},
+		"ModelMenu": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"from": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"items": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/ModelMenuItem"
+					}
+				},
+				"check": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"name",
+				"from",
+				"label",
+				"items"
+			],
+			"additionalProperties": false
+		},
+		"ModelMenuItem": {
+			"type": "object",
+			"properties": {
+				"label": {
+					"type": "string"
+				},
+				"url": {
+					"type": "string"
+				},
+				"children": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/ModelMenuItem"
+					}
+				}
+			},
+			"required": [
+				"label",
+				"url"
+			],
+			"additionalProperties": false
+		},
+		"Route": {
+			"type": "object",
+			"properties": {
+				"kind": {
+					"$ref": "#/$defs/RouteKind"
+				},
+				"pattern": {
+					"type": "string"
+				},
+				"collection": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"kind",
+				"pattern"
+			],
+			"additionalProperties": false
+		}
+	}
+}

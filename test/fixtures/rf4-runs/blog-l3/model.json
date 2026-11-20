@@ -1,0 +1,244 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"check": "Left out WordPress internal keys: footnotes. Left out post types that hold plugin, builder or theme data, not site content: wp_global_styles, wp_navigation. The move does not bring them across.",
+			"fields": [
+				{
+					"from": "post_title",
+					"label": "Title",
+					"name": "title",
+					"required": true,
+					"searchable": true,
+					"type": "string"
+				},
+				{
+					"from": "post_content",
+					"label": "Content",
+					"name": "content",
+					"required": false,
+					"searchable": true,
+					"type": "portableText"
+				},
+				{
+					"check": "No entry has one (0 of 3). Kept (optional), since EmDash's import can ask for it. Remove it if the new site will not use it.",
+					"from": "post_excerpt",
+					"label": "Excerpt",
+					"name": "excerpt",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"check": "No entry has one (0 of 3). Kept (optional), since EmDash's import can ask for it. Remove it if the new site will not use it.",
+					"from": "_thumbnail_id",
+					"label": "Featured image",
+					"name": "featured_image",
+					"required": false,
+					"type": "image"
+				},
+				{
+					"from": "_yoast_wpseo_title",
+					"label": "SEO Title",
+					"name": "seo_title",
+					"required": false,
+					"type": "string"
+				},
+				{
+					"from": "_yoast_wpseo_metadesc",
+					"label": "SEO Description",
+					"name": "seo_description",
+					"required": false,
+					"type": "text"
+				}
+			],
+			"from": "page",
+			"hierarchical": true,
+			"label": "Pages",
+			"labelSingular": "Page",
+			"route": "/{path}/",
+			"slug": "pages",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"taxonomies": []
+		},
+		{
+			"check": "Old URLs follow the permalink structure /%year%/%monthnum%/%postname%/. The new URLs have no dates or other tags, so the new pattern is /blog/{slug}/. The redirect plan maps each old URL. Left out WordPress internal keys: footnotes. The old home page listed the latest posts. On the new site the post list is at /blog/, and the home page is a page of its own. Decide what the home page shows.",
+			"fields": [
+				{
+					"from": "post_title",
+					"label": "Title",
+					"name": "title",
+					"required": true,
+					"searchable": true,
+					"type": "string"
+				},
+				{
+					"from": "post_content",
+					"label": "Content",
+					"name": "content",
+					"required": false,
+					"searchable": true,
+					"type": "portableText"
+				},
+				{
+					"check": "Filled on 41 of 124.",
+					"from": "post_excerpt",
+					"label": "Excerpt",
+					"name": "excerpt",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"check": "Filled on 12 of 124.",
+					"from": "_thumbnail_id",
+					"label": "Featured image",
+					"name": "featured_image",
+					"required": false,
+					"type": "image"
+				},
+				{
+					"from": "post_date",
+					"label": "Date",
+					"name": "date",
+					"required": true,
+					"type": "datetime"
+				},
+				{
+					"from": "post_modified",
+					"label": "Modified",
+					"name": "modified",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"from": "_yoast_wpseo_title",
+					"label": "SEO Title",
+					"name": "seo_title",
+					"required": false,
+					"type": "string"
+				},
+				{
+					"from": "_yoast_wpseo_metadesc",
+					"label": "SEO Description",
+					"name": "seo_description",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"from": "_yoast_wpseo_focuskw",
+					"label": "Focus keyphrase",
+					"name": "seo_focus_keyphrase",
+					"required": false,
+					"type": "string"
+				}
+			],
+			"from": "post",
+			"label": "Posts",
+			"labelSingular": "Post",
+			"route": "/blog/{slug}/",
+			"slug": "posts",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"taxonomies": [
+				"category",
+				"tag"
+			]
+		}
+	],
+	"locales": [
+		{
+			"code": "en-US",
+			"default": true
+		}
+	],
+	"menus": [
+		{
+			"from": "Main menu",
+			"items": [
+				{
+					"label": "Home",
+					"url": "/"
+				},
+				{
+					"label": "About",
+					"url": "/about/"
+				},
+				{
+					"children": [
+						{
+							"label": "Beginner",
+							"url": "/category/guides/beginner/"
+						}
+					],
+					"label": "Guides",
+					"url": "/category/guides/"
+				},
+				{
+					"label": "Contact",
+					"url": "/contact/"
+				}
+			],
+			"label": "Main menu",
+			"name": "main-menu"
+		}
+	],
+	"routes": [
+		{
+			"kind": "author",
+			"pattern": "/author/{slug}/"
+		},
+		{
+			"kind": "blog",
+			"pattern": "/blog/"
+		},
+		{
+			"kind": "feed",
+			"pattern": "/rss.xml"
+		},
+		{
+			"kind": "home",
+			"pattern": "/"
+		},
+		{
+			"kind": "search",
+			"pattern": "/search/"
+		}
+	],
+	"site": {
+		"name": "Field Notes",
+		"tagline": "Small experiments in home cooking",
+		"url": "http://localhost:4601/"
+	},
+	"taxonomies": [
+		{
+			"collections": [
+				"posts"
+			],
+			"from": "category",
+			"hierarchical": true,
+			"label": "Categories",
+			"labelSingular": "Category",
+			"route": "/category/{path}/",
+			"slug": "category"
+		},
+		{
+			"collections": [
+				"posts"
+			],
+			"from": "post_tag",
+			"hierarchical": false,
+			"label": "Tags",
+			"labelSingular": "Tag",
+			"route": "/tag/{slug}/",
+			"slug": "tag"
+		}
+	]
+}

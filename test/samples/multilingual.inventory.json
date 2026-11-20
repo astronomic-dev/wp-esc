@@ -1,0 +1,261 @@
+{
+	"version": 1,
+	"site": {
+		"url": "https://lingua.example.com/",
+		"apiRoot": "https://lingua.example.com/wp-json/",
+		"name": "Two Rivers Bakery",
+		"wpVersion": "6.8.3",
+		"locales": [
+			{
+				"code": "en-US",
+				"default": true
+			},
+			{
+				"code": "fr-CA",
+				"prefix": "fr"
+			}
+		],
+		"theme": "twentytwentyfive"
+	},
+	"levels": [
+		1
+	],
+	"coverage": [
+		{
+			"area": "rest",
+			"source": "rest",
+			"status": "complete",
+			"detail": "Read 4 namespaces; every list paged to the end."
+		},
+		{
+			"area": "sitemaps",
+			"source": "sitemap",
+			"status": "complete",
+			"detail": "Read /wp-sitemap.xml with hreflang links."
+		}
+	],
+	"types": [
+		{
+			"slug": "post",
+			"label": "Posts",
+			"count": 10,
+			"byStatus": {
+				"publish": 10
+			},
+			"hierarchical": false,
+			"restBase": "posts",
+			"inRest": true,
+			"fields": [
+				{
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"shape": "text",
+					"source": "rest",
+					"filled": 10,
+					"total": 10,
+					"samples": [
+						"Spring bread",
+						"Pain du printemps"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"shape": "html",
+					"source": "rest",
+					"filled": 10,
+					"total": 10,
+					"samples": [
+						"<p>Rye and honey.</p>"
+					],
+					"confidence": "high"
+				}
+			],
+			"taxonomies": [
+				"category"
+			],
+			"sources": [
+				"rest",
+				"sitemap"
+			]
+		},
+		{
+			"slug": "page",
+			"label": "Pages",
+			"count": 4,
+			"byStatus": {
+				"publish": 4
+			},
+			"hierarchical": true,
+			"restBase": "pages",
+			"inRest": true,
+			"fields": [
+				{
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"shape": "text",
+					"source": "rest",
+					"filled": 4,
+					"total": 4,
+					"samples": [
+						"About",
+						"À propos"
+					],
+					"confidence": "high"
+				}
+			],
+			"taxonomies": [],
+			"sources": [
+				"rest",
+				"sitemap"
+			]
+		}
+	],
+	"taxonomies": [
+		{
+			"slug": "category",
+			"label": "Categories",
+			"hierarchical": true,
+			"count": 4,
+			"types": [
+				"post"
+			],
+			"sources": [
+				"rest"
+			]
+		}
+	],
+	"plugins": [
+		{
+			"slug": "polylang",
+			"name": "Polylang",
+			"category": "multilingual",
+			"source": "html",
+			"confidence": "high"
+		}
+	],
+	"builders": [],
+	"shortcodes": [],
+	"blocks": [],
+	"menus": [],
+	"authors": {
+		"count": 1,
+		"source": "rest"
+	},
+	"media": {
+		"count": 22,
+		"source": "rest"
+	},
+	"permalinks": {
+		"structure": "/%postname%/",
+		"source": "html",
+		"confidence": "medium"
+	},
+	"urls": [
+		{
+			"url": "https://lingua.example.com/",
+			"kind": "home",
+			"source": [
+				"html"
+			],
+			"locale": "en-US",
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://lingua.example.com/fr/",
+			"kind": "home",
+			"source": [
+				"html"
+			],
+			"locale": "fr-CA",
+			"translationOf": "https://lingua.example.com/",
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://lingua.example.com/spring-bread/",
+			"kind": "post",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "post",
+			"id": 40,
+			"slug": "spring-bread",
+			"locale": "en-US",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://lingua.example.com/fr/pain-du-printemps/",
+			"kind": "post",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "post",
+			"id": 41,
+			"slug": "pain-du-printemps",
+			"locale": "fr-CA",
+			"translationOf": "https://lingua.example.com/spring-bread/",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://lingua.example.com/about/",
+			"kind": "page",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"id": 2,
+			"slug": "about",
+			"path": "about",
+			"locale": "en-US",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://lingua.example.com/fr/a-propos/",
+			"kind": "page",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"id": 3,
+			"slug": "a-propos",
+			"path": "a-propos",
+			"locale": "fr-CA",
+			"translationOf": "https://lingua.example.com/about/",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://lingua.example.com/category/breads/",
+			"kind": "category",
+			"source": [
+				"rest"
+			],
+			"taxonomy": "category",
+			"termId": 2,
+			"slug": "breads",
+			"locale": "en-US",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://lingua.example.com/fr/category/pains/",
+			"kind": "category",
+			"source": [
+				"rest"
+			],
+			"taxonomy": "category",
+			"termId": 5,
+			"slug": "pains",
+			"locale": "fr-CA",
+			"translationOf": "https://lingua.example.com/category/breads/",
+			"evidence": "listed"
+		}
+	],
+	"storedElsewhere": []
+}

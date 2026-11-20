@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="WordPress 6.8.3">
+<meta name="generator" content="Elementor 3.25.0; features: e_font_icon_svg">
+<link rel="stylesheet" href="http://localhost:4703/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.25.0">
+<link rel="stylesheet" href="http://localhost:4703/wp-content/themes/hello-elementor/style.min.css">
+</head>
+<body class="home">
+<div class="et_pb_section"></div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+[
+ {
+  "id": 1,
+  "count": 100,
+  "name": "News",
+  "slug": "news",
+  "parent": 0,
+  "link": "http://localhost:4701/category/news/",
+  "taxonomy": "category"
+ },
+ {
+  "id": 2,
+  "count": 50,
+  "name": "Local",
+  "slug": "local",
+  "parent": 1,
+  "link": "http://localhost:4701/category/news/local/",
+  "taxonomy": "category"
+ }
+]

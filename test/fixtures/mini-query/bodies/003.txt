@@ -1,0 +1,11 @@
+{
+ "name": "Builder Co",
+ "description": "We build",
+ "url": "http://localhost:4703",
+ "home": "http://localhost:4703",
+ "namespaces": [
+  "wp/v2",
+  "elementor/v1"
+ ],
+ "routes": {}
+}

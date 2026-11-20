@@ -1,0 +1,11 @@
+[
+ {
+  "id": 1,
+  "count": 1,
+  "name": "Uncategorized",
+  "slug": "uncategorized",
+  "parent": 0,
+  "link": "http://localhost:4702/site/category/uncategorized/",
+  "taxonomy": "category"
+ }
+]

@@ -1,0 +1,110 @@
+# Test WordPress sites for wp-esc. Throwaway: no data volume outlives `down -v`.
+#
+#   docker compose -p wpm-record --env-file packages/wp-esc/test/sites/versions.env \
+#     -f packages/wp-esc/test/sites/compose.yaml up -d db blog business builder
+#
+# record.mjs drives this file end to end. Every container carries the label
+# `wp-esc`, so `docker ps --filter label=wp-esc` shows what is left running.
+# The cli-* services are WP-CLI, started only with `run --rm`.
+
+x-db-env: &db-env
+  WORDPRESS_DB_HOST: db
+  WORDPRESS_DB_USER: wp
+  WORDPRESS_DB_PASSWORD: wp-esc-test-only
+  WORDPRESS_CONFIG_EXTRA: |
+    define('WP_ENVIRONMENT_TYPE', 'local');
+    define('DISABLE_WP_CRON', true);
+    define('AUTOMATIC_UPDATER_DISABLED', true);
+    define('WP_AUTO_UPDATE_CORE', false);
+
+x-wp: &wp
+  image: ${WPM_WP_IMAGE:?set by versions.env}
+  depends_on:
+    db:
+      condition: service_healthy
+  labels: [wp-esc]
+
+x-cli: &cli
+  image: ${WPM_CLI_IMAGE:?set by versions.env}
+  profiles: [cli]
+  user: "33:33"
+  labels: [wp-esc]
+  depends_on:
+    db:
+      condition: service_healthy
+
+services:
+  db:
+    image: ${WPM_DB_IMAGE:?set by versions.env}
+    labels: [wp-esc]
+    environment:
+      MARIADB_ROOT_PASSWORD: wp-esc-test-only
+      MARIADB_USER: wp
+      MARIADB_PASSWORD: wp-esc-test-only
+    volumes:
+      - ./initdb.sql:/docker-entrypoint-initdb.d/initdb.sql:ro
+      - db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 2s
+      timeout: 5s
+      retries: 60
+
+  blog:
+    <<: *wp
+    ports: ["${WPM_BLOG_PORT:-4601}:80"]
+    environment:
+      <<: *db-env
+      WORDPRESS_DB_NAME: blog
+    volumes: [blog:/var/www/html]
+
+  business:
+    <<: *wp
+    # Installed in a subdirectory: WordPress lives at /site/.
+    working_dir: /var/www/html/site
+    ports: ["${WPM_BUSINESS_PORT:-4602}:80"]
+    environment:
+      <<: *db-env
+      WORDPRESS_DB_NAME: business
+    volumes: [business:/var/www/html]
+
+  builder:
+    <<: *wp
+    ports: ["${WPM_BUILDER_PORT:-4603}:80"]
+    environment:
+      <<: *db-env
+      WORDPRESS_DB_NAME: builder
+    volumes: [builder:/var/www/html]
+
+  cli-blog:
+    <<: *cli
+    working_dir: /var/www/html
+    environment:
+      <<: *db-env
+      WORDPRESS_DB_NAME: blog
+      WP_CLI_CACHE_DIR: /tmp/wp-cli-cache
+    volumes: [blog:/var/www/html, ./:/seed:ro]
+
+  cli-business:
+    <<: *cli
+    working_dir: /var/www/html/site
+    environment:
+      <<: *db-env
+      WORDPRESS_DB_NAME: business
+      WP_CLI_CACHE_DIR: /tmp/wp-cli-cache
+    volumes: [business:/var/www/html, ./:/seed:ro]
+
+  cli-builder:
+    <<: *cli
+    working_dir: /var/www/html
+    environment:
+      <<: *db-env
+      WORDPRESS_DB_NAME: builder
+      WP_CLI_CACHE_DIR: /tmp/wp-cli-cache
+    volumes: [builder:/var/www/html, ./:/seed:ro]
+
+volumes:
+  db:
+  blog:
+  business:
+  builder:

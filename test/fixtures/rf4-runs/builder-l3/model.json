@@ -1,0 +1,176 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"check": "Old URLs did not share one pattern; the new pattern is /{path}/, and the redirect plan maps each old URL. Left out WordPress internal keys: _wp_page_template, footnotes. Left out post types that hold plugin, builder or theme data, not site content: e-floating-buttons, elementor_library, wp_global_styles, wp_navigation, wpcf7_contact_form. The move does not bring them across.",
+			"fields": [
+				{
+					"from": "post_title",
+					"label": "Title",
+					"name": "title",
+					"required": true,
+					"searchable": true,
+					"type": "string"
+				},
+				{
+					"from": "post_content",
+					"label": "Content",
+					"name": "content",
+					"required": false,
+					"searchable": true,
+					"type": "portableText"
+				},
+				{
+					"check": "No entry has one (0 of 8). Kept (optional), since EmDash's import can ask for it. Remove it if the new site will not use it.",
+					"from": "post_excerpt",
+					"label": "Excerpt",
+					"name": "excerpt",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"check": "No entry has one (0 of 8). Kept (optional), since EmDash's import can ask for it. Remove it if the new site will not use it.",
+					"from": "_thumbnail_id",
+					"label": "Featured image",
+					"name": "featured_image",
+					"required": false,
+					"type": "image"
+				}
+			],
+			"from": "page",
+			"hierarchical": true,
+			"label": "Pages",
+			"labelSingular": "Page",
+			"route": "/{path}/",
+			"slug": "pages",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"taxonomies": []
+		},
+		{
+			"check": "Old URLs did not share one pattern; the new pattern is /blog/{slug}/, and the redirect plan maps each old URL. Left out WordPress internal keys: footnotes.",
+			"fields": [
+				{
+					"from": "post_title",
+					"label": "Title",
+					"name": "title",
+					"required": true,
+					"searchable": true,
+					"type": "string"
+				},
+				{
+					"from": "post_content",
+					"label": "Content",
+					"name": "content",
+					"required": false,
+					"searchable": true,
+					"type": "portableText"
+				},
+				{
+					"check": "No entry has one (0 of 4). Kept (optional), since EmDash's import can ask for it. Remove it if the new site will not use it.",
+					"from": "post_excerpt",
+					"label": "Excerpt",
+					"name": "excerpt",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"check": "No entry has one (0 of 4). Kept (optional), since EmDash's import can ask for it. Remove it if the new site will not use it.",
+					"from": "_thumbnail_id",
+					"label": "Featured image",
+					"name": "featured_image",
+					"required": false,
+					"type": "image"
+				},
+				{
+					"from": "post_date",
+					"label": "Date",
+					"name": "date",
+					"required": true,
+					"type": "datetime"
+				},
+				{
+					"from": "post_modified",
+					"label": "Modified",
+					"name": "modified",
+					"required": false,
+					"type": "datetime"
+				}
+			],
+			"from": "post",
+			"label": "Posts",
+			"labelSingular": "Post",
+			"route": "/blog/{slug}/",
+			"slug": "posts",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"taxonomies": [
+				"category",
+				"tag"
+			]
+		}
+	],
+	"locales": [
+		{
+			"code": "en-US",
+			"default": true
+		}
+	],
+	"menus": [],
+	"routes": [
+		{
+			"kind": "blog",
+			"pattern": "/blog/"
+		},
+		{
+			"kind": "feed",
+			"pattern": "/rss.xml"
+		},
+		{
+			"kind": "home",
+			"pattern": "/"
+		},
+		{
+			"kind": "search",
+			"pattern": "/search/"
+		}
+	],
+	"site": {
+		"name": "Northwind Studio",
+		"tagline": "Websites and brand work for local shops",
+		"url": "http://localhost:4603/"
+	},
+	"taxonomies": [
+		{
+			"check": "The old term pages had no shared pattern (or used plain links like ?cat=1). The new pattern is /category/{path}/. The redirect plan maps each old URL.",
+			"collections": [
+				"posts"
+			],
+			"from": "category",
+			"hierarchical": true,
+			"label": "Categories",
+			"labelSingular": "Category",
+			"route": "/category/{path}/",
+			"slug": "category"
+		},
+		{
+			"check": "The old site has no terms in it. Keep it only if the new site will use it.",
+			"collections": [
+				"posts"
+			],
+			"from": "post_tag",
+			"hierarchical": false,
+			"label": "Tags",
+			"labelSingular": "Tag",
+			"slug": "tag"
+		}
+	]
+}

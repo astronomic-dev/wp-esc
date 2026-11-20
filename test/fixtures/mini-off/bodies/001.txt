@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="WordPress 6.8.3">
+<link rel="stylesheet" href="http://localhost:4704/wp-content/plugins/wordpress-seo/css/x.css">
+</head>
+<body class="home">
+
+</body>
+</html>

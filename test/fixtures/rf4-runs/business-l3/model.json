@@ -1,0 +1,419 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"check": "Left out WordPress internal keys: footnotes. Collection names: page becomes pages, post becomes posts. Other post types keep their WordPress names (service, team). Left out post types that hold plugin, builder or theme data, not site content: acf-field, acf-field-group, flamingo_contact, flamingo_inbound, wp_global_styles, wp_navigation, wpcf7_contact_form. The move does not bring them across.",
+			"fields": [
+				{
+					"from": "post_title",
+					"label": "Title",
+					"name": "title",
+					"required": true,
+					"searchable": true,
+					"type": "string"
+				},
+				{
+					"from": "post_content",
+					"label": "Content",
+					"name": "content",
+					"required": false,
+					"searchable": true,
+					"type": "portableText"
+				},
+				{
+					"check": "No entry has one (0 of 13). Kept (optional), since EmDash's import can ask for it. Remove it if the new site will not use it.",
+					"from": "post_excerpt",
+					"label": "Excerpt",
+					"name": "excerpt",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"check": "No entry has one (0 of 13). Kept (optional), since EmDash's import can ask for it. Remove it if the new site will not use it.",
+					"from": "_thumbnail_id",
+					"label": "Featured image",
+					"name": "featured_image",
+					"required": false,
+					"type": "image"
+				}
+			],
+			"from": "page",
+			"hierarchical": true,
+			"label": "Pages",
+			"labelSingular": "Page",
+			"route": "/{path}/",
+			"slug": "pages",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"taxonomies": []
+		},
+		{
+			"check": "Left out WordPress internal keys: footnotes. Shares the URL space /{slug}/ with pages; one route must serve both, or move this collection under its own path.",
+			"fields": [
+				{
+					"from": "post_title",
+					"label": "Title",
+					"name": "title",
+					"required": true,
+					"searchable": true,
+					"type": "string"
+				},
+				{
+					"from": "post_content",
+					"label": "Content",
+					"name": "content",
+					"required": false,
+					"searchable": true,
+					"type": "portableText"
+				},
+				{
+					"check": "No entry has one (0 of 3). Kept (optional), since EmDash's import can ask for it. Remove it if the new site will not use it.",
+					"from": "post_excerpt",
+					"label": "Excerpt",
+					"name": "excerpt",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"check": "No entry has one (0 of 3). Kept (optional), since EmDash's import can ask for it. Remove it if the new site will not use it.",
+					"from": "_thumbnail_id",
+					"label": "Featured image",
+					"name": "featured_image",
+					"required": false,
+					"type": "image"
+				},
+				{
+					"from": "post_date",
+					"label": "Date",
+					"name": "date",
+					"required": true,
+					"type": "datetime"
+				},
+				{
+					"from": "post_modified",
+					"label": "Modified",
+					"name": "modified",
+					"required": false,
+					"type": "datetime"
+				}
+			],
+			"from": "post",
+			"label": "Posts",
+			"labelSingular": "Post",
+			"route": "/{slug}/",
+			"slug": "posts",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"taxonomies": [
+				"category",
+				"tag"
+			]
+		},
+		{
+			"fields": [
+				{
+					"from": "post_title",
+					"label": "Title",
+					"name": "title",
+					"required": true,
+					"searchable": true,
+					"type": "string"
+				},
+				{
+					"from": "post_content",
+					"label": "Content",
+					"name": "content",
+					"required": false,
+					"searchable": true,
+					"type": "portableText"
+				},
+				{
+					"from": "post_excerpt",
+					"label": "Excerpt",
+					"name": "excerpt",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"from": "_thumbnail_id",
+					"label": "Featured image",
+					"name": "featured_image",
+					"required": false,
+					"type": "image"
+				},
+				{
+					"from": "tagline",
+					"label": "Tagline",
+					"name": "tagline",
+					"required": true,
+					"type": "string"
+				},
+				{
+					"from": "hero_image",
+					"label": "Hero image",
+					"name": "hero_image",
+					"required": true,
+					"type": "image"
+				},
+				{
+					"check": "Values are WordPress post IDs; relink to service entries after import.",
+					"from": "related_services",
+					"label": "Related services",
+					"name": "related_services",
+					"required": false,
+					"type": "json"
+				},
+				{
+					"check": "Filled on 1 of 8.",
+					"from": "warranty_note",
+					"label": "Warranty note",
+					"name": "warranty_note",
+					"required": false,
+					"type": "string"
+				},
+				{
+					"check": "A repeater; check the rows after import.",
+					"from": "faq",
+					"label": "Questions",
+					"name": "faq",
+					"required": false,
+					"subfields": [
+						{
+							"from": "question",
+							"label": "Question",
+							"name": "question",
+							"required": true,
+							"type": "string"
+						},
+						{
+							"from": "answer",
+							"label": "Answer",
+							"name": "answer",
+							"required": true,
+							"type": "string"
+						}
+					],
+					"type": "repeater"
+				}
+			],
+			"from": "service",
+			"label": "Services",
+			"labelSingular": "Service",
+			"route": "/services/{slug}/",
+			"slug": "service",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"taxonomies": [
+				"service_area"
+			]
+		},
+		{
+			"fields": [
+				{
+					"from": "post_title",
+					"label": "Title",
+					"name": "title",
+					"required": true,
+					"searchable": true,
+					"type": "string"
+				},
+				{
+					"from": "post_content",
+					"label": "Content",
+					"name": "content",
+					"required": false,
+					"searchable": true,
+					"type": "portableText"
+				},
+				{
+					"check": "The old site shows no excerpt for this type. Kept (optional), since EmDash's import can ask for it. Remove it if the new site will not use it.",
+					"from": "post_excerpt",
+					"label": "Excerpt",
+					"name": "excerpt",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"check": "The old site shows no featured image for this type. Kept (optional), since EmDash's import can ask for it. Remove it if the new site will not use it.",
+					"from": "_thumbnail_id",
+					"label": "Featured image",
+					"name": "featured_image",
+					"required": false,
+					"type": "image"
+				},
+				{
+					"from": "job_title",
+					"label": "Job title",
+					"name": "job_title",
+					"required": true,
+					"type": "string"
+				},
+				{
+					"from": "headshot",
+					"label": "Headshot",
+					"name": "headshot",
+					"required": true,
+					"type": "image"
+				},
+				{
+					"check": "Values are WordPress post IDs; relink to service entries after import.",
+					"from": "team_services",
+					"label": "Services",
+					"name": "team_services",
+					"required": false,
+					"type": "json"
+				},
+				{
+					"check": "A repeater; check the rows after import.",
+					"from": "credentials",
+					"label": "Credentials",
+					"name": "credentials",
+					"required": false,
+					"subfields": [
+						{
+							"from": "credential",
+							"label": "Credential",
+							"name": "credential",
+							"required": true,
+							"type": "string"
+						},
+						{
+							"from": "year",
+							"label": "Year",
+							"name": "year",
+							"required": true,
+							"type": "integer"
+						}
+					],
+					"type": "repeater"
+				}
+			],
+			"from": "team",
+			"label": "Team",
+			"labelSingular": "Team member",
+			"route": "/team/{slug}/",
+			"slug": "team",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"taxonomies": []
+		}
+	],
+	"locales": [
+		{
+			"code": "en-US",
+			"default": true
+		}
+	],
+	"menus": [
+		{
+			"from": "Primary",
+			"items": [
+				{
+					"children": [
+						{
+							"label": "Residential",
+							"url": "/what-we-do/residential/"
+						}
+					],
+					"label": "What we do",
+					"url": "/what-we-do/"
+				},
+				{
+					"label": "All services",
+					"url": "/services/"
+				},
+				{
+					"label": "Contact",
+					"url": "/contact/"
+				}
+			],
+			"label": "Primary",
+			"name": "primary"
+		}
+	],
+	"routes": [
+		{
+			"collection": "posts",
+			"kind": "archive",
+			"pattern": "/news/"
+		},
+		{
+			"collection": "service",
+			"kind": "archive",
+			"pattern": "/services/"
+		},
+		{
+			"kind": "author",
+			"pattern": "/author/{slug}/"
+		},
+		{
+			"kind": "feed",
+			"pattern": "/rss.xml"
+		},
+		{
+			"kind": "home",
+			"pattern": "/"
+		},
+		{
+			"kind": "search",
+			"pattern": "/search/"
+		}
+	],
+	"site": {
+		"name": "Harbor Light Home Services",
+		"tagline": "Repairs and upkeep for homes and shops",
+		"url": "http://localhost:4602/site/"
+	},
+	"taxonomies": [
+		{
+			"collections": [
+				"posts"
+			],
+			"from": "category",
+			"hierarchical": true,
+			"label": "Categories",
+			"labelSingular": "Category",
+			"route": "/category/{path}/",
+			"slug": "category"
+		},
+		{
+			"check": "Old term URLs were flat, but the terms nest. The new pattern is /service-area/{path}/, so child terms move under their parent. The redirect plan maps each old URL.",
+			"collections": [
+				"service"
+			],
+			"from": "service_area",
+			"hierarchical": true,
+			"label": "Service areas",
+			"labelSingular": "Service area",
+			"route": "/service-area/{path}/",
+			"slug": "service_area"
+		},
+		{
+			"check": "The old site has no terms in it. Keep it only if the new site will use it.",
+			"collections": [
+				"posts"
+			],
+			"from": "post_tag",
+			"hierarchical": false,
+			"label": "Tags",
+			"labelSingular": "Tag",
+			"slug": "tag"
+		}
+	]
+}

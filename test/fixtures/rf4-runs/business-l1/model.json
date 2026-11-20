@@ -1,0 +1,337 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"check": "Left out WordPress internal keys: footnotes. Collection names: page becomes pages, post becomes posts. Other post types keep their WordPress names (service, team).",
+			"fields": [
+				{
+					"from": "post_title",
+					"label": "Title",
+					"name": "title",
+					"required": true,
+					"searchable": true,
+					"type": "string"
+				},
+				{
+					"from": "post_content",
+					"label": "Content",
+					"name": "content",
+					"required": false,
+					"searchable": true,
+					"type": "portableText"
+				},
+				{
+					"check": "The excerpts hold HTML (<p>...</p>) and WordPress fills an empty excerpt from the content, so most are likely made from the content, not written by hand; check whether they are worth keeping.",
+					"from": "post_excerpt",
+					"label": "Excerpt",
+					"name": "excerpt",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"check": "No entry has one (0 of 13). Kept (optional), since EmDash's import can ask for it. Remove it if the new site will not use it.",
+					"from": "_thumbnail_id",
+					"label": "Featured image",
+					"name": "featured_image",
+					"required": false,
+					"type": "image"
+				}
+			],
+			"from": "page",
+			"hierarchical": true,
+			"label": "Pages",
+			"labelSingular": "Page",
+			"route": "/{path}/",
+			"slug": "pages",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"taxonomies": []
+		},
+		{
+			"check": "Left out WordPress internal keys: footnotes. Shares the URL space /{slug}/ with pages; one route must serve both, or move this collection under its own path.",
+			"fields": [
+				{
+					"from": "post_title",
+					"label": "Title",
+					"name": "title",
+					"required": true,
+					"searchable": true,
+					"type": "string"
+				},
+				{
+					"from": "post_content",
+					"label": "Content",
+					"name": "content",
+					"required": false,
+					"searchable": true,
+					"type": "portableText"
+				},
+				{
+					"check": "The excerpts hold HTML (<p>...</p>) and WordPress fills an empty excerpt from the content, so most are likely made from the content, not written by hand; check whether they are worth keeping.",
+					"from": "post_excerpt",
+					"label": "Excerpt",
+					"name": "excerpt",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"check": "No entry has one (0 of 3). Kept (optional), since EmDash's import can ask for it. Remove it if the new site will not use it.",
+					"from": "_thumbnail_id",
+					"label": "Featured image",
+					"name": "featured_image",
+					"required": false,
+					"type": "image"
+				},
+				{
+					"from": "post_date",
+					"label": "Date",
+					"name": "date",
+					"required": true,
+					"type": "datetime"
+				},
+				{
+					"from": "post_modified",
+					"label": "Modified",
+					"name": "modified",
+					"required": false,
+					"type": "datetime"
+				}
+			],
+			"from": "post",
+			"label": "Posts",
+			"labelSingular": "Post",
+			"route": "/{slug}/",
+			"slug": "posts",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"taxonomies": [
+				"category",
+				"tag"
+			]
+		},
+		{
+			"fields": [
+				{
+					"from": "post_title",
+					"label": "Title",
+					"name": "title",
+					"required": true,
+					"searchable": true,
+					"type": "string"
+				},
+				{
+					"from": "post_content",
+					"label": "Content",
+					"name": "content",
+					"required": false,
+					"searchable": true,
+					"type": "portableText"
+				},
+				{
+					"check": "The excerpts hold HTML (<p>...</p>) and WordPress fills an empty excerpt from the content, so most are likely made from the content, not written by hand; check whether they are worth keeping.",
+					"from": "post_excerpt",
+					"label": "Excerpt",
+					"name": "excerpt",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"from": "_thumbnail_id",
+					"label": "Featured image",
+					"name": "featured_image",
+					"required": false,
+					"type": "image"
+				},
+				{
+					"check": "A repeater; check the rows after import. Field type \"repeater\" as the REST API reports it.",
+					"from": "faq",
+					"label": "Questions",
+					"name": "faq",
+					"required": false,
+					"subfields": [
+						{
+							"from": "answer",
+							"label": "Answer",
+							"name": "answer",
+							"required": true,
+							"type": "string"
+						},
+						{
+							"from": "question",
+							"label": "Question",
+							"name": "question",
+							"required": true,
+							"type": "string"
+						}
+					],
+					"type": "repeater"
+				},
+				{
+					"from": "hero_image",
+					"label": "Hero image",
+					"name": "hero_image",
+					"required": true,
+					"type": "image"
+				},
+				{
+					"check": "Values are WordPress post IDs; relink them after import. Field type \"relationship\" as the REST API reports it.",
+					"from": "related_services",
+					"label": "Related services",
+					"name": "related_services",
+					"required": false,
+					"type": "json"
+				},
+				{
+					"from": "tagline",
+					"label": "Tagline",
+					"name": "tagline",
+					"required": true,
+					"type": "string"
+				},
+				{
+					"check": "Filled on 1 of 8.",
+					"from": "warranty_note",
+					"label": "Warranty note",
+					"name": "warranty_note",
+					"required": false,
+					"type": "string"
+				}
+			],
+			"from": "service",
+			"label": "Services",
+			"labelSingular": "Service",
+			"route": "/services/{slug}/",
+			"slug": "service",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"taxonomies": [
+				"service_area"
+			]
+		},
+		{
+			"check": "Seen by name only; no entries or fields were visible, so check the fields by hand.",
+			"fields": [
+				{
+					"from": "post_title",
+					"label": "Title",
+					"name": "title",
+					"required": true,
+					"searchable": true,
+					"type": "string"
+				},
+				{
+					"from": "post_content",
+					"label": "Content",
+					"name": "content",
+					"required": false,
+					"searchable": true,
+					"type": "portableText"
+				},
+				{
+					"from": "post_excerpt",
+					"label": "Excerpt",
+					"name": "excerpt",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"from": "_thumbnail_id",
+					"label": "Featured image",
+					"name": "featured_image",
+					"required": false,
+					"type": "image"
+				}
+			],
+			"from": "team",
+			"label": "Team",
+			"labelSingular": "Team member",
+			"route": "/team/{slug}/",
+			"slug": "team",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"taxonomies": []
+		}
+	],
+	"locales": [
+		{
+			"code": "en-US",
+			"default": true
+		}
+	],
+	"menus": [],
+	"routes": [
+		{
+			"kind": "author",
+			"pattern": "/author/{slug}/"
+		},
+		{
+			"kind": "feed",
+			"pattern": "/rss.xml"
+		},
+		{
+			"kind": "home",
+			"pattern": "/"
+		},
+		{
+			"kind": "search",
+			"pattern": "/search/"
+		}
+	],
+	"site": {
+		"name": "Harbor Light Home Services",
+		"tagline": "Repairs and upkeep for homes and shops",
+		"url": "http://localhost:4602/site/"
+	},
+	"taxonomies": [
+		{
+			"collections": [
+				"posts"
+			],
+			"from": "category",
+			"hierarchical": true,
+			"label": "Categories",
+			"labelSingular": "Category",
+			"route": "/category/{path}/",
+			"slug": "category"
+		},
+		{
+			"check": "Old term URLs were flat, but the terms nest. The new pattern is /service-area/{path}/, so child terms move under their parent. The redirect plan maps each old URL.",
+			"collections": [
+				"service"
+			],
+			"from": "service_area",
+			"hierarchical": true,
+			"label": "Service areas",
+			"labelSingular": "Service area",
+			"route": "/service-area/{path}/",
+			"slug": "service_area"
+		},
+		{
+			"check": "The old site has no terms in it. Keep it only if the new site will use it.",
+			"collections": [
+				"posts"
+			],
+			"from": "post_tag",
+			"hierarchical": false,
+			"label": "Tags",
+			"labelSingular": "Tag",
+			"slug": "tag"
+		}
+	]
+}

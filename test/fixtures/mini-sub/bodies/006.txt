@@ -1,0 +1,86 @@
+[
+ {
+  "id": 10,
+  "date": "2026-01-15T09:00:00",
+  "slug": "about",
+  "status": "publish",
+  "type": "page",
+  "link": "http://localhost:4702/site/about/",
+  "title": {
+   "rendered": "Title 10"
+  },
+  "content": {
+   "rendered": "<p>Body of 10.</p>",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Body of 10.</p>",
+   "protected": false
+  },
+  "featured_media": 0,
+  "parent": 0
+ },
+ {
+  "id": 11,
+  "date": "2026-01-15T09:00:00",
+  "slug": "history",
+  "status": "publish",
+  "type": "page",
+  "link": "http://localhost:4702/site/about/history/",
+  "title": {
+   "rendered": "Title 11"
+  },
+  "content": {
+   "rendered": "<p>Body of 11.</p>",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Body of 11.</p>",
+   "protected": false
+  },
+  "featured_media": 0,
+  "parent": 10
+ },
+ {
+  "id": 12,
+  "date": "2026-01-15T09:00:00",
+  "slug": "history",
+  "status": "publish",
+  "type": "page",
+  "link": "http://localhost:4702/site/services-info/history/",
+  "title": {
+   "rendered": "Title 12"
+  },
+  "content": {
+   "rendered": "<p>Body of 12.</p>",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Body of 12.</p>",
+   "protected": false
+  },
+  "featured_media": 0,
+  "parent": 13
+ },
+ {
+  "id": 13,
+  "date": "2026-01-15T09:00:00",
+  "slug": "services-info",
+  "status": "publish",
+  "type": "page",
+  "link": "http://localhost:4702/site/services-info/",
+  "title": {
+   "rendered": "Title 13"
+  },
+  "content": {
+   "rendered": "<p>Body of 13.</p>",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Body of 13.</p>",
+   "protected": false
+  },
+  "featured_media": 0,
+  "parent": 0
+ }
+]

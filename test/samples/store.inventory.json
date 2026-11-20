@@ -1,0 +1,280 @@
+{
+	"version": 1,
+	"site": {
+		"url": "https://shop.example.com/",
+		"apiRoot": "https://shop.example.com/wp-json/",
+		"name": "Copper Kettle Goods",
+		"wpVersion": "6.8.3",
+		"locales": [
+			{
+				"code": "en-US",
+				"default": true
+			}
+		],
+		"theme": "storefront"
+	},
+	"levels": [
+		1,
+		2
+	],
+	"coverage": [
+		{
+			"area": "rest",
+			"source": "rest",
+			"status": "complete",
+			"detail": "Read 6 namespaces, including wc/store/v1."
+		},
+		{
+			"area": "sitemaps",
+			"source": "sitemap",
+			"status": "complete",
+			"detail": "Read /wp-sitemap.xml and 5 child sitemaps."
+		},
+		{
+			"area": "wxr",
+			"source": "wxr",
+			"status": "complete",
+			"detail": "Read the export. Orders and customers are in WooCommerce tables, not the export."
+		}
+	],
+	"types": [
+		{
+			"slug": "post",
+			"label": "Posts",
+			"count": 8,
+			"byStatus": {
+				"publish": 8
+			},
+			"hierarchical": false,
+			"restBase": "posts",
+			"inRest": true,
+			"fields": [
+				{
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"shape": "text",
+					"source": "wxr",
+					"filled": 8,
+					"total": 8,
+					"samples": [
+						"Caring for copper"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"shape": "html",
+					"source": "wxr",
+					"filled": 8,
+					"total": 8,
+					"samples": [
+						"<p>Polish it once a month.</p>"
+					],
+					"confidence": "high"
+				}
+			],
+			"taxonomies": [
+				"category"
+			],
+			"sources": [
+				"rest",
+				"sitemap",
+				"wxr"
+			]
+		},
+		{
+			"slug": "product",
+			"label": "Products",
+			"count": 42,
+			"byStatus": {
+				"publish": 40,
+				"draft": 2
+			},
+			"hierarchical": false,
+			"restBase": "product",
+			"inRest": true,
+			"fields": [
+				{
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"shape": "text",
+					"source": "wxr",
+					"filled": 42,
+					"total": 42,
+					"samples": [
+						"Copper kettle, 2 qt"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "_price",
+					"label": "Price",
+					"owner": "meta",
+					"shape": "number",
+					"source": "wxr",
+					"filled": 42,
+					"total": 42,
+					"samples": [
+						"64.00"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "_sku",
+					"label": "SKU",
+					"owner": "meta",
+					"shape": "text",
+					"source": "wxr",
+					"filled": 40,
+					"total": 42,
+					"samples": [
+						"CK-2QT"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "_stock_status",
+					"label": "Stock status",
+					"owner": "meta",
+					"shape": "text",
+					"source": "wxr",
+					"filled": 42,
+					"total": 42,
+					"samples": [
+						"instock"
+					],
+					"confidence": "high"
+				}
+			],
+			"taxonomies": [
+				"product_cat"
+			],
+			"sources": [
+				"rest",
+				"sitemap",
+				"wxr"
+			]
+		}
+	],
+	"taxonomies": [
+		{
+			"slug": "category",
+			"label": "Categories",
+			"hierarchical": true,
+			"count": 2,
+			"types": [
+				"post"
+			],
+			"sources": [
+				"rest",
+				"wxr"
+			]
+		},
+		{
+			"slug": "product_cat",
+			"label": "Product categories",
+			"hierarchical": true,
+			"count": 5,
+			"types": [
+				"product"
+			],
+			"sources": [
+				"rest",
+				"sitemap",
+				"wxr"
+			]
+		}
+	],
+	"plugins": [
+		{
+			"slug": "woocommerce",
+			"name": "WooCommerce",
+			"category": "store",
+			"source": "html",
+			"confidence": "high"
+		}
+	],
+	"builders": [],
+	"shortcodes": [
+		{
+			"name": "woocommerce_cart",
+			"count": 1,
+			"samples": [
+				"https://shop.example.com/cart/"
+			]
+		}
+	],
+	"blocks": [],
+	"menus": [],
+	"authors": {
+		"count": 1,
+		"source": "wxr"
+	},
+	"media": {
+		"count": 130,
+		"source": "wxr"
+	},
+	"permalinks": {
+		"structure": "/%postname%/",
+		"source": "html",
+		"confidence": "medium"
+	},
+	"urls": [
+		{
+			"url": "https://shop.example.com/",
+			"kind": "home",
+			"source": [
+				"html"
+			],
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://shop.example.com/product/copper-kettle-2-qt/",
+			"kind": "custom",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "product",
+			"id": 70,
+			"slug": "copper-kettle-2-qt",
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://shop.example.com/product-category/kettles/",
+			"kind": "term",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"taxonomy": "product_cat",
+			"termId": 15,
+			"slug": "kettles",
+			"evidence": "listed"
+		},
+		{
+			"url": "https://shop.example.com/caring-for-copper/",
+			"kind": "post",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "post",
+			"id": 9,
+			"slug": "caring-for-copper",
+			"evidence": "listed"
+		}
+	],
+	"storedElsewhere": [
+		{
+			"plugin": "woocommerce",
+			"what": "orders and customers"
+		}
+	]
+}

@@ -1,0 +1,813 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://astronomic.dev/schema/wp-esc/inventory.schema.json",
+	"title": "WordPress site inventory",
+	"description": "What one run learned about a WordPress site. Mirrors src/contracts/inventory.ts.",
+	"type": "object",
+	"properties": {
+		"version": {
+			"const": 1
+		},
+		"site": {
+			"type": "object",
+			"properties": {
+				"url": {
+					"type": "string"
+				},
+				"apiRoot": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"tagline": {
+					"type": "string"
+				},
+				"wpVersion": {
+					"type": "string"
+				},
+				"locales": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/Locale"
+					}
+				},
+				"theme": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"url",
+				"locales"
+			],
+			"additionalProperties": false
+		},
+		"levels": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/Level"
+			},
+			"minItems": 1,
+			"uniqueItems": true
+		},
+		"coverage": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/Coverage"
+			}
+		},
+		"types": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/ContentType"
+			}
+		},
+		"taxonomies": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/Taxonomy"
+			}
+		},
+		"plugins": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/Plugin"
+			}
+		},
+		"builders": {
+			"description": "Page builders, with page counts.",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/Usage"
+			}
+		},
+		"shortcodes": {
+			"description": "From raw content (WXR or auth) and unrendered tags in HTML.",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/Usage"
+			}
+		},
+		"blocks": {
+			"description": "From block comments in raw content and block classes in HTML.",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/Usage"
+			}
+		},
+		"menus": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/Menu"
+			}
+		},
+		"authors": {
+			"type": "object",
+			"properties": {
+				"count": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"source": {
+					"$ref": "#/$defs/Source"
+				}
+			},
+			"required": [
+				"count",
+				"source"
+			],
+			"additionalProperties": false
+		},
+		"media": {
+			"type": "object",
+			"properties": {
+				"count": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"source": {
+					"$ref": "#/$defs/Source"
+				}
+			},
+			"required": [
+				"count",
+				"source"
+			],
+			"additionalProperties": false
+		},
+		"comments": {
+			"type": "object",
+			"properties": {
+				"count": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"source": {
+					"$ref": "#/$defs/Source"
+				},
+				"byType": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "integer",
+						"minimum": 0
+					}
+				},
+				"pending": {
+					"type": "integer",
+					"minimum": 0
+				}
+			},
+			"required": [
+				"count",
+				"source"
+			],
+			"additionalProperties": false
+		},
+		"permalinks": {
+			"type": "object",
+			"properties": {
+				"structure": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "#/$defs/Source"
+				},
+				"confidence": {
+					"$ref": "#/$defs/Confidence"
+				}
+			},
+			"required": [
+				"source",
+				"confidence"
+			],
+			"additionalProperties": false
+		},
+		"urls": {
+			"description": "The URL ledger. The key is the URL.",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/UrlEntry"
+			}
+		},
+		"storedElsewhere": {
+			"description": "Plugin data the export does not carry, only when a storing plugin is found.",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/StoredData"
+			}
+		}
+	},
+	"required": [
+		"version",
+		"site",
+		"levels",
+		"coverage",
+		"types",
+		"taxonomies",
+		"plugins",
+		"builders",
+		"shortcodes",
+		"blocks",
+		"menus",
+		"permalinks",
+		"urls",
+		"storedElsewhere"
+	],
+	"additionalProperties": false,
+	"$defs": {
+		"Level": {
+			"type": "integer",
+			"enum": [
+				1,
+				2,
+				3
+			]
+		},
+		"Confidence": {
+			"type": "string",
+			"enum": [
+				"high",
+				"medium",
+				"low"
+			]
+		},
+		"Source": {
+			"type": "string",
+			"enum": [
+				"rest",
+				"sitemap",
+				"html",
+				"wxr",
+				"auth"
+			]
+		},
+		"Coverage": {
+			"type": "object",
+			"properties": {
+				"area": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "#/$defs/Source"
+				},
+				"status": {
+					"type": "string",
+					"enum": [
+						"complete",
+						"partial",
+						"failed",
+						"not-visible"
+					]
+				},
+				"detail": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"area",
+				"source",
+				"status",
+				"detail"
+			],
+			"additionalProperties": false
+		},
+		"ContentType": {
+			"description": "A post type. `count` stays unset when the type was seen only by name.",
+			"type": "object",
+			"properties": {
+				"slug": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"count": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"byStatus": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "integer",
+						"minimum": 0
+					}
+				},
+				"unpublished": {
+					"description": "Drafts, private and pending items, at most 20 per type.",
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"title": {
+								"type": "string"
+							},
+							"status": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"title",
+							"status"
+						],
+						"additionalProperties": false
+					}
+				},
+				"hierarchical": {
+					"type": "boolean"
+				},
+				"restBase": {
+					"type": "string"
+				},
+				"inRest": {
+					"type": "boolean"
+				},
+				"fields": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/Field"
+					}
+				},
+				"taxonomies": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"uniqueItems": true
+				},
+				"sources": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/Source"
+					},
+					"uniqueItems": true
+				}
+			},
+			"required": [
+				"slug",
+				"byStatus",
+				"fields",
+				"taxonomies",
+				"sources"
+			],
+			"additionalProperties": false
+		},
+		"Field": {
+			"type": "object",
+			"properties": {
+				"key": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"group": {
+					"type": "string"
+				},
+				"owner": {
+					"type": "string",
+					"enum": [
+						"core",
+						"acf",
+						"meta",
+						"seo",
+						"builder"
+					]
+				},
+				"shape": {
+					"$ref": "#/$defs/FieldShape"
+				},
+				"source": {
+					"$ref": "#/$defs/Source"
+				},
+				"order": {
+					"type": "integer"
+				},
+				"subfields": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/Field"
+					}
+				},
+				"layouts": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/Layout"
+					}
+				},
+				"targets": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"uniqueItems": true
+				},
+				"options": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"filled": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"total": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"samples": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"confidence": {
+					"$ref": "#/$defs/Confidence"
+				},
+				"note": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"key",
+				"owner",
+				"shape",
+				"source",
+				"filled",
+				"total",
+				"samples",
+				"confidence"
+			],
+			"additionalProperties": false
+		},
+		"Layout": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"subfields": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/Field"
+					}
+				}
+			},
+			"required": [
+				"name",
+				"subfields"
+			],
+			"additionalProperties": false
+		},
+		"FieldShape": {
+			"type": "string",
+			"enum": [
+				"text",
+				"html",
+				"number",
+				"boolean",
+				"date",
+				"url",
+				"email",
+				"image",
+				"file",
+				"relation",
+				"list",
+				"object",
+				"repeater",
+				"flexible",
+				"serialized",
+				"mixed",
+				"unknown"
+			]
+		},
+		"Taxonomy": {
+			"type": "object",
+			"properties": {
+				"slug": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"hierarchical": {
+					"type": "boolean"
+				},
+				"count": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"types": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"uniqueItems": true
+				},
+				"sources": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/Source"
+					},
+					"uniqueItems": true
+				}
+			},
+			"required": [
+				"slug",
+				"types",
+				"sources"
+			],
+			"additionalProperties": false
+		},
+		"Plugin": {
+			"type": "object",
+			"properties": {
+				"slug": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"version": {
+					"type": "string"
+				},
+				"active": {
+					"type": "boolean"
+				},
+				"category": {
+					"$ref": "#/$defs/PluginCategory"
+				},
+				"source": {
+					"$ref": "#/$defs/Source"
+				},
+				"confidence": {
+					"$ref": "#/$defs/Confidence"
+				}
+			},
+			"required": [
+				"slug",
+				"category",
+				"source",
+				"confidence"
+			],
+			"additionalProperties": false
+		},
+		"PluginCategory": {
+			"type": "string",
+			"enum": [
+				"seo",
+				"forms",
+				"form-storage",
+				"store",
+				"members",
+				"courses",
+				"builder",
+				"fields",
+				"cache",
+				"security",
+				"analytics",
+				"comments",
+				"search",
+				"media",
+				"multilingual",
+				"redirects",
+				"other"
+			]
+		},
+		"Usage": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"count": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"samples": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"required": [
+				"name",
+				"count",
+				"samples"
+			],
+			"additionalProperties": false
+		},
+		"Menu": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "integer"
+				},
+				"name": {
+					"type": "string"
+				},
+				"kind": {
+					"description": "block: links read from a wp_navigation post. Unset or classic: a classic menu.",
+					"enum": [
+						"classic",
+						"block"
+					]
+				},
+				"location": {
+					"type": "string"
+				},
+				"items": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/MenuItem"
+					}
+				},
+				"source": {
+					"$ref": "#/$defs/Source"
+				}
+			},
+			"required": [
+				"name",
+				"items",
+				"source"
+			],
+			"additionalProperties": false
+		},
+		"MenuItem": {
+			"type": "object",
+			"properties": {
+				"title": {
+					"type": "string"
+				},
+				"url": {
+					"type": "string"
+				},
+				"target": {
+					"type": "object",
+					"properties": {
+						"kind": {
+							"$ref": "#/$defs/UrlKind"
+						},
+						"type": {
+							"type": "string"
+						},
+						"id": {
+							"type": "integer"
+						}
+					},
+					"required": [
+						"kind"
+					],
+					"additionalProperties": false
+				},
+				"parent": {
+					"type": "integer"
+				},
+				"order": {
+					"type": "integer"
+				},
+				"id": {
+					"type": "integer"
+				}
+			},
+			"required": [
+				"title",
+				"url",
+				"order",
+				"id"
+			],
+			"additionalProperties": false
+		},
+		"UrlEntry": {
+			"type": "object",
+			"properties": {
+				"url": {
+					"type": "string"
+				},
+				"kind": {
+					"$ref": "#/$defs/UrlKind"
+				},
+				"source": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/Source"
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"type": {
+					"type": "string"
+				},
+				"id": {
+					"type": "integer"
+				},
+				"slug": {
+					"type": "string"
+				},
+				"parentId": {
+					"description": "Pages and nested terms: the parent. Attachments: the WXR post_parent, or else the first published post that uses it as _thumbnail_id.",
+					"type": "integer"
+				},
+				"path": {
+					"description": "Full hierarchical path, for pages.",
+					"type": "string"
+				},
+				"taxonomy": {
+					"type": "string"
+				},
+				"termId": {
+					"type": "integer"
+				},
+				"count": {
+					"description": "Terms only: the entries WordPress counts in the term (published, child terms not included), when REST gave it.",
+					"type": "integer",
+					"minimum": 0
+				},
+				"locale": {
+					"type": "string"
+				},
+				"translationOf": {
+					"type": "string"
+				},
+				"file": {
+					"description": "Attachments only: the absolute upload file URL.",
+					"type": "string"
+				},
+				"evidence": {
+					"description": "listed by API or sitemap, linked in HTML, or fetched and returned 200",
+					"type": "string",
+					"enum": [
+						"listed",
+						"linked",
+						"resolved"
+					]
+				}
+			},
+			"required": [
+				"url",
+				"kind",
+				"source",
+				"evidence"
+			],
+			"additionalProperties": false
+		},
+		"UrlKind": {
+			"type": "string",
+			"enum": [
+				"post",
+				"page",
+				"custom",
+				"category",
+				"tag",
+				"term",
+				"author",
+				"date",
+				"feed",
+				"attachment",
+				"paged",
+				"query",
+				"home",
+				"archive",
+				"other"
+			]
+		},
+		"StoredData": {
+			"type": "object",
+			"properties": {
+				"plugin": {
+					"type": "string"
+				},
+				"what": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"plugin",
+				"what"
+			],
+			"additionalProperties": false
+		},
+		"Locale": {
+			"type": "object",
+			"properties": {
+				"code": {
+					"type": "string"
+				},
+				"prefix": {
+					"type": "string"
+				},
+				"default": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"code"
+			],
+			"additionalProperties": false
+		}
+	}
+}

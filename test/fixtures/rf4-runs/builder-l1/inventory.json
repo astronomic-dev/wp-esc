@@ -1,0 +1,729 @@
+{
+	"version": 1,
+	"authors": {
+		"count": 1,
+		"source": "rest"
+	},
+	"blocks": [
+		{
+			"count": 1,
+			"name": "core/button",
+			"samples": [
+				"http://localhost:4603/?page_id=19"
+			]
+		},
+		{
+			"count": 1,
+			"name": "core/buttons",
+			"samples": [
+				"http://localhost:4603/?page_id=19"
+			]
+		},
+		{
+			"count": 1,
+			"name": "core/column",
+			"samples": [
+				"http://localhost:4603/?page_id=19"
+			]
+		},
+		{
+			"count": 1,
+			"name": "core/columns",
+			"samples": [
+				"http://localhost:4603/?page_id=19"
+			]
+		},
+		{
+			"count": 1,
+			"name": "core/heading",
+			"samples": [
+				"http://localhost:4603/?page_id=18"
+			]
+		},
+		{
+			"count": 1,
+			"name": "core/image",
+			"samples": [
+				"http://localhost:4603/?page_id=18"
+			]
+		},
+		{
+			"count": 6,
+			"name": "core/paragraph",
+			"samples": [
+				"http://localhost:4603/?p=20",
+				"http://localhost:4603/?p=21",
+				"http://localhost:4603/?p=22"
+			]
+		},
+		{
+			"count": 1,
+			"name": "core/quote",
+			"samples": [
+				"http://localhost:4603/?page_id=18"
+			]
+		}
+	],
+	"builders": [
+		{
+			"count": 3,
+			"name": "elementor",
+			"samples": [
+				"http://localhost:4603/",
+				"http://localhost:4603/?page_id=13",
+				"http://localhost:4603/?page_id=14"
+			]
+		}
+	],
+	"comments": {
+		"count": 0,
+		"source": "rest"
+	},
+	"coverage": [
+		{
+			"area": "comments",
+			"detail": "0 approved comments in all. The REST API shows approved comments only, and does not split them by type.",
+			"source": "rest",
+			"status": "partial"
+		},
+		{
+			"area": "html",
+			"detail": "Read a sample of 7 pages: the home page and up to 3 pages of each type, at most 30. Pages outside the sample are not read. Builders, shortcodes and blocks are counted from the REST content of 12 items, not from this sample.",
+			"source": "html",
+			"status": "partial"
+		},
+		{
+			"area": "menus",
+			"detail": "Menus are not read at level 1; names, items and locations need level 2 or 3.",
+			"source": "html",
+			"status": "not-visible"
+		},
+		{
+			"area": "plugins",
+			"detail": "Found from asset paths, SEO comments and REST namespaces only; plugins with no front-end trace do not show. The full list needs level 3.",
+			"source": "html",
+			"status": "partial"
+		},
+		{
+			"area": "rest",
+			"detail": "Read 13 namespaces; 7 lists paged; not read in full: elementor_library.",
+			"source": "rest",
+			"status": "partial"
+		},
+		{
+			"area": "settings",
+			"detail": "Site settings need level 3.",
+			"source": "html",
+			"status": "not-visible"
+		},
+		{
+			"area": "sitemaps",
+			"detail": "Read 4 sitemaps listed in the index at /?sitemap=index.",
+			"source": "sitemap",
+			"status": "complete"
+		},
+		{
+			"area": "taxonomy:category",
+			"detail": "1 term.",
+			"source": "rest",
+			"status": "complete"
+		},
+		{
+			"area": "taxonomy:post_tag",
+			"detail": "0 terms.",
+			"source": "rest",
+			"status": "complete"
+		},
+		{
+			"area": "type:attachment",
+			"detail": "Media items listed; files are not downloaded.",
+			"source": "rest",
+			"status": "partial"
+		},
+		{
+			"area": "type:e-floating-buttons",
+			"detail": "0 published items, every page read; drafts and private items need level 3.",
+			"source": "rest",
+			"status": "partial"
+		},
+		{
+			"area": "type:elementor_library",
+			"detail": "/wp/v2/elementor_library answered 401.",
+			"source": "rest",
+			"status": "failed"
+		},
+		{
+			"area": "type:page",
+			"detail": "8 published items, every page read; drafts and private items need level 3.",
+			"source": "rest",
+			"status": "partial"
+		},
+		{
+			"area": "type:post",
+			"detail": "4 published items, every page read; drafts and private items need level 3.",
+			"source": "rest",
+			"status": "partial"
+		},
+		{
+			"area": "users",
+			"detail": "Only authors with published posts are listed; user counts by role need level 3.",
+			"source": "rest",
+			"status": "partial"
+		}
+	],
+	"levels": [
+		1
+	],
+	"media": {
+		"count": 6,
+		"source": "rest"
+	},
+	"menus": [],
+	"permalinks": {
+		"confidence": "medium",
+		"source": "rest",
+		"structure": ""
+	},
+	"plugins": [
+		{
+			"category": "forms",
+			"confidence": "high",
+			"name": "Contact Form 7",
+			"slug": "contact-form-7",
+			"source": "html"
+		},
+		{
+			"category": "builder",
+			"confidence": "high",
+			"name": "Elementor",
+			"slug": "elementor",
+			"source": "html"
+		}
+	],
+	"shortcodes": [
+		{
+			"count": 4,
+			"name": "pricing_table",
+			"samples": [
+				"http://localhost:4603/",
+				"http://localhost:4603/?page_id=13",
+				"http://localhost:4603/?page_id=14"
+			]
+		}
+	],
+	"site": {
+		"apiRoot": "http://localhost:4603/index.php?rest_route=/",
+		"locales": [
+			{
+				"code": "en-US",
+				"default": true
+			}
+		],
+		"name": "Northwind Studio",
+		"tagline": "Websites and brand work for local shops",
+		"theme": "twentytwentyfive",
+		"url": "http://localhost:4603/",
+		"wpVersion": "7.1.4"
+	},
+	"storedElsewhere": [],
+	"taxonomies": [
+		{
+			"count": 1,
+			"hierarchical": true,
+			"label": "Categories",
+			"slug": "category",
+			"sources": [
+				"rest",
+				"sitemap"
+			],
+			"types": [
+				"post"
+			]
+		},
+		{
+			"count": 0,
+			"hierarchical": false,
+			"label": "Tags",
+			"slug": "post_tag",
+			"sources": [
+				"rest"
+			],
+			"types": [
+				"post"
+			]
+		}
+	],
+	"types": [
+		{
+			"byStatus": {},
+			"count": 0,
+			"fields": [],
+			"hierarchical": false,
+			"inRest": true,
+			"label": "Floating Elements",
+			"restBase": "e-floating-buttons",
+			"slug": "e-floating-buttons",
+			"sources": [
+				"rest"
+			],
+			"taxonomies": []
+		},
+		{
+			"byStatus": {},
+			"fields": [],
+			"hierarchical": false,
+			"inRest": true,
+			"label": "My Templates",
+			"restBase": "elementor_library",
+			"slug": "elementor_library",
+			"sources": [
+				"rest"
+			],
+			"taxonomies": []
+		},
+		{
+			"byStatus": {
+				"publish": 8
+			},
+			"count": 8,
+			"fields": [
+				{
+					"confidence": "low",
+					"filled": 0,
+					"key": "_thumbnail_id",
+					"label": "Featured image",
+					"owner": "core",
+					"samples": [],
+					"shape": "image",
+					"source": "rest",
+					"total": 8
+				},
+				{
+					"confidence": "low",
+					"filled": 0,
+					"key": "footnotes",
+					"owner": "meta",
+					"samples": [],
+					"shape": "unknown",
+					"source": "rest",
+					"total": 8
+				},
+				{
+					"confidence": "high",
+					"filled": 8,
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"samples": [
+						"<div data-elementor-type=\"wp-page\" data-elementor-id=\"12\" class=\"elementor elementor-12\">\n\t\t\t\t\t\t<section class=\"elemento…",
+						"<div data-elementor-type=\"wp-page\" data-elementor-id=\"13\" class=\"elementor elementor-13\">\n\t\t\t\t\t\t<section class=\"elemento…"
+					],
+					"shape": "html",
+					"source": "rest",
+					"total": 8
+				},
+				{
+					"confidence": "medium",
+					"filled": 8,
+					"key": "post_excerpt",
+					"label": "Excerpt",
+					"note": "WordPress fills an empty excerpt from the content, so this count can be high.",
+					"owner": "core",
+					"samples": [
+						"<p>Home at Northwind We build Home pages that load fast.</p>",
+						"<p>Services at Northwind We build Services pages that load fast.</p>"
+					],
+					"shape": "html",
+					"source": "rest",
+					"total": 8
+				},
+				{
+					"confidence": "high",
+					"filled": 8,
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"samples": [
+						"Home",
+						"Services"
+					],
+					"shape": "text",
+					"source": "rest",
+					"total": 8
+				}
+			],
+			"hierarchical": true,
+			"inRest": true,
+			"label": "Pages",
+			"restBase": "pages",
+			"slug": "page",
+			"sources": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"taxonomies": []
+		},
+		{
+			"byStatus": {
+				"publish": 4
+			},
+			"count": 4,
+			"fields": [
+				{
+					"confidence": "low",
+					"filled": 0,
+					"key": "_thumbnail_id",
+					"label": "Featured image",
+					"owner": "core",
+					"samples": [],
+					"shape": "image",
+					"source": "rest",
+					"total": 4
+				},
+				{
+					"confidence": "low",
+					"filled": 0,
+					"key": "footnotes",
+					"owner": "meta",
+					"samples": [],
+					"shape": "unknown",
+					"source": "rest",
+					"total": 4
+				},
+				{
+					"confidence": "high",
+					"filled": 4,
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"samples": [
+						"<p class=\"wp-block-paragraph\">New site for the corner bakery.</p>",
+						"<p class=\"wp-block-paragraph\">Why we stopped using sliders.</p>"
+					],
+					"shape": "html",
+					"source": "rest",
+					"total": 4
+				},
+				{
+					"confidence": "medium",
+					"filled": 4,
+					"key": "post_excerpt",
+					"label": "Excerpt",
+					"note": "WordPress fills an empty excerpt from the content, so this count can be high.",
+					"owner": "core",
+					"samples": [
+						"<p>New site for the corner bakery.</p>",
+						"<p>Why we stopped using sliders.</p>"
+					],
+					"shape": "html",
+					"source": "rest",
+					"total": 4
+				},
+				{
+					"confidence": "high",
+					"filled": 4,
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"samples": [
+						"New site for the corner bakery",
+						"Why we stopped using sliders"
+					],
+					"shape": "text",
+					"source": "rest",
+					"total": 4
+				}
+			],
+			"hierarchical": false,
+			"inRest": true,
+			"label": "Posts",
+			"restBase": "posts",
+			"slug": "post",
+			"sources": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"taxonomies": [
+				"category",
+				"post_tag"
+			]
+		}
+	],
+	"urls": [
+		{
+			"evidence": "resolved",
+			"id": 12,
+			"kind": "home",
+			"slug": "home",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4603/"
+		},
+		{
+			"evidence": "listed",
+			"id": 10,
+			"kind": "attachment",
+			"slug": "studio-work-5",
+			"source": [
+				"rest"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4603/?attachment_id=10"
+		},
+		{
+			"evidence": "listed",
+			"id": 11,
+			"kind": "attachment",
+			"slug": "studio-work-6",
+			"source": [
+				"rest"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4603/?attachment_id=11"
+		},
+		{
+			"evidence": "listed",
+			"id": 6,
+			"kind": "attachment",
+			"slug": "studio-work-1",
+			"source": [
+				"rest"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4603/?attachment_id=6"
+		},
+		{
+			"evidence": "listed",
+			"id": 7,
+			"kind": "attachment",
+			"slug": "studio-work-2",
+			"source": [
+				"rest"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4603/?attachment_id=7"
+		},
+		{
+			"evidence": "listed",
+			"id": 8,
+			"kind": "attachment",
+			"slug": "studio-work-3",
+			"source": [
+				"rest"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4603/?attachment_id=8"
+		},
+		{
+			"evidence": "listed",
+			"id": 9,
+			"kind": "attachment",
+			"slug": "studio-work-4",
+			"source": [
+				"rest"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4603/?attachment_id=9"
+		},
+		{
+			"evidence": "listed",
+			"kind": "author",
+			"slug": "theo-marsh",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"url": "http://localhost:4603/?author=2"
+		},
+		{
+			"count": 4,
+			"evidence": "listed",
+			"kind": "category",
+			"slug": "uncategorized",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"taxonomy": "category",
+			"termId": 1,
+			"url": "http://localhost:4603/?cat=1"
+		},
+		{
+			"evidence": "linked",
+			"kind": "feed",
+			"source": [
+				"html"
+			],
+			"url": "http://localhost:4603/?feed=comments-rss2"
+		},
+		{
+			"evidence": "linked",
+			"kind": "feed",
+			"source": [
+				"html"
+			],
+			"url": "http://localhost:4603/?feed=rss2"
+		},
+		{
+			"evidence": "listed",
+			"id": 20,
+			"kind": "post",
+			"slug": "new-site-for-the-corner-bakery",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "post",
+			"url": "http://localhost:4603/?p=20"
+		},
+		{
+			"evidence": "resolved",
+			"id": 21,
+			"kind": "post",
+			"slug": "why-we-stopped-using-sliders",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "post",
+			"url": "http://localhost:4603/?p=21"
+		},
+		{
+			"evidence": "resolved",
+			"id": 22,
+			"kind": "post",
+			"slug": "a-faster-menu-for-rosas-diner",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "post",
+			"url": "http://localhost:4603/?p=22"
+		},
+		{
+			"evidence": "resolved",
+			"id": 23,
+			"kind": "post",
+			"slug": "notes-on-local-search",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "post",
+			"url": "http://localhost:4603/?p=23"
+		},
+		{
+			"evidence": "listed",
+			"id": 12,
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"type": "page",
+			"url": "http://localhost:4603/?page_id=12"
+		},
+		{
+			"evidence": "listed",
+			"id": 13,
+			"kind": "page",
+			"path": "services",
+			"slug": "services",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4603/?page_id=13"
+		},
+		{
+			"evidence": "listed",
+			"id": 14,
+			"kind": "page",
+			"path": "our-process",
+			"slug": "our-process",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4603/?page_id=14"
+		},
+		{
+			"evidence": "listed",
+			"id": 15,
+			"kind": "page",
+			"path": "portfolio",
+			"slug": "portfolio",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4603/?page_id=15"
+		},
+		{
+			"evidence": "listed",
+			"id": 16,
+			"kind": "page",
+			"path": "pricing",
+			"slug": "pricing",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4603/?page_id=16"
+		},
+		{
+			"evidence": "resolved",
+			"id": 17,
+			"kind": "page",
+			"path": "contact",
+			"slug": "contact",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4603/?page_id=17"
+		},
+		{
+			"evidence": "resolved",
+			"id": 18,
+			"kind": "page",
+			"path": "about",
+			"slug": "about",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4603/?page_id=18"
+		},
+		{
+			"evidence": "resolved",
+			"id": 19,
+			"kind": "page",
+			"path": "approach",
+			"slug": "approach",
+			"source": [
+				"html",
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"url": "http://localhost:4603/?page_id=19"
+		}
+	]
+}

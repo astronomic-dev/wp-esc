@@ -1,0 +1,247 @@
+{
+	"version": 1,
+	"site": {
+		"url": "https://example.com/site/",
+		"name": "Harbor Light Consulting",
+		"tagline": "Plain advice for small firms"
+	},
+	"locales": [
+		{
+			"code": "en-US",
+			"default": true
+		}
+	],
+	"collections": [
+		{
+			"slug": "pages",
+			"from": "page",
+			"label": "Pages",
+			"labelSingular": "Page",
+			"hierarchical": true,
+			"route": "/{path}/",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"taxonomies": [],
+			"fields": [
+				{
+					"name": "title",
+					"from": "post_title",
+					"label": "Title",
+					"type": "string",
+					"required": true,
+					"searchable": true
+				},
+				{
+					"name": "content",
+					"from": "post_content",
+					"label": "Content",
+					"type": "portableText",
+					"required": false,
+					"searchable": true
+				}
+			]
+		},
+		{
+			"slug": "service",
+			"from": "service",
+			"label": "Services",
+			"labelSingular": "Service",
+			"route": "/services/{slug}/",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"taxonomies": [
+				"service_area"
+			],
+			"fields": [
+				{
+					"name": "title",
+					"from": "post_title",
+					"label": "Title",
+					"type": "string",
+					"required": true,
+					"searchable": true
+				},
+				{
+					"name": "tagline",
+					"from": "tagline",
+					"label": "Tagline",
+					"type": "string",
+					"required": true
+				},
+				{
+					"name": "hero_image",
+					"from": "hero_image",
+					"label": "Hero image",
+					"type": "image",
+					"required": false
+				},
+				{
+					"name": "content",
+					"from": "post_content",
+					"label": "Content",
+					"type": "portableText",
+					"required": false,
+					"searchable": true
+				},
+				{
+					"name": "related_services",
+					"from": "related_services",
+					"label": "Related services",
+					"type": "json",
+					"required": false,
+					"check": "WordPress post IDs; relink to service entries after import."
+				},
+				{
+					"name": "award",
+					"from": "award",
+					"label": "Award",
+					"type": "string",
+					"required": false,
+					"check": "Filled on 1 of 6 services."
+				},
+				{
+					"name": "price_band",
+					"from": "price_band",
+					"label": "Price band",
+					"type": "select",
+					"required": true,
+					"options": [
+						"Under $500",
+						"$500 to $2,000",
+						"Over $2,000"
+					]
+				},
+				{
+					"name": "steps",
+					"from": "steps",
+					"label": "Steps",
+					"type": "repeater",
+					"required": false,
+					"check": "A repeater; check the rows after import.",
+					"subfields": [
+						{
+							"name": "step_title",
+							"from": "step_title",
+							"label": "Step title",
+							"type": "string",
+							"required": true
+						},
+						{
+							"name": "step_body",
+							"from": "step_body",
+							"label": "Step body",
+							"type": "text",
+							"required": false
+						}
+					]
+				},
+				{
+					"name": "sections",
+					"from": "sections",
+					"label": "Sections",
+					"type": "json",
+					"required": false,
+					"check": "Flexible content (quote, gallery); EmDash blocks are not set up in v1, so this stays loose JSON."
+				}
+			]
+		},
+		{
+			"slug": "team",
+			"from": "team",
+			"label": "Team",
+			"labelSingular": "Team member",
+			"route": null,
+			"supports": [
+				"drafts"
+			],
+			"taxonomies": [],
+			"fields": [
+				{
+					"name": "title",
+					"from": "post_title",
+					"label": "Name",
+					"type": "string",
+					"required": true
+				},
+				{
+					"name": "role",
+					"from": "role",
+					"label": "Role",
+					"type": "string",
+					"required": true
+				},
+				{
+					"name": "email",
+					"from": "email",
+					"label": "Email",
+					"type": "string",
+					"required": false
+				}
+			],
+			"check": "Team members had pages in WordPress; this model shows them on the About page instead."
+		}
+	],
+	"taxonomies": [
+		{
+			"slug": "service_area",
+			"from": "service_area",
+			"label": "Service areas",
+			"labelSingular": "Service area",
+			"hierarchical": false,
+			"collections": [
+				"service"
+			],
+			"route": "/services/area/{slug}/"
+		}
+	],
+	"menus": [
+		{
+			"name": "primary",
+			"from": "Main",
+			"label": "Main",
+			"items": [
+				{
+					"label": "Services",
+					"url": "/services/"
+				},
+				{
+					"label": "Plans",
+					"url": "/plans/",
+					"children": [
+						{
+							"label": "Pricing",
+							"url": "/plans/pricing/"
+						}
+					]
+				},
+				{
+					"label": "Contact",
+					"url": "/contact/"
+				}
+			]
+		}
+	],
+	"routes": [
+		{
+			"kind": "home",
+			"pattern": "/"
+		},
+		{
+			"kind": "search",
+			"pattern": "/search/"
+		},
+		{
+			"kind": "archive",
+			"pattern": "/services/",
+			"collection": "service"
+		}
+	]
+}

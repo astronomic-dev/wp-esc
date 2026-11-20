@@ -1,0 +1,376 @@
+{
+	"site": {
+		"title": "Harbor Light Home Services",
+		"url": "http://localhost:4602/site"
+	},
+	"post_types": [
+		{
+			"name": "post",
+			"label": "Posts",
+			"label_singular": "Post",
+			"total": 3,
+			"by_status": {
+				"publish": 3,
+				"draft": 0,
+				"pending": 0,
+				"private": 0,
+				"future": 0
+			},
+			"supports": {
+				"title": true,
+				"editor": [
+					{
+						"notes": true
+					}
+				],
+				"author": true,
+				"thumbnail": true,
+				"excerpt": true,
+				"trackbacks": true,
+				"custom-fields": true,
+				"comments": true,
+				"revisions": true,
+				"post-formats": true,
+				"autosave": true
+			},
+			"taxonomies": [
+				"category",
+				"post_tag",
+				"post_format"
+			],
+			"custom_fields": [],
+			"hierarchical": false,
+			"has_archive": false
+		},
+		{
+			"name": "page",
+			"label": "Pages",
+			"label_singular": "Page",
+			"total": 13,
+			"by_status": {
+				"publish": 13,
+				"draft": 0,
+				"pending": 0,
+				"private": 0,
+				"future": 0
+			},
+			"supports": {
+				"title": true,
+				"editor": [
+					{
+						"notes": true
+					}
+				],
+				"author": true,
+				"thumbnail": true,
+				"page-attributes": true,
+				"custom-fields": true,
+				"comments": true,
+				"revisions": true,
+				"autosave": true
+			},
+			"taxonomies": [],
+			"custom_fields": [],
+			"hierarchical": true,
+			"has_archive": false
+		},
+		{
+			"name": "service",
+			"label": "Services",
+			"label_singular": "Service",
+			"total": 8,
+			"by_status": {
+				"publish": 8,
+				"draft": 0,
+				"pending": 0,
+				"private": 0,
+				"future": 0
+			},
+			"supports": {
+				"title": true,
+				"editor": true,
+				"excerpt": true,
+				"thumbnail": true,
+				"custom-fields": true,
+				"autosave": true
+			},
+			"taxonomies": [
+				"service_area"
+			],
+			"custom_fields": [
+				{
+					"key": "tagline",
+					"count": 8,
+					"inferred_type": "string",
+					"sample": "Leak repair without the wait"
+				},
+				{
+					"key": "hero_image",
+					"count": 8,
+					"inferred_type": "reference",
+					"sample": "8"
+				},
+				{
+					"key": "related_services",
+					"count": 8,
+					"inferred_type": "json",
+					"sample": "a:2:{i:0;s:2:\"45\";i:1;s:2:\"46\";}"
+				},
+				{
+					"key": "faq_0_question",
+					"count": 8,
+					"inferred_type": "string",
+					"sample": "Question 0 about Leak repair?"
+				},
+				{
+					"key": "faq_0_answer",
+					"count": 8,
+					"inferred_type": "string",
+					"sample": "Answer 0."
+				},
+				{
+					"key": "faq",
+					"count": 8,
+					"inferred_type": "integer",
+					"sample": "1"
+				},
+				{
+					"key": "faq_1_question",
+					"count": 5,
+					"inferred_type": "string",
+					"sample": "Question 1 about Water heater service?"
+				},
+				{
+					"key": "faq_1_answer",
+					"count": 5,
+					"inferred_type": "string",
+					"sample": "Answer 1."
+				},
+				{
+					"key": "faq_2_question",
+					"count": 2,
+					"inferred_type": "string",
+					"sample": "Question 2 about Drywall patching?"
+				},
+				{
+					"key": "faq_2_answer",
+					"count": 2,
+					"inferred_type": "string",
+					"sample": "Answer 2."
+				}
+			],
+			"hierarchical": false,
+			"has_archive": true
+		},
+		{
+			"name": "team",
+			"label": "Team",
+			"label_singular": "Team member",
+			"total": 5,
+			"by_status": {
+				"publish": 5,
+				"draft": 0,
+				"pending": 0,
+				"private": 0,
+				"future": 0
+			},
+			"supports": {
+				"title": true,
+				"editor": true,
+				"thumbnail": true,
+				"custom-fields": true,
+				"autosave": true
+			},
+			"taxonomies": [],
+			"custom_fields": [
+				{
+					"key": "job_title",
+					"count": 5,
+					"inferred_type": "string",
+					"sample": "Owner"
+				},
+				{
+					"key": "headshot",
+					"count": 5,
+					"inferred_type": "integer",
+					"sample": "7"
+				},
+				{
+					"key": "team_services",
+					"count": 5,
+					"inferred_type": "json",
+					"sample": "a:2:{i:0;s:2:\"44\";i:1;s:2:\"47\";}"
+				},
+				{
+					"key": "credentials",
+					"count": 5,
+					"inferred_type": "integer",
+					"sample": "1"
+				},
+				{
+					"key": "credentials_0_credential",
+					"count": 3,
+					"inferred_type": "string",
+					"sample": "License 0"
+				},
+				{
+					"key": "credentials_0_year",
+					"count": 3,
+					"inferred_type": "integer",
+					"sample": "2018"
+				}
+			],
+			"hierarchical": false,
+			"has_archive": true
+		}
+	],
+	"taxonomies": [
+		{
+			"name": "category",
+			"label": "Categories",
+			"hierarchical": true,
+			"term_count": 1,
+			"object_types": [
+				"post"
+			]
+		},
+		{
+			"name": "post_tag",
+			"label": "Tags",
+			"hierarchical": false,
+			"term_count": 0,
+			"object_types": [
+				"post"
+			]
+		},
+		{
+			"name": "post_format",
+			"label": "Formats",
+			"hierarchical": false,
+			"term_count": 0,
+			"object_types": [
+				"post"
+			]
+		},
+		{
+			"name": "service_area",
+			"label": "Service areas",
+			"hierarchical": true,
+			"term_count": 4,
+			"object_types": [
+				"service"
+			]
+		}
+	],
+	"custom_fields": [],
+	"authors": [
+		{
+			"id": 2,
+			"login": "dana-whitlock",
+			"email": "dana-whitlock@example.com",
+			"display_name": "Dana Whitlock",
+			"post_count": "3"
+		}
+	],
+	"attachments": {
+		"count": 6,
+		"by_type": {
+			"image": 6
+		}
+	},
+	"acf": [
+		{
+			"key": "group_wpm_service",
+			"title": "Service details",
+			"location": [
+				[
+					{
+						"param": "post_type",
+						"operator": "==",
+						"value": "service"
+					}
+				]
+			],
+			"fields": [
+				{
+					"key": "field_wpm_tagline",
+					"name": "tagline",
+					"label": "Tagline",
+					"type": "text",
+					"required": false
+				},
+				{
+					"key": "field_wpm_hero",
+					"name": "hero_image",
+					"label": "Hero image",
+					"type": "image",
+					"required": false
+				},
+				{
+					"key": "field_wpm_related",
+					"name": "related_services",
+					"label": "Related services",
+					"type": "relationship",
+					"required": false
+				},
+				{
+					"key": "field_wpm_warranty",
+					"name": "warranty_note",
+					"label": "Warranty note",
+					"type": "textarea",
+					"required": false
+				},
+				{
+					"key": "field_wpm_faq",
+					"name": "faq",
+					"label": "Questions",
+					"type": "repeater",
+					"required": false
+				}
+			]
+		},
+		{
+			"key": "group_wpm_team",
+			"title": "Team profile",
+			"location": [
+				[
+					{
+						"param": "post_type",
+						"operator": "==",
+						"value": "team"
+					}
+				]
+			],
+			"fields": [
+				{
+					"key": "field_wpm_job",
+					"name": "job_title",
+					"label": "Job title",
+					"type": "text",
+					"required": false
+				},
+				{
+					"key": "field_wpm_headshot",
+					"name": "headshot",
+					"label": "Headshot",
+					"type": "image",
+					"required": false
+				},
+				{
+					"key": "field_wpm_team_services",
+					"name": "team_services",
+					"label": "Services",
+					"type": "relationship",
+					"required": false
+				},
+				{
+					"key": "field_wpm_creds",
+					"name": "credentials",
+					"label": "Credentials",
+					"type": "repeater",
+					"required": false
+				}
+			]
+		}
+	]
+}

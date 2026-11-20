@@ -1,0 +1,10 @@
+[
+ {
+  "id": 10,
+  "count": 150,
+  "name": "Gear",
+  "slug": "gear",
+  "link": "http://localhost:4701/tag/gear/",
+  "taxonomy": "post_tag"
+ }
+]

@@ -1,0 +1,13 @@
+{
+	"name": "wp-esc-emdash-proof",
+	"private": true,
+	"type": "module",
+	"dependencies": {
+		"@astrojs/node": "*",
+		"@astrojs/react": "*",
+		"astro": "*",
+		"emdash": "*",
+		"react": "*",
+		"react-dom": "*"
+	}
+}

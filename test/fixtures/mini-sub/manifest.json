@@ -1,0 +1,253 @@
+{
+	"origin": "http://localhost:4702",
+	"entries": [
+		{
+			"method": "GET",
+			"path": "/site/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8"
+			},
+			"body": "bodies/001.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-json/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/json; charset=UTF-8"
+			},
+			"body": "bodies/002.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-json/wp/v2/types",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/json; charset=UTF-8"
+			},
+			"body": "bodies/003.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-json/wp/v2/taxonomies",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/json; charset=UTF-8"
+			},
+			"body": "bodies/004.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-json/wp/v2/posts?per_page=100&page=1",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/json; charset=UTF-8",
+				"x-wp-total": "1",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/005.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-json/wp/v2/pages?per_page=100&page=1",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/json; charset=UTF-8",
+				"x-wp-total": "4",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/006.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-json/wp/v2/services?per_page=100&page=1",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/json; charset=UTF-8",
+				"x-wp-total": "2",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/007.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-json/wp/v2/media?per_page=100&page=1",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/json; charset=UTF-8",
+				"x-wp-total": "0",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/008.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-json/wp/v2/blocks?per_page=100&page=1",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/json; charset=UTF-8",
+				"x-wp-total": "0",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/009.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-json/wp/v2/categories?per_page=100&page=1",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/json; charset=UTF-8",
+				"x-wp-total": "1",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/010.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-json/wp/v2/tags?per_page=100&page=1",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/json; charset=UTF-8",
+				"x-wp-total": "0",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/011.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-json/wp/v2/service_area?per_page=100&page=1",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/json; charset=UTF-8",
+				"x-wp-total": "1",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/012.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-json/wp/v2/users?per_page=100&page=1",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/json; charset=UTF-8",
+				"x-wp-total": "1",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/013.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-sitemap.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/xml; charset=UTF-8"
+			},
+			"body": "bodies/014.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-sitemap-posts-post-1.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/xml; charset=UTF-8"
+			},
+			"body": "bodies/015.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-sitemap-posts-page-1.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/xml; charset=UTF-8"
+			},
+			"body": "bodies/016.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-sitemap-posts-service-1.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/xml; charset=UTF-8"
+			},
+			"body": "bodies/017.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-sitemap-posts-team-1.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/xml; charset=UTF-8"
+			},
+			"body": "bodies/018.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-sitemap-taxonomies-service_area-1.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/xml; charset=UTF-8"
+			},
+			"body": "bodies/019.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/wp-sitemap-users-1.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/xml; charset=UTF-8"
+			},
+			"body": "bodies/020.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/team/ana/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8"
+			},
+			"body": "bodies/021.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/team/ben/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8"
+			},
+			"body": "bodies/022.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/site/service/plumbing/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8"
+			},
+			"body": "bodies/023.txt"
+		}
+	]
+}

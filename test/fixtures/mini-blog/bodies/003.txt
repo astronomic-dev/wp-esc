@@ -1,0 +1,39 @@
+{
+ "post": {
+  "name": "Posts",
+  "slug": "post",
+  "hierarchical": false,
+  "rest_base": "posts",
+  "rest_namespace": "wp/v2",
+  "taxonomies": [
+   "category",
+   "post_tag"
+  ]
+ },
+ "page": {
+  "name": "Pages",
+  "slug": "page",
+  "hierarchical": true,
+  "rest_base": "pages",
+  "rest_namespace": "wp/v2",
+  "taxonomies": []
+ },
+ "attachment": {
+  "name": "Media",
+  "slug": "attachment",
+  "hierarchical": false,
+  "rest_base": "media",
+  "rest_namespace": "wp/v2",
+  "taxonomies": []
+ },
+ "wp_block": {
+  "name": "Patterns",
+  "slug": "wp_block",
+  "hierarchical": false,
+  "rest_base": "blocks",
+  "rest_namespace": "wp/v2",
+  "taxonomies": [
+   "wp_pattern_category"
+  ]
+ }
+}

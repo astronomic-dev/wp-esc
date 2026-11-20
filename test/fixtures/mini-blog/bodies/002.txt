@@ -1,0 +1,14 @@
+{
+ "name": "Mini Blog",
+ "description": "Short notes",
+ "url": "http://localhost:4701",
+ "home": "http://localhost:4701",
+ "namespaces": [
+  "oembed/1.0",
+  "wp/v2",
+  "wp-site-health/v1",
+  "yoast/v1",
+  "contact-form-7/v1"
+ ],
+ "routes": {}
+}

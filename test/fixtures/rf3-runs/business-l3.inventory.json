@@ -1,0 +1,1911 @@
+{
+	"version": 1,
+	"authors": {
+		"count": 1,
+		"source": "wxr"
+	},
+	"blocks": [
+		{
+			"count": 29,
+			"name": "core/paragraph",
+			"samples": [
+				"http://localhost:4602/site/",
+				"http://localhost:4602/site/company/",
+				"http://localhost:4602/site/company/about-us/",
+				"http://localhost:4602/site/how-to-winterize-an-outdoor-faucet/",
+				"http://localhost:4602/site/spring-checklist-for-older-homes/",
+				"http://localhost:4602/site/we-now-serve-bayview/",
+				"http://localhost:4602/site/what-we-do/",
+				"http://localhost:4602/site/what-we-do/residential/"
+			]
+		},
+		{
+			"count": 1,
+			"name": "core/shortcode",
+			"samples": [
+				"http://localhost:4602/site/contact/"
+			]
+		}
+	],
+	"builders": [],
+	"comments": {
+		"count": 0,
+		"source": "wxr"
+	},
+	"coverage": [
+		{
+			"area": "acf",
+			"detail": "Read the custom field settings in the export (2 field groups, 13 fields). Field types come from these settings.",
+			"source": "wxr",
+			"status": "complete"
+		},
+		{
+			"area": "comments",
+			"detail": "No comments in the export.",
+			"source": "wxr",
+			"status": "complete"
+		},
+		{
+			"area": "html",
+			"detail": "Read a sample of 13 pages: the home page and up to 3 pages of each type, at most 30. Pages outside the sample are not read. Builders, shortcodes and blocks are counted from the REST content of 24 items, not from this sample.",
+			"source": "html",
+			"status": "partial"
+		},
+		{
+			"area": "menus",
+			"detail": "Read 1 menu with 4 items. This is a block theme. The menu shown may be a Navigation block (1 wp_navigation item on the site) or an automatic page list, not a classic menu.",
+			"source": "auth",
+			"status": "partial"
+		},
+		{
+			"area": "plugins",
+			"detail": "Read the full plugin list: 3 plugins, 3 active.",
+			"source": "auth",
+			"status": "complete"
+		},
+		{
+			"area": "rest",
+			"detail": "Read 4 post types with the application password. Read 6 namespaces; 8 lists paged to the end.",
+			"source": "auth",
+			"status": "complete"
+		},
+		{
+			"area": "settings",
+			"detail": "Read the site title, tagline, front page and posts page only. The home page is page 13. The posts page is page 25. Other settings are not read. The REST API does not show the permalink structure.",
+			"source": "auth",
+			"status": "partial"
+		},
+		{
+			"area": "sitemaps",
+			"detail": "Read 7 sitemaps listed in the index at /site/wp-sitemap.xml.",
+			"source": "sitemap",
+			"status": "complete"
+		},
+		{
+			"area": "taxonomy:category",
+			"detail": "1 term.",
+			"source": "rest",
+			"status": "complete"
+		},
+		{
+			"area": "taxonomy:post_tag",
+			"detail": "0 terms.",
+			"source": "rest",
+			"status": "complete"
+		},
+		{
+			"area": "taxonomy:service_area",
+			"detail": "4 terms.",
+			"source": "rest",
+			"status": "complete"
+		},
+		{
+			"area": "type:acf-field",
+			"detail": "13 items in the export (13 published). This is plugin or site data, not content; only the count is kept.",
+			"source": "wxr",
+			"status": "complete"
+		},
+		{
+			"area": "type:acf-field-group",
+			"detail": "2 items in the export (2 published). This is plugin or site data, not content; only the count is kept.",
+			"source": "wxr",
+			"status": "complete"
+		},
+		{
+			"area": "type:attachment",
+			"detail": "Media items listed; files are not downloaded.",
+			"source": "rest",
+			"status": "partial"
+		},
+		{
+			"area": "type:flamingo_contact",
+			"detail": "5 items in the export (5 published). This is plugin or site data, not content; only the count is kept.",
+			"source": "wxr",
+			"status": "complete"
+		},
+		{
+			"area": "type:flamingo_inbound",
+			"detail": "3 items in the export (3 published). These are Contact Form 7 messages. They are in this export file, but EmDash does not import them. Keep the file if you need them.",
+			"source": "wxr",
+			"status": "complete"
+		},
+		{
+			"area": "type:page",
+			"detail": "Read 13 entries in edit context, drafts and private ones too. 13 items in the export, every status (13 published), with their fields.",
+			"source": "auth",
+			"status": "complete"
+		},
+		{
+			"area": "type:post",
+			"detail": "Read 3 entries in edit context, drafts and private ones too. 3 items in the export, every status (3 published), with their fields.",
+			"source": "auth",
+			"status": "complete"
+		},
+		{
+			"area": "type:service",
+			"detail": "Read 8 entries in edit context, drafts and private ones too. 8 items in the export, every status (8 published), with their fields.",
+			"source": "auth",
+			"status": "complete"
+		},
+		{
+			"area": "type:team",
+			"detail": "5 items in the export, every status (5 published), with their fields.",
+			"source": "wxr",
+			"status": "complete"
+		},
+		{
+			"area": "type:wp_global_styles",
+			"detail": "1 item in the export (1 published). This is plugin or site data, not content; only the count is kept.",
+			"source": "wxr",
+			"status": "complete"
+		},
+		{
+			"area": "type:wp_navigation",
+			"detail": "Read 1 entry in edit context, drafts and private ones too. This is plugin or site data, not content; only the count is kept.",
+			"source": "auth",
+			"status": "complete"
+		},
+		{
+			"area": "type:wpcf7_contact_form",
+			"detail": "1 item in the export (1 published). This is plugin or site data, not content; only the count is kept.",
+			"source": "wxr",
+			"status": "complete"
+		},
+		{
+			"area": "users",
+			"detail": "The site has 2 user accounts. Names and emails are not read. The authors count holds only people who wrote content, so it can be lower.",
+			"source": "auth",
+			"status": "complete"
+		},
+		{
+			"area": "wxr",
+			"detail": "Read the export: 64 items, 315 meta rows. Media files, site options, users and plugin tables are not in the export.",
+			"source": "wxr",
+			"status": "complete"
+		}
+	],
+	"levels": [
+		1,
+		2,
+		3
+	],
+	"media": {
+		"count": 6,
+		"source": "wxr"
+	},
+	"menus": [
+		{
+			"id": 6,
+			"items": [
+				{
+					"id": 63,
+					"order": 0,
+					"target": {
+						"id": 14,
+						"kind": "page",
+						"type": "page"
+					},
+					"title": "What we do",
+					"url": "http://localhost:4602/site/what-we-do/"
+				},
+				{
+					"id": 64,
+					"order": 2,
+					"parent": 63,
+					"target": {
+						"id": 15,
+						"kind": "page",
+						"type": "page"
+					},
+					"title": "Residential",
+					"url": "http://localhost:4602/site/what-we-do/residential/"
+				},
+				{
+					"id": 65,
+					"order": 3,
+					"target": {
+						"kind": "archive",
+						"type": "service"
+					},
+					"title": "All services",
+					"url": "http://localhost:4602/site/services/"
+				},
+				{
+					"id": 66,
+					"order": 4,
+					"target": {
+						"id": 24,
+						"kind": "page",
+						"type": "page"
+					},
+					"title": "Contact",
+					"url": "http://localhost:4602/site/contact/"
+				}
+			],
+			"name": "Primary",
+			"source": "auth"
+		}
+	],
+	"permalinks": {
+		"confidence": "medium",
+		"source": "wxr",
+		"structure": "/%postname%/"
+	},
+	"plugins": [
+		{
+			"version": "6.2.4",
+			"active": true,
+			"category": "forms",
+			"confidence": "high",
+			"name": "Contact Form 7",
+			"slug": "contact-form-7",
+			"source": "auth"
+		},
+		{
+			"version": "2.6.4",
+			"active": true,
+			"category": "form-storage",
+			"confidence": "high",
+			"name": "Flamingo",
+			"slug": "flamingo",
+			"source": "auth"
+		},
+		{
+			"version": "6.9.7",
+			"active": true,
+			"category": "fields",
+			"confidence": "high",
+			"name": "Secure Custom Fields",
+			"slug": "secure-custom-fields",
+			"source": "auth"
+		}
+	],
+	"shortcodes": [
+		{
+			"count": 1,
+			"name": "contact-form-7",
+			"samples": [
+				"http://localhost:4602/site/contact/"
+			]
+		}
+	],
+	"site": {
+		"apiRoot": "http://localhost:4602/site/wp-json/",
+		"locales": [
+			{
+				"code": "en-US",
+				"default": true
+			}
+		],
+		"name": "Harbor Light Home Services",
+		"tagline": "Repairs and upkeep for homes and shops",
+		"theme": "twentytwentyfive",
+		"url": "http://localhost:4602/site/",
+		"wpVersion": "7.1.4"
+	},
+	"storedElsewhere": [],
+	"taxonomies": [
+		{
+			"count": 1,
+			"hierarchical": true,
+			"label": "Categories",
+			"slug": "category",
+			"sources": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"types": [
+				"post"
+			]
+		},
+		{
+			"count": 0,
+			"hierarchical": false,
+			"label": "Tags",
+			"slug": "post_tag",
+			"sources": [
+				"rest"
+			],
+			"types": [
+				"post"
+			]
+		},
+		{
+			"count": 4,
+			"hierarchical": true,
+			"label": "Service areas",
+			"slug": "service_area",
+			"sources": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"types": [
+				"service"
+			]
+		}
+	],
+	"types": [
+		{
+			"byStatus": {
+				"publish": 13
+			},
+			"count": 13,
+			"fields": [],
+			"slug": "acf-field",
+			"sources": [
+				"wxr"
+			],
+			"taxonomies": []
+		},
+		{
+			"byStatus": {
+				"publish": 2
+			},
+			"count": 2,
+			"fields": [],
+			"slug": "acf-field-group",
+			"sources": [
+				"wxr"
+			],
+			"taxonomies": []
+		},
+		{
+			"byStatus": {
+				"publish": 5
+			},
+			"count": 5,
+			"fields": [],
+			"slug": "flamingo_contact",
+			"sources": [
+				"wxr"
+			],
+			"taxonomies": []
+		},
+		{
+			"byStatus": {
+				"publish": 3
+			},
+			"count": 3,
+			"fields": [],
+			"slug": "flamingo_inbound",
+			"sources": [
+				"wxr"
+			],
+			"taxonomies": []
+		},
+		{
+			"byStatus": {
+				"publish": 13
+			},
+			"count": 13,
+			"fields": [
+				{
+					"confidence": "high",
+					"filled": 0,
+					"key": "_thumbnail_id",
+					"label": "Featured image",
+					"note": "The export has no value for it, so no item fills it. The REST API value was not stored data.",
+					"owner": "core",
+					"samples": [],
+					"shape": "image",
+					"source": "wxr",
+					"total": 13
+				},
+				{
+					"confidence": "high",
+					"filled": 0,
+					"key": "footnotes",
+					"note": "The export has no value for it, so no item fills it. The REST API value was not stored data.",
+					"owner": "meta",
+					"samples": [],
+					"shape": "unknown",
+					"source": "wxr",
+					"total": 13
+				},
+				{
+					"confidence": "high",
+					"filled": 13,
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"samples": [
+						"<!-- wp:paragraph --> <p>Repairs and upkeep for homes and shops on the coast.</p> <!-- /wp:paragraph -->",
+						"<!-- wp:paragraph --> <p>Residential at Harbor Light.</p> <!-- /wp:paragraph -->",
+						"<!-- wp:paragraph --> <p>What we do at Harbor Light.</p> <!-- /wp:paragraph -->"
+					],
+					"shape": "html",
+					"source": "wxr",
+					"total": 13
+				},
+				{
+					"confidence": "high",
+					"filled": 0,
+					"key": "post_excerpt",
+					"label": "Excerpt",
+					"note": "The export has no value for it, so no item fills it. The REST API value was not stored data.",
+					"owner": "core",
+					"samples": [],
+					"shape": "html",
+					"source": "wxr",
+					"total": 13
+				},
+				{
+					"confidence": "high",
+					"filled": 13,
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"samples": [
+						"Home",
+						"Residential",
+						"What we do"
+					],
+					"shape": "text",
+					"source": "wxr",
+					"total": 13
+				}
+			],
+			"hierarchical": true,
+			"inRest": true,
+			"label": "Pages",
+			"restBase": "pages",
+			"slug": "page",
+			"sources": [
+				"auth",
+				"html",
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"taxonomies": []
+		},
+		{
+			"byStatus": {
+				"publish": 3
+			},
+			"count": 3,
+			"fields": [
+				{
+					"confidence": "high",
+					"filled": 0,
+					"key": "_thumbnail_id",
+					"label": "Featured image",
+					"note": "The export has no value for it, so no item fills it. The REST API value was not stored data.",
+					"owner": "core",
+					"samples": [],
+					"shape": "image",
+					"source": "wxr",
+					"total": 3
+				},
+				{
+					"confidence": "high",
+					"filled": 0,
+					"key": "footnotes",
+					"note": "The export has no value for it, so no item fills it. The REST API value was not stored data.",
+					"owner": "meta",
+					"samples": [],
+					"shape": "unknown",
+					"source": "wxr",
+					"total": 3
+				},
+				{
+					"confidence": "high",
+					"filled": 3,
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"samples": [
+						"<!-- wp:paragraph --> <p>How to winterize an outdoor faucet.</p> <!-- /wp:paragraph -->",
+						"<!-- wp:paragraph --> <p>Spring checklist for older homes.</p> <!-- /wp:paragraph -->",
+						"<!-- wp:paragraph --> <p>We now serve Bayview.</p> <!-- /wp:paragraph -->"
+					],
+					"shape": "html",
+					"source": "wxr",
+					"total": 3
+				},
+				{
+					"confidence": "high",
+					"filled": 0,
+					"key": "post_excerpt",
+					"label": "Excerpt",
+					"note": "The export has no value for it, so no item fills it. The REST API value was not stored data.",
+					"owner": "core",
+					"samples": [],
+					"shape": "html",
+					"source": "wxr",
+					"total": 3
+				},
+				{
+					"confidence": "high",
+					"filled": 3,
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"samples": [
+						"How to winterize an outdoor faucet",
+						"Spring checklist for older homes",
+						"We now serve Bayview"
+					],
+					"shape": "text",
+					"source": "wxr",
+					"total": 3
+				}
+			],
+			"hierarchical": false,
+			"inRest": true,
+			"label": "Posts",
+			"restBase": "posts",
+			"slug": "post",
+			"sources": [
+				"auth",
+				"html",
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"taxonomies": [
+				"category",
+				"post_tag"
+			]
+		},
+		{
+			"byStatus": {
+				"publish": 8
+			},
+			"count": 8,
+			"fields": [
+				{
+					"confidence": "high",
+					"filled": 8,
+					"key": "_thumbnail_id",
+					"label": "Featured image",
+					"owner": "core",
+					"samples": [
+						"7",
+						"8",
+						"9"
+					],
+					"shape": "image",
+					"source": "wxr",
+					"total": 8
+				},
+				{
+					"confidence": "low",
+					"filled": 8,
+					"group": "Service details",
+					"key": "faq",
+					"label": "Questions",
+					"order": 4,
+					"owner": "acf",
+					"samples": [
+						"1",
+						"2",
+						"3"
+					],
+					"shape": "repeater",
+					"source": "wxr",
+					"subfields": [
+						{
+							"confidence": "high",
+							"filled": 15,
+							"key": "answer",
+							"label": "Answer",
+							"order": 1,
+							"owner": "acf",
+							"samples": [
+								"Answer 0.",
+								"Answer 1.",
+								"Answer 2."
+							],
+							"shape": "text",
+							"source": "wxr",
+							"total": 15
+						},
+						{
+							"confidence": "high",
+							"filled": 15,
+							"key": "question",
+							"label": "Question",
+							"order": 0,
+							"owner": "acf",
+							"samples": [
+								"Question 0 about Leak repair?",
+								"Question 0 about Water heater service?",
+								"Question 1 about Water heater service?"
+							],
+							"shape": "text",
+							"source": "wxr",
+							"total": 15
+						}
+					],
+					"total": 8
+				},
+				{
+					"confidence": "high",
+					"filled": 8,
+					"group": "Service details",
+					"key": "hero_image",
+					"label": "Hero image",
+					"order": 1,
+					"owner": "acf",
+					"samples": [
+						"10",
+						"8",
+						"9"
+					],
+					"shape": "image",
+					"source": "wxr",
+					"total": 8
+				},
+				{
+					"confidence": "high",
+					"filled": 8,
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"samples": [
+						"<!-- wp:paragraph --> <p>Drywall patching for the Harbor Light area.</p> <!-- /wp:paragraph -->",
+						"<!-- wp:paragraph --> <p>Leak repair for the Harbor Light area.</p> <!-- /wp:paragraph -->",
+						"<!-- wp:paragraph --> <p>Water heater service for the Harbor Light area.</p> <!-- /wp:paragraph -->"
+					],
+					"shape": "html",
+					"source": "wxr",
+					"total": 8
+				},
+				{
+					"confidence": "high",
+					"filled": 8,
+					"key": "post_excerpt",
+					"label": "Excerpt",
+					"owner": "core",
+					"samples": [
+						"Drywall patching, done right.",
+						"Leak repair, done right.",
+						"Water heater service, done right."
+					],
+					"shape": "text",
+					"source": "wxr",
+					"total": 8
+				},
+				{
+					"confidence": "high",
+					"filled": 8,
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"samples": [
+						"Drywall patching",
+						"Leak repair",
+						"Water heater service"
+					],
+					"shape": "text",
+					"source": "wxr",
+					"total": 8
+				},
+				{
+					"confidence": "low",
+					"filled": 8,
+					"group": "Service details",
+					"key": "related_services",
+					"label": "Related services",
+					"note": "Values are WordPress post IDs.",
+					"order": 2,
+					"owner": "acf",
+					"samples": [
+						"a:2:{i:0;s:2:\"45\";i:1;s:2:\"46\";}",
+						"a:2:{i:0;s:2:\"46\";i:1;s:2:\"47\";}",
+						"a:2:{i:0;s:2:\"47\";i:1;s:2:\"48\";}"
+					],
+					"shape": "relation",
+					"source": "wxr",
+					"targets": [
+						"service"
+					],
+					"total": 8
+				},
+				{
+					"confidence": "high",
+					"filled": 8,
+					"group": "Service details",
+					"key": "tagline",
+					"label": "Tagline",
+					"order": 0,
+					"owner": "acf",
+					"samples": [
+						"Drywall patching without the wait",
+						"Leak repair without the wait",
+						"Water heater service without the wait"
+					],
+					"shape": "text",
+					"source": "wxr",
+					"total": 8
+				},
+				{
+					"confidence": "low",
+					"filled": 1,
+					"group": "Service details",
+					"key": "warranty_note",
+					"label": "Warranty note",
+					"note": "Filled on 1 of 8.",
+					"order": 3,
+					"owner": "acf",
+					"samples": [
+						"Parts and labor covered for one year."
+					],
+					"shape": "text",
+					"source": "wxr",
+					"total": 8
+				}
+			],
+			"hierarchical": false,
+			"inRest": true,
+			"label": "Services",
+			"restBase": "services",
+			"slug": "service",
+			"sources": [
+				"auth",
+				"html",
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"taxonomies": [
+				"service_area"
+			]
+		},
+		{
+			"byStatus": {
+				"publish": 5
+			},
+			"count": 5,
+			"fields": [
+				{
+					"confidence": "low",
+					"filled": 3,
+					"group": "Team profile",
+					"key": "credentials",
+					"label": "Credentials",
+					"order": 3,
+					"owner": "acf",
+					"samples": [
+						"1",
+						"2"
+					],
+					"shape": "repeater",
+					"source": "wxr",
+					"subfields": [
+						{
+							"confidence": "high",
+							"filled": 4,
+							"key": "credential",
+							"label": "Credential",
+							"order": 0,
+							"owner": "acf",
+							"samples": [
+								"License 0",
+								"License 1"
+							],
+							"shape": "text",
+							"source": "wxr",
+							"total": 4
+						},
+						{
+							"confidence": "high",
+							"filled": 4,
+							"key": "year",
+							"label": "Year",
+							"order": 1,
+							"owner": "acf",
+							"samples": [
+								"2018",
+								"2019"
+							],
+							"shape": "number",
+							"source": "wxr",
+							"total": 4
+						}
+					],
+					"total": 5
+				},
+				{
+					"confidence": "high",
+					"filled": 5,
+					"group": "Team profile",
+					"key": "headshot",
+					"label": "Headshot",
+					"order": 1,
+					"owner": "acf",
+					"samples": [
+						"7",
+						"8",
+						"9"
+					],
+					"shape": "image",
+					"source": "wxr",
+					"total": 5
+				},
+				{
+					"confidence": "high",
+					"filled": 5,
+					"group": "Team profile",
+					"key": "job_title",
+					"label": "Job title",
+					"order": 0,
+					"owner": "acf",
+					"samples": [
+						"Electrician",
+						"Lead technician",
+						"Owner"
+					],
+					"shape": "text",
+					"source": "wxr",
+					"total": 5
+				},
+				{
+					"confidence": "high",
+					"filled": 5,
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"samples": [
+						"<!-- wp:paragraph --> <p>Hana Sato has been with Harbor Light since 2017.</p> <!-- /wp:paragraph -->",
+						"<!-- wp:paragraph --> <p>Ines Duarte has been with Harbor Light since 2015.</p> <!-- /wp:paragraph -->",
+						"<!-- wp:paragraph --> <p>Marcus Bell has been with Harbor Light since 2016.</p> <!-- /wp:paragraph -->"
+					],
+					"shape": "html",
+					"source": "wxr",
+					"total": 5
+				},
+				{
+					"confidence": "high",
+					"filled": 5,
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"samples": [
+						"Hana Sato",
+						"Ines Duarte",
+						"Marcus Bell"
+					],
+					"shape": "text",
+					"source": "wxr",
+					"total": 5
+				},
+				{
+					"confidence": "low",
+					"filled": 5,
+					"group": "Team profile",
+					"key": "team_services",
+					"label": "Services",
+					"note": "Values are WordPress post IDs.",
+					"order": 2,
+					"owner": "acf",
+					"samples": [
+						"a:2:{i:0;s:2:\"44\";i:1;s:2:\"47\";}",
+						"a:2:{i:0;s:2:\"45\";i:1;s:2:\"48\";}",
+						"a:2:{i:0;s:2:\"46\";i:1;s:2:\"49\";}"
+					],
+					"shape": "relation",
+					"source": "wxr",
+					"targets": [
+						"service"
+					],
+					"total": 5
+				}
+			],
+			"inRest": false,
+			"slug": "team",
+			"sources": [
+				"html",
+				"sitemap",
+				"wxr"
+			],
+			"taxonomies": []
+		},
+		{
+			"byStatus": {
+				"publish": 1
+			},
+			"count": 1,
+			"fields": [],
+			"slug": "wp_global_styles",
+			"sources": [
+				"wxr"
+			],
+			"taxonomies": []
+		},
+		{
+			"byStatus": {
+				"publish": 1
+			},
+			"count": 1,
+			"fields": [],
+			"hierarchical": false,
+			"inRest": true,
+			"label": "Navigation Menus",
+			"restBase": "navigation",
+			"slug": "wp_navigation",
+			"sources": [
+				"auth"
+			],
+			"taxonomies": []
+		},
+		{
+			"byStatus": {
+				"publish": 1
+			},
+			"count": 1,
+			"fields": [],
+			"slug": "wpcf7_contact_form",
+			"sources": [
+				"wxr"
+			],
+			"taxonomies": []
+		}
+	],
+	"urls": [
+		{
+			"evidence": "resolved",
+			"id": 13,
+			"kind": "home",
+			"path": "home",
+			"slug": "home",
+			"source": [
+				"auth",
+				"html",
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/"
+		},
+		{
+			"evidence": "listed",
+			"kind": "query",
+			"slug": "dana-whitlock",
+			"source": [
+				"rest"
+			],
+			"url": "http://localhost:4602/site/?author=2"
+		},
+		{
+			"evidence": "listed",
+			"kind": "query",
+			"source": [
+				"rest"
+			],
+			"taxonomy": "category",
+			"termId": 1,
+			"url": "http://localhost:4602/site/?cat=1"
+		},
+		{
+			"evidence": "listed",
+			"id": 26,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "post",
+			"url": "http://localhost:4602/site/?p=26"
+		},
+		{
+			"evidence": "listed",
+			"id": 27,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "post",
+			"url": "http://localhost:4602/site/?p=27"
+		},
+		{
+			"evidence": "listed",
+			"id": 28,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "post",
+			"url": "http://localhost:4602/site/?p=28"
+		},
+		{
+			"evidence": "listed",
+			"id": 44,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=44"
+		},
+		{
+			"evidence": "listed",
+			"id": 45,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=45"
+		},
+		{
+			"evidence": "listed",
+			"id": 46,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=46"
+		},
+		{
+			"evidence": "listed",
+			"id": 47,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=47"
+		},
+		{
+			"evidence": "listed",
+			"id": 48,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=48"
+		},
+		{
+			"evidence": "listed",
+			"id": 49,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=49"
+		},
+		{
+			"evidence": "listed",
+			"id": 50,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=50"
+		},
+		{
+			"evidence": "listed",
+			"id": 51,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/?p=51"
+		},
+		{
+			"evidence": "listed",
+			"id": 52,
+			"kind": "query",
+			"source": [
+				"wxr"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/?p=52"
+		},
+		{
+			"evidence": "listed",
+			"id": 53,
+			"kind": "query",
+			"source": [
+				"wxr"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/?p=53"
+		},
+		{
+			"evidence": "listed",
+			"id": 54,
+			"kind": "query",
+			"source": [
+				"wxr"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/?p=54"
+		},
+		{
+			"evidence": "listed",
+			"id": 55,
+			"kind": "query",
+			"source": [
+				"wxr"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/?p=55"
+		},
+		{
+			"evidence": "listed",
+			"id": 56,
+			"kind": "query",
+			"source": [
+				"wxr"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/?p=56"
+		},
+		{
+			"evidence": "listed",
+			"id": 13,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=13"
+		},
+		{
+			"evidence": "listed",
+			"id": 14,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=14"
+		},
+		{
+			"evidence": "listed",
+			"id": 15,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=15"
+		},
+		{
+			"evidence": "listed",
+			"id": 16,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=16"
+		},
+		{
+			"evidence": "listed",
+			"id": 17,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=17"
+		},
+		{
+			"evidence": "listed",
+			"id": 18,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=18"
+		},
+		{
+			"evidence": "listed",
+			"id": 19,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=19"
+		},
+		{
+			"evidence": "listed",
+			"id": 20,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=20"
+		},
+		{
+			"evidence": "listed",
+			"id": 21,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=21"
+		},
+		{
+			"evidence": "listed",
+			"id": 22,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=22"
+		},
+		{
+			"evidence": "listed",
+			"id": 23,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=23"
+		},
+		{
+			"evidence": "listed",
+			"id": 24,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=24"
+		},
+		{
+			"evidence": "listed",
+			"id": 25,
+			"kind": "query",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/?page_id=25"
+		},
+		{
+			"evidence": "listed",
+			"kind": "author",
+			"slug": "dana-whitlock",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"url": "http://localhost:4602/site/author/dana-whitlock/"
+		},
+		{
+			"count": 3,
+			"evidence": "listed",
+			"kind": "category",
+			"slug": "uncategorized",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"taxonomy": "category",
+			"termId": 1,
+			"url": "http://localhost:4602/site/category/uncategorized/"
+		},
+		{
+			"evidence": "linked",
+			"kind": "feed",
+			"source": [
+				"html"
+			],
+			"url": "http://localhost:4602/site/comments/feed/"
+		},
+		{
+			"evidence": "listed",
+			"id": 20,
+			"kind": "page",
+			"path": "company",
+			"slug": "company",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/company/"
+		},
+		{
+			"evidence": "listed",
+			"id": 21,
+			"kind": "page",
+			"parentId": 20,
+			"path": "company/about-us",
+			"slug": "about-us",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/company/about-us/"
+		},
+		{
+			"evidence": "listed",
+			"id": 22,
+			"kind": "page",
+			"parentId": 21,
+			"path": "company/about-us/history",
+			"slug": "history",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/company/about-us/history/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 23,
+			"kind": "page",
+			"parentId": 20,
+			"path": "company/careers",
+			"slug": "careers",
+			"source": [
+				"html",
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/company/careers/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 24,
+			"kind": "page",
+			"path": "contact",
+			"slug": "contact",
+			"source": [
+				"html",
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/contact/"
+		},
+		{
+			"evidence": "linked",
+			"kind": "feed",
+			"source": [
+				"html"
+			],
+			"url": "http://localhost:4602/site/feed/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 28,
+			"kind": "post",
+			"slug": "how-to-winterize-an-outdoor-faucet",
+			"source": [
+				"html",
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "post",
+			"url": "http://localhost:4602/site/how-to-winterize-an-outdoor-faucet/"
+		},
+		{
+			"evidence": "linked",
+			"kind": "feed",
+			"source": [
+				"html"
+			],
+			"url": "http://localhost:4602/site/how-to-winterize-an-outdoor-faucet/feed/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 25,
+			"kind": "archive",
+			"path": "news",
+			"slug": "news",
+			"source": [
+				"auth",
+				"html",
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "post",
+			"url": "http://localhost:4602/site/news/"
+		},
+		{
+			"count": 3,
+			"evidence": "listed",
+			"kind": "term",
+			"slug": "commercial",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"taxonomy": "service_area",
+			"termId": 3,
+			"url": "http://localhost:4602/site/service-area/commercial/"
+		},
+		{
+			"count": 0,
+			"evidence": "listed",
+			"kind": "term",
+			"slug": "emergency",
+			"source": [
+				"rest"
+			],
+			"taxonomy": "service_area",
+			"termId": 4,
+			"url": "http://localhost:4602/site/service-area/emergency/"
+		},
+		{
+			"count": 4,
+			"evidence": "listed",
+			"kind": "term",
+			"slug": "residential",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"taxonomy": "service_area",
+			"termId": 2,
+			"url": "http://localhost:4602/site/service-area/residential/"
+		},
+		{
+			"count": 1,
+			"evidence": "listed",
+			"kind": "term",
+			"parentId": 4,
+			"path": "emergency/same-day",
+			"slug": "same-day",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"taxonomy": "service_area",
+			"termId": 5,
+			"url": "http://localhost:4602/site/service-area/same-day/"
+		},
+		{
+			"evidence": "listed",
+			"id": 46,
+			"kind": "custom",
+			"slug": "drywall-patching",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/drywall-patching/"
+		},
+		{
+			"evidence": "listed",
+			"file": "http://localhost:4602/site/wp-content/uploads/2026/11/harbor-light-photo-4.png",
+			"id": 10,
+			"kind": "attachment",
+			"parentId": 46,
+			"slug": "harbor-light-photo-4",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4602/site/services/drywall-patching/harbor-light-photo-4/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 50,
+			"kind": "custom",
+			"slug": "gutter-cleaning",
+			"source": [
+				"html",
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/gutter-cleaning/"
+		},
+		{
+			"evidence": "listed",
+			"id": 44,
+			"kind": "custom",
+			"slug": "leak-repair",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/leak-repair/"
+		},
+		{
+			"evidence": "listed",
+			"file": "http://localhost:4602/site/wp-content/uploads/2026/11/harbor-light-photo-2.png",
+			"id": 8,
+			"kind": "attachment",
+			"parentId": 44,
+			"slug": "harbor-light-photo-2",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4602/site/services/leak-repair/harbor-light-photo-2/"
+		},
+		{
+			"evidence": "listed",
+			"id": 48,
+			"kind": "custom",
+			"slug": "lighting-retrofits",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/lighting-retrofits/"
+		},
+		{
+			"evidence": "listed",
+			"file": "http://localhost:4602/site/wp-content/uploads/2026/11/harbor-light-photo-6.png",
+			"id": 12,
+			"kind": "attachment",
+			"parentId": 48,
+			"slug": "harbor-light-photo-6",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4602/site/services/lighting-retrofits/harbor-light-photo-6/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 49,
+			"kind": "custom",
+			"slug": "roof-tarping",
+			"source": [
+				"html",
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/roof-tarping/"
+		},
+		{
+			"evidence": "listed",
+			"file": "http://localhost:4602/site/wp-content/uploads/2026/11/harbor-light-photo-1.png",
+			"id": 7,
+			"kind": "attachment",
+			"parentId": 49,
+			"slug": "harbor-light-photo-1",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4602/site/services/roof-tarping/harbor-light-photo-1/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 51,
+			"kind": "custom",
+			"slug": "snow-removal",
+			"source": [
+				"html",
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/snow-removal/"
+		},
+		{
+			"evidence": "listed",
+			"id": 47,
+			"kind": "custom",
+			"slug": "storefront-doors",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/storefront-doors/"
+		},
+		{
+			"evidence": "listed",
+			"file": "http://localhost:4602/site/wp-content/uploads/2026/11/harbor-light-photo-5.png",
+			"id": 11,
+			"kind": "attachment",
+			"parentId": 47,
+			"slug": "harbor-light-photo-5",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4602/site/services/storefront-doors/harbor-light-photo-5/"
+		},
+		{
+			"evidence": "listed",
+			"id": 45,
+			"kind": "custom",
+			"slug": "water-heater-service",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "service",
+			"url": "http://localhost:4602/site/services/water-heater-service/"
+		},
+		{
+			"evidence": "listed",
+			"file": "http://localhost:4602/site/wp-content/uploads/2026/11/harbor-light-photo-3.png",
+			"id": 9,
+			"kind": "attachment",
+			"parentId": 45,
+			"slug": "harbor-light-photo-3",
+			"source": [
+				"rest",
+				"wxr"
+			],
+			"type": "attachment",
+			"url": "http://localhost:4602/site/services/water-heater-service/harbor-light-photo-3/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 26,
+			"kind": "post",
+			"slug": "spring-checklist-for-older-homes",
+			"source": [
+				"html",
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "post",
+			"url": "http://localhost:4602/site/spring-checklist-for-older-homes/"
+		},
+		{
+			"evidence": "linked",
+			"kind": "feed",
+			"source": [
+				"html"
+			],
+			"url": "http://localhost:4602/site/spring-checklist-for-older-homes/feed/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 54,
+			"kind": "custom",
+			"slug": "hana-sato",
+			"source": [
+				"html",
+				"sitemap",
+				"wxr"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/team/hana-sato/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 52,
+			"kind": "custom",
+			"slug": "ines-duarte",
+			"source": [
+				"html",
+				"sitemap",
+				"wxr"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/team/ines-duarte/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 53,
+			"kind": "custom",
+			"slug": "marcus-bell",
+			"source": [
+				"html",
+				"sitemap",
+				"wxr"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/team/marcus-bell/"
+		},
+		{
+			"evidence": "listed",
+			"id": 55,
+			"kind": "custom",
+			"slug": "owen-price",
+			"source": [
+				"sitemap",
+				"wxr"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/team/owen-price/"
+		},
+		{
+			"evidence": "listed",
+			"id": 56,
+			"kind": "custom",
+			"slug": "rosa-lind",
+			"source": [
+				"sitemap",
+				"wxr"
+			],
+			"type": "team",
+			"url": "http://localhost:4602/site/team/rosa-lind/"
+		},
+		{
+			"evidence": "resolved",
+			"id": 27,
+			"kind": "post",
+			"slug": "we-now-serve-bayview",
+			"source": [
+				"html",
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "post",
+			"url": "http://localhost:4602/site/we-now-serve-bayview/"
+		},
+		{
+			"evidence": "linked",
+			"kind": "feed",
+			"source": [
+				"html"
+			],
+			"url": "http://localhost:4602/site/we-now-serve-bayview/feed/"
+		},
+		{
+			"evidence": "listed",
+			"id": 14,
+			"kind": "page",
+			"path": "what-we-do",
+			"slug": "what-we-do",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/what-we-do/"
+		},
+		{
+			"evidence": "listed",
+			"id": 16,
+			"kind": "page",
+			"parentId": 14,
+			"path": "what-we-do/commercial",
+			"slug": "commercial",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/what-we-do/commercial/"
+		},
+		{
+			"evidence": "listed",
+			"id": 18,
+			"kind": "page",
+			"parentId": 16,
+			"path": "what-we-do/commercial/pricing",
+			"slug": "pricing",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/what-we-do/commercial/pricing/"
+		},
+		{
+			"evidence": "listed",
+			"id": 15,
+			"kind": "page",
+			"parentId": 14,
+			"path": "what-we-do/residential",
+			"slug": "residential",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/what-we-do/residential/"
+		},
+		{
+			"evidence": "listed",
+			"id": 17,
+			"kind": "page",
+			"parentId": 15,
+			"path": "what-we-do/residential/pricing",
+			"slug": "pricing",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/what-we-do/residential/pricing/"
+		},
+		{
+			"evidence": "listed",
+			"id": 19,
+			"kind": "page",
+			"parentId": 15,
+			"path": "what-we-do/residential/repairs",
+			"slug": "repairs",
+			"source": [
+				"rest",
+				"sitemap",
+				"wxr"
+			],
+			"type": "page",
+			"url": "http://localhost:4602/site/what-we-do/residential/repairs/"
+		}
+	]
+}

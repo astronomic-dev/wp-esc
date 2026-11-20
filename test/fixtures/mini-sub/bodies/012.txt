@@ -1,0 +1,10 @@
+[
+ {
+  "id": 30,
+  "count": 1,
+  "name": "North",
+  "slug": "north",
+  "link": "http://localhost:4702/site/service_area/north/",
+  "taxonomy": "service_area"
+ }
+]

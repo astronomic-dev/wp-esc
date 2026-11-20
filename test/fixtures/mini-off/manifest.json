@@ -1,0 +1,96 @@
+{
+	"origin": "http://localhost:4704",
+	"entries": [
+		{
+			"method": "GET",
+			"path": "/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"link": "<http://localhost:4704/wp-json/>; rel=\"https://api.w.org/\""
+			},
+			"body": "bodies/001.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"content-type": "application/json"
+			},
+			"body": "bodies/002.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/robots.txt",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/plain"
+			},
+			"body": "bodies/003.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-sitemap.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/xml; charset=UTF-8"
+			},
+			"body": "bodies/004.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-sitemap-posts-post-1.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/xml; charset=UTF-8"
+			},
+			"body": "bodies/005.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-sitemap-taxonomies-category-1.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "application/xml; charset=UTF-8"
+			},
+			"body": "bodies/006.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/2025/12/winter/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8"
+			},
+			"body": "bodies/007.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/2026/02/coast/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8"
+			},
+			"body": "bodies/008.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/2026/03/ridge/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8"
+			},
+			"body": "bodies/009.txt"
+		}
+	]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@astronomic/wp-esc",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.21.0",
+  "description": "Move from WordPress to Astro or EmDash: read the site, judge the move, and plan the new content model and redirects.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=26"
+  },
+  "bin": {
+    "wp-inventory": "./bin/wp-inventory.mjs",
+    "wp-assess": "./bin/wp-assess.mjs",
+    "wp-content-model": "./bin/wp-content-model.mjs",
+    "wp-redirect-plan": "./bin/wp-redirect-plan.mjs"
+  },
+  "exports": {
+    "./contracts/inventory": "./src/contracts/inventory.ts",
+    "./contracts/model": "./src/contracts/model.ts",
+    "./contracts/assessment": "./src/contracts/assessment.ts",
+    "./contracts/fetch": "./src/contracts/fetch.ts",
+    "./contracts/write": "./src/contracts/write.ts",
+    "./contracts/merge": "./src/contracts/merge.ts",
+    "./contracts/url": "./src/contracts/url.ts",
+    "./schema/*": "./schema/*"
+  },
+  "scripts": {
+    "test": "node --test --test-reporter=dot \"test/*.test.ts\""
+  },
+  "dependencies": {
+    "saxes": "6.0.0",
+    "ultrahtml": "1.7.0"
+  }
+}

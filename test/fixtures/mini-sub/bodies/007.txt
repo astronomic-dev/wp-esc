@@ -1,0 +1,56 @@
+[
+ {
+  "id": 20,
+  "date": "2026-01-15T09:00:00",
+  "slug": "plumbing",
+  "status": "publish",
+  "type": "service",
+  "link": "http://localhost:4702/site/service/plumbing/",
+  "title": {
+   "rendered": "Title 20"
+  },
+  "content": {
+   "rendered": "<p>Body of 20.</p>",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Body of 20.</p>",
+   "protected": false
+  },
+  "featured_media": 0,
+  "parent": 0,
+  "service_area": [
+   30
+  ],
+  "meta": {
+   "price": 120,
+   "featured": true
+  }
+ },
+ {
+  "id": 21,
+  "date": "2026-01-15T09:00:00",
+  "slug": "heating",
+  "status": "publish",
+  "type": "service",
+  "link": "http://localhost:4702/site/service/heating/",
+  "title": {
+   "rendered": "Title 21"
+  },
+  "content": {
+   "rendered": "<p>Body of 21.</p>",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Body of 21.</p>",
+   "protected": false
+  },
+  "featured_media": 0,
+  "parent": 0,
+  "service_area": [],
+  "meta": {
+   "price": "",
+   "featured": false
+  }
+ }
+]

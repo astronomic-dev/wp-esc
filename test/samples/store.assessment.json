@@ -1,0 +1,17 @@
+{
+	"version": 1,
+	"findings": [
+		{ "area": "posts", "score": "easy", "reason": "8 posts with title and content only.", "next": "Move them with the EmDash importer or as Markdown files." },
+		{ "area": "store", "score": "blocker", "reason": "WooCommerce runs the store: 42 products, plus orders and customers.", "next": "Pick a store path below before you move." },
+		{ "area": "shortcodes", "score": "some-work", "reason": "1 shortcode does not move on its own.", "next": "Replace it on the new site.", "count": 1, "items": ["woocommerce_cart"] },
+		{ "area": "stored-data", "score": "some-work", "reason": "Orders and customers stay in WooCommerce tables.", "next": "Export them with WooCommerce's own export before you turn the old site off.", "items": ["woocommerce: orders and customers"] }
+	],
+	"blockers": ["store"],
+	"storePaths": [
+		{ "kind": "digital", "title": "Digital goods with a hosted checkout", "reason": "The site stays static; the checkout service handles payment and tax.", "links": [{ "label": "Polar", "url": "https://polar.sh/" }] },
+		{ "kind": "physical", "title": "Physical goods with a headless store backend", "reason": "The backend handles carts, shipping, taxes and stock; Astro renders the pages.", "links": [] },
+		{ "kind": "buy-button", "title": "A Buy button for a few items", "reason": "Fine for a handful of products.", "links": [] },
+		{ "kind": "ready-made", "title": "A ready-made store", "reason": "Fast to set up, for a monthly fee.", "links": [{ "label": "Shopify", "url": "https://www.shopify.com/" }] }
+	],
+	"themes": "none-fit"
+}

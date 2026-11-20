@@ -1,0 +1,172 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://astronomic.dev/schema/wp-esc/assessment.schema.json",
+	"title": "Move assessment",
+	"description": "Scored findings, store paths and theme matches. Mirrors src/contracts/assessment.ts.",
+	"type": "object",
+	"properties": {
+		"version": {
+			"const": 1
+		},
+		"findings": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/Finding"
+			}
+		},
+		"blockers": {
+			"description": "Areas of the findings scored blocker. Always present; empty when nothing blocks the move.",
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"storePaths": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/StorePath"
+			}
+		},
+		"themes": {
+			"description": "Best first, or \"none-fit\". Left out when theme matches are off.",
+			"anyOf": [
+				{
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/ThemeMatch"
+					}
+				},
+				{
+					"const": "none-fit"
+				}
+			]
+		}
+	},
+	"required": [
+		"version",
+		"findings",
+		"blockers"
+	],
+	"additionalProperties": false,
+	"$defs": {
+		"Score": {
+			"type": "string",
+			"enum": [
+				"easy",
+				"some-work",
+				"hard",
+				"blocker"
+			]
+		},
+		"StoreKind": {
+			"type": "string",
+			"enum": [
+				"digital",
+				"physical",
+				"buy-button",
+				"ready-made"
+			]
+		},
+		"Finding": {
+			"type": "object",
+			"properties": {
+				"area": {
+					"type": "string"
+				},
+				"score": {
+					"$ref": "#/$defs/Score"
+				},
+				"reason": {
+					"type": "string"
+				},
+				"next": {
+					"type": "string"
+				},
+				"count": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"items": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"required": [
+				"area",
+				"score",
+				"reason",
+				"next"
+			],
+			"additionalProperties": false
+		},
+		"StorePath": {
+			"type": "object",
+			"properties": {
+				"kind": {
+					"$ref": "#/$defs/StoreKind"
+				},
+				"title": {
+					"type": "string"
+				},
+				"reason": {
+					"type": "string"
+				},
+				"links": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/Link"
+					}
+				}
+			},
+			"required": [
+				"kind",
+				"title",
+				"reason",
+				"links"
+			],
+			"additionalProperties": false
+		},
+		"Link": {
+			"type": "object",
+			"properties": {
+				"label": {
+					"type": "string"
+				},
+				"url": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"label",
+				"url"
+			],
+			"additionalProperties": false
+		},
+		"ThemeMatch": {
+			"type": "object",
+			"properties": {
+				"slug": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"reason": {
+					"type": "string"
+				},
+				"url": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"slug",
+				"name",
+				"reason",
+				"url"
+			],
+			"additionalProperties": false
+		}
+	}
+}

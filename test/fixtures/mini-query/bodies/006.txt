@@ -1,0 +1,44 @@
+[
+ {
+  "id": 2,
+  "date": "2026-02-01T00:00:00",
+  "slug": "second",
+  "status": "publish",
+  "type": "post",
+  "link": "http://localhost:4703/?p=2",
+  "title": {
+   "rendered": "Title 2"
+  },
+  "content": {
+   "rendered": "<p>Body of 2.</p>\n[gallery ids=\"1,2\"]",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Body of 2.</p>",
+   "protected": false
+  },
+  "featured_media": 0,
+  "parent": 0
+ },
+ {
+  "id": 1,
+  "date": "2026-01-15T09:00:00",
+  "slug": "first",
+  "status": "publish",
+  "type": "post",
+  "link": "http://localhost:4703/?p=1",
+  "title": {
+   "rendered": "Title 1"
+  },
+  "content": {
+   "rendered": "<div class=\"et_pb_section\"><p>Body of 1.</p></div>",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Body of 1.</p>",
+   "protected": false
+  },
+  "featured_media": 0,
+  "parent": 0
+ }
+]

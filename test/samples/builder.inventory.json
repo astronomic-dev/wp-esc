@@ -1,0 +1,243 @@
+{
+	"version": 1,
+	"site": {
+		"url": "https://builder.example.com/",
+		"apiRoot": "https://builder.example.com/?rest_route=/",
+		"name": "Bright Studio",
+		"wpVersion": "6.8.3",
+		"locales": [
+			{
+				"code": "en-US",
+				"default": true
+			}
+		],
+		"theme": "hello-elementor"
+	},
+	"levels": [
+		1
+	],
+	"coverage": [
+		{
+			"area": "rest",
+			"source": "rest",
+			"status": "complete",
+			"detail": "API at ?rest_route=/ (plain permalinks); every list paged to the end."
+		},
+		{
+			"area": "type:portfolio",
+			"source": "rest",
+			"status": "not-visible",
+			"detail": "portfolio is named in the sitemap but not in the REST API. Run level 2 to see it."
+		},
+		{
+			"area": "sitemaps",
+			"source": "sitemap",
+			"status": "complete",
+			"detail": "Read /wp-sitemap.xml and 4 child sitemaps."
+		},
+		{
+			"area": "html",
+			"source": "html",
+			"status": "partial",
+			"detail": "Read 8 of 14 pages."
+		}
+	],
+	"types": [
+		{
+			"slug": "page",
+			"label": "Pages",
+			"count": 12,
+			"byStatus": {
+				"publish": 12
+			},
+			"hierarchical": true,
+			"restBase": "pages",
+			"inRest": true,
+			"fields": [
+				{
+					"key": "post_title",
+					"label": "Title",
+					"owner": "core",
+					"shape": "text",
+					"source": "rest",
+					"filled": 12,
+					"total": 12,
+					"samples": [
+						"Home"
+					],
+					"confidence": "high"
+				},
+				{
+					"key": "post_content",
+					"label": "Content",
+					"owner": "core",
+					"shape": "html",
+					"source": "rest",
+					"filled": 12,
+					"total": 12,
+					"samples": [
+						"<div class=\"elementor elementor-12\">"
+					],
+					"confidence": "medium",
+					"note": "6 pages are Elementor markup."
+				}
+			],
+			"taxonomies": [],
+			"sources": [
+				"rest",
+				"sitemap",
+				"html"
+			]
+		},
+		{
+			"slug": "portfolio",
+			"byStatus": {},
+			"inRest": false,
+			"fields": [],
+			"taxonomies": [],
+			"sources": [
+				"sitemap"
+			]
+		}
+	],
+	"taxonomies": [],
+	"plugins": [
+		{
+			"slug": "elementor",
+			"name": "Elementor",
+			"category": "builder",
+			"source": "html",
+			"confidence": "high"
+		},
+		{
+			"slug": "contact-form-7",
+			"name": "Contact Form 7",
+			"category": "forms",
+			"source": "html",
+			"confidence": "high"
+		}
+	],
+	"builders": [
+		{
+			"name": "elementor",
+			"count": 6,
+			"samples": [
+				"https://builder.example.com/",
+				"https://builder.example.com/?page_id=5"
+			]
+		}
+	],
+	"shortcodes": [
+		{
+			"name": "gallery",
+			"count": 1,
+			"samples": [
+				"https://builder.example.com/?page_id=8"
+			]
+		},
+		{
+			"name": "contact-form-7",
+			"count": 1,
+			"samples": [
+				"https://builder.example.com/?page_id=9"
+			]
+		},
+		{
+			"name": "pricing_table",
+			"count": 2,
+			"samples": [
+				"https://builder.example.com/?page_id=10"
+			]
+		}
+	],
+	"blocks": [
+		{
+			"name": "core/columns",
+			"count": 3,
+			"samples": [
+				"https://builder.example.com/?page_id=11"
+			]
+		},
+		{
+			"name": "core/heading",
+			"count": 4,
+			"samples": [
+				"https://builder.example.com/?page_id=11"
+			]
+		}
+	],
+	"menus": [],
+	"authors": {
+		"count": 1,
+		"source": "rest"
+	},
+	"media": {
+		"count": 64,
+		"source": "rest"
+	},
+	"permalinks": {
+		"structure": "",
+		"source": "html",
+		"confidence": "high"
+	},
+	"urls": [
+		{
+			"url": "https://builder.example.com/",
+			"kind": "home",
+			"source": [
+				"html"
+			],
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://builder.example.com/?page_id=5",
+			"kind": "query",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"id": 5,
+			"slug": "services",
+			"path": "services",
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://builder.example.com/?page_id=8",
+			"kind": "query",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"id": 8,
+			"slug": "gallery",
+			"path": "gallery",
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://builder.example.com/?page_id=10",
+			"kind": "query",
+			"source": [
+				"rest",
+				"sitemap"
+			],
+			"type": "page",
+			"id": 10,
+			"slug": "pricing",
+			"path": "pricing",
+			"evidence": "resolved"
+		},
+		{
+			"url": "https://builder.example.com/?portfolio=harbor-rebrand",
+			"kind": "query",
+			"source": [
+				"sitemap"
+			],
+			"type": "portfolio",
+			"slug": "harbor-rebrand",
+			"evidence": "listed"
+		}
+	],
+	"storedElsewhere": []
+}

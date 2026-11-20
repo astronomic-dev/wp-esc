@@ -1,0 +1,10 @@
+{
+	"origin": "http://localhost:4799",
+	"entries": [
+		{ "method": "GET", "path": "/", "auth": false, "status": 200, "headers": { "content-type": "text/html; charset=UTF-8", "link": "<http://localhost:4799/wp-json/>; rel=\"https://api.w.org/\"" }, "body": "bodies/home.txt" },
+		{ "method": "HEAD", "path": "/", "auth": false, "status": 204, "headers": {} },
+		{ "method": "GET", "path": "/old/", "auth": false, "status": 301, "headers": { "location": "http://localhost:4799/" } },
+		{ "method": "GET", "path": "/wp-json/wp/v2/posts?per_page=100&page=1", "auth": false, "status": 200, "headers": { "x-wp-total": "3", "x-wp-totalpages": "1" }, "body": "bodies/posts.txt" },
+		{ "method": "GET", "path": "/wp-json/wp/v2/posts?per_page=100&page=1", "auth": true, "status": 200, "headers": { "x-wp-total": "9", "x-wp-totalpages": "1" }, "body": "bodies/posts.txt" }
+	]
+}

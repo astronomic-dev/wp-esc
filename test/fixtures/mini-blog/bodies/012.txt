@@ -1,0 +1,8 @@
+[
+ {
+  "id": 1,
+  "name": "Ruth",
+  "slug": "ruth",
+  "link": "http://localhost:4701/author/ruth/"
+ }
+]

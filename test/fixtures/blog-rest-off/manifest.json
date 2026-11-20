@@ -1,0 +1,2046 @@
+{
+	"origin": "http://localhost:4601",
+	"entries": [
+		{
+			"method": "GET",
+			"path": "/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/2d68928f0c32da1eaf9628cbc55dcf5fc6f56673.txt"
+		},
+		{
+			"method": "HEAD",
+			"path": "/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/9f907dc4c20bef664ac13cb029eb5f75e9d0dea0.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/2023/01/simple-broth-no-1/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\", <http://localhost:4601/wp-json/wp/v2/posts/10>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <http://localhost:4601/?p=10>; rel=shortlink",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-pingback": "http://localhost:4601/xmlrpc.php",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/f4bfd5e9273eab52c8e1ca8f3e81c8352df3c06d.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/2023/01/slow-pickles-no-2/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\", <http://localhost:4601/wp-json/wp/v2/posts/11>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <http://localhost:4601/?p=11>; rel=shortlink",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-pingback": "http://localhost:4601/xmlrpc.php",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/d7f39ac8ab1bea4ad1feca54c644b8a2cdfec405.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/?rest_route=/",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/51555fa4d394bc95b130dcd8e05db72669056ac9.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/?rest_route=/",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/fc07f399a8f8dac20b9cb9c786955c745ca0d08d.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/?sitemap=index",
+			"auth": false,
+			"status": 404,
+			"headers": {
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/6b22a4e6f1f28563a3935139052de42e93fb81a3.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/about/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\", <http://localhost:4601/wp-json/wp/v2/pages/134>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <http://localhost:4601/?p=134>; rel=shortlink",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/6829d24b1b60e663715c687cfae250afd2fb8a75.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/about/start-here/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\", <http://localhost:4601/wp-json/wp/v2/pages/135>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <http://localhost:4601/?p=135>; rel=shortlink",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/1d2618190eb12c0b55ea5f1618c449ff423d657a.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/author-sitemap.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/xml; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex, follow"
+			},
+			"body": "bodies/21b8dc9e5974a182f1e2e231d71261baca6e783a.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/author/dana-whitlock/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\", <http://localhost:4601/wp-json/wp/v2/users/2>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/14f99acf2d1eb7da92716605e0b666a2a02569f7.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/author/theo-marsh/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\", <http://localhost:4601/wp-json/wp/v2/users/3>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/23e14c631fefe445b98a3ad6d0852cc51da50030.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/category-sitemap.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/xml; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex, follow"
+			},
+			"body": "bodies/cfad624ae1392a5591814186b358ffdb6248f68b.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/category/guides/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\", <http://localhost:4601/wp-json/wp/v2/categories/4>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/c77948e27b7f90e99c4434b3eb45bd28bfd96f70.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/category/guides/beginner/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\", <http://localhost:4601/wp-json/wp/v2/categories/5>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/ad5078e67f33ad567902771f03923d806b77b361.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/category/news/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\", <http://localhost:4601/wp-json/wp/v2/categories/2>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/a3fccfbcefa18c77bcee5922612d851af6f2ee03.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/page-sitemap.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/xml; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex, follow"
+			},
+			"body": "bodies/709a5153085faf4a161173a1102bc137fdaf1f12.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/post-sitemap.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/xml; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex, follow"
+			},
+			"body": "bodies/8fa224324ae07718acc7a71464e180a2175cf5de.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/post_tag-sitemap.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/xml; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex, follow"
+			},
+			"body": "bodies/85294cc7c467c661e7fbc5c1912bf53d70b1f2be.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/robots.txt",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/plain; charset=utf-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex, follow"
+			},
+			"body": "bodies/6daeb56ff12c6a5f8b2decfa939cf402b48791af.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/sitemap.xml",
+			"auth": false,
+			"status": 301,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"location": "http://localhost:4601/sitemap_index.xml",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-powered-by": "PHP/8.3.36",
+				"x-redirect-by": "Yoast SEO"
+			},
+			"body": "bodies/b46a8683060841ec9fed9193fe74db0de7669f35.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/sitemap_index.xml",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/xml; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex, follow"
+			},
+			"body": "bodies/caf46fab4eadc904a71ad27f7f0e04257a69a79b.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/tag/baking/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\", <http://localhost:4601/wp-json/wp/v2/tags/17>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/556542c90f57aeee8d9494139b80bf3e416d2c43.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/tag/bread/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\", <http://localhost:4601/wp-json/wp/v2/tags/9>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/0e90d7e4ffa41a04089b0745e1a9cdc9c50e9cff.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/tag/breakfast/",
+			"auth": false,
+			"status": 200,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\", <http://localhost:4601/wp-json/wp/v2/tags/22>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Accept-Encoding",
+				"x-powered-by": "PHP/8.3.36"
+			},
+			"body": "bodies/9e9e71e60757f7e4bfa47091e82a25900341012c.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/a4c7869f7b06ebe91897c7530b15c3aa5b32f829.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/55eb45e2e5cb7ec449f55472930257edb746c990.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/c37f1177d1da3fb2d631d1c3acbcfd3f42c2df1e.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/blocks?context=edit&status=any&per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "0",
+				"x-wp-totalpages": "0"
+			},
+			"body": "bodies/c255a40a03a5794d901353ad8a58d90231c37eda.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/blocks?context=edit&status=any&per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "0",
+				"x-wp-totalpages": "0"
+			},
+			"body": "bodies/80103adeb06c275e06121b97d5ccdacc279c31b8.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/blocks?per_page=100",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/61c65712f3a5c7d0e8db75d5152f0767e09f35eb.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/blocks?per_page=100&page=1",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/a9c296a1765e27877fae9fe29192d5e55acde5cb.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/categories?context=edit&per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "8",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/4759fd97deeeef7772b1dfff3ffd51373a1969e3.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/categories?context=edit&per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "8",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/782fc2c4059c9dfaed8e8192311a9f9022caa43e.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/categories?per_page=100",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/006ca7a32445b1de958f19a2295d84353816deb4.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/categories?per_page=100&page=1",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/29afa7f62a22b5307fbc3c02d65f43aa6258f53c.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/comments?context=edit&per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "21",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/a660c10acaf64180799f30d28c9a791118392b9a.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/comments?context=edit&per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "21",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/5c45346eca29689b10083ecc4cbd6c78c9f9abc7.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/comments?per_page=100",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/4e89f126be00c2f3e77ba79635434bd4b4a96ead.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/comments?per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "21",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/8a70706c83c12320984b2ea75d3f56332defb026.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/comments?per_page=100&page=1",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/601ae894a3f44300e3b0664f3a7c0493c221e375.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/comments?per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "21",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/46c270a3d6a181b1794ec4dae8b8dac98d6ff3c1.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/media?context=edit&per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "6",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/41769ce90899619bc4c78076d48b27c96f94442f.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/media?context=edit&per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "6",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/a7f048100beab8967ab53b48f3ca3fd27110e0ff.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/media?context=edit&status=any&per_page=100",
+			"auth": true,
+			"status": 400,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/2ec0dee8ca47163534066157a35ae6038b999cc3.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/media?context=edit&status=any&per_page=100&page=1",
+			"auth": true,
+			"status": 400,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/380e65d0f28e22f7c4822fe21f30b29b7b391b23.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/media?per_page=100",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/5f36720d5be895c657f60e691a1db1a6888998f2.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/media?per_page=100&page=1",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/9f3a23a17553e8d247ec48eae095dd2ded5c2490.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menu-items?context=edit&per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "5",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/7740e20af355dc296601ee20baf89e696e589349.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menu-items?context=edit&per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "5",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/4d5c508ec636f8b29e956c19ec81fa836f556d54.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menu-items?context=edit&status=any&per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "5",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/a16a9dde93e8dd8fe2fe85bd8509784345fd02b8.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menu-items?context=edit&status=any&per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "5",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/801a45b88babe20db8209f6bc2ab4f5d62c1aeba.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menu-items?per_page=100",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/94e0f8c38c1069e5dca634cc078b8acfc866e797.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menu-items?per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "5",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/56f243a9aaa0ad0da98a10fe97b329927989623a.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menu-items?per_page=100&page=1",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/282fcda0d03b79bcb18ebbfeb1a6351084fca38f.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menu-items?per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "5",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/ef5f8c7e1abf2599d85a395b449aa7eaca2ae242.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menu-locations",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/ebbfad1f1a3bf6995eef172e05b361b0624508da.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menu-locations",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/9517a5333383cdb4931b27bffa8a9d9d7b299067.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menus?context=edit&per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "1",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/f2490fec0e8ab4be4aa89f54968e8f26d09619fa.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menus?context=edit&per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "1",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/7deb20da2bc82c6f96490795f9feee3d445418fa.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menus?per_page=100",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/d846dc13f91a79739d843344c9e5c8a97562dbe9.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menus?per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "1",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/09f9ae6d11d3cfbd477619b92bc147cfad445861.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menus?per_page=100&page=1",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/d67b03d898fb24b225b04871b69cb06b367e3f2e.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/menus?per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "1",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/91ff140ca673d9c495548da00ef77fa99b3b64a4.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/navigation?context=edit&status=any&per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "1",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/da7a988b1448fc00c1ccae316398503babb32759.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/navigation?context=edit&status=any&per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "1",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/d9fbcb94b9d8c6526e58d58147cb7ff043fb2768.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/navigation?per_page=100",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/a8e3a30de91c1cd3f95483910e099d126564c7b1.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/navigation?per_page=100&page=1",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/5f6780ab881bc76225049d69850f9843d4d70125.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/pages?context=edit&status=any&per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "3",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/6a8b2aa815d5800f892d972ef666fb92ffb56c4f.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/pages?context=edit&status=any&per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "3",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/e0fd23b7a59f6b82342a504e377292fd0f5eb0f1.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/pages?per_page=100",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/3a497259871fc2850d9117dc25e14df42cb4d6dc.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/pages?per_page=100&page=1",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/44d1144b5d92509a79f71eb1898ce7d5d0a0d2fe.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/plugins",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/04e080250b219888ed34fdb2d533de885a5ef09a.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/plugins",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/acaf8b09b46034e0707f96c05e7ebd44e51f1568.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/posts?context=edit&status=any&per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/wp/v2/posts?context=edit&status%5B0%5D=any&per_page=100&page=2>; rel=\"next\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "124",
+				"x-wp-totalpages": "2"
+			},
+			"body": "bodies/43e708da1c06bd8646232247e12bb5d00a9554b3.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/posts?context=edit&status=any&per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/wp/v2/posts?context=edit&status%5B0%5D=any&per_page=100&page=2>; rel=\"next\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "124",
+				"x-wp-totalpages": "2"
+			},
+			"body": "bodies/f7b843c416481a636a79b0de7ef0a52491077ed9.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/posts?context=edit&status=any&per_page=100&page=2",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/wp/v2/posts?context=edit&status%5B0%5D=any&per_page=100&page=1>; rel=\"prev\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "124",
+				"x-wp-totalpages": "2"
+			},
+			"body": "bodies/6be2163ff2bfafbc7c4fbb6fb48655a6cf1eeab5.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/posts?per_page=100",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/fb24165a111db411515fb11874b9a0ccd6113f26.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/posts?per_page=100&page=1",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/00a353e90a555d24a40a0ae510d76e819b3c8a3d.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/settings",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/54585241f135c6f06c2ecc4346ce02d21b40dc0f.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/settings",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST, PUT, PATCH",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/1d23388d8607091d1434f6b63e332416e304cd77.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/tags?context=edit&per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "25",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/f6cd91ddbab9a080258c71e530f0617c5e9c8677.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/tags?context=edit&per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "25",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/f9a64768fff00a5ca43d282deb043ebd3c428490.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/tags?per_page=100",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/3c28008316b3b5d2d827a1fdce17d75759dbd9fc.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/tags?per_page=100&page=1",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/2006e95004e28d3dc38331bebbcd1a0decf30d3e.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/taxonomies",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/b555b8b7a7ee75868e7ed3cb063660d956269412.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/taxonomies",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/5d085931b67456a8b186dc21c6db19dfa4293461.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/taxonomies?context=edit",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/055b4ed1a8748e1dd39f0d77bac693a8c6b38faa.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/themes",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/bd497168c444ed0357c911f4a42dc65ce75c3e8c.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/themes",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "3",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/f1e490348bc7a287bd0ef5800f8b8a904d484db6.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/themes?status=active",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/7e0e416e1e95529d52714b0c0090f3f5868f8c3b.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/themes?status=active",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "1",
+				"x-wp-totalpages": "1"
+			},
+			"body": "bodies/dbf9a15af9ebd31ba11b41721fe0e93651689836.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/types",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/9af132672ec475ef9ac68b326377ef97d07ac6ea.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/types",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/cbc5f9d21d00ef08dd31f32ccc8ba2fd9a389a16.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/types?context=edit",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:55 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/d7934762213b7494fe6c79f64c5523be81429019.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/users?per_page=1",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/5df1b86200827e3b412d61b5752316922eace26f.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/users?per_page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/wp/v2/users?per_page=1&page=2>; rel=\"next\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "3",
+				"x-wp-totalpages": "3"
+			},
+			"body": "bodies/7e00d26e80d94b2469727b20a061f1a43169205c.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/users?per_page=100",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/c9eafae54c50fe34b685830a9e8dd88a23b403a2.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/users?per_page=100&page=1",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/306b6a8dc9fce9d7336a6fcc124422130fdd62e8.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/wp_pattern_category?context=edit&per_page=100",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "0",
+				"x-wp-totalpages": "0"
+			},
+			"body": "bodies/7fa4da86507b752f69f11d12b052f379dde47014.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/wp_pattern_category?context=edit&per_page=100&page=1",
+			"auth": true,
+			"status": 200,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"allow": "GET, POST",
+				"cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex",
+				"x-wp-total": "0",
+				"x-wp-totalpages": "0"
+			},
+			"body": "bodies/394a1e822105f09b4cde6ceaaacc0b78e0e387e6.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/wp_pattern_category?per_page=100",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/64adfd23206342b7d9e5ddd3b1096904c8cd5256.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-json/wp/v2/wp_pattern_category?per_page=100&page=1",
+			"auth": false,
+			"status": 401,
+			"headers": {
+				"access-control-allow-headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+				"access-control-expose-headers": "X-WP-Total, X-WP-TotalPages, Link",
+				"content-type": "application/json; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:56 GMT",
+				"link": "<http://localhost:4601/wp-json/>; rel=\"https://api.w.org/\"",
+				"server": "Apache/2.4.69 (Debian)",
+				"vary": "Origin",
+				"x-content-type-options": "nosniff",
+				"x-powered-by": "PHP/8.3.36",
+				"x-robots-tag": "noindex"
+			},
+			"body": "bodies/c3b33e3f7e032ddccb378d415aca832659b1d88d.txt"
+		},
+		{
+			"method": "GET",
+			"path": "/wp-sitemap.xml",
+			"auth": false,
+			"status": 301,
+			"headers": {
+				"content-type": "text/html; charset=UTF-8",
+				"date": "Tue, 10 Nov 2026 16:09:57 GMT",
+				"location": "http://localhost:4601/sitemap_index.xml",
+				"server": "Apache/2.4.69 (Debian)",
+				"x-powered-by": "PHP/8.3.36",
+				"x-redirect-by": "Yoast SEO"
+			},
+			"body": "bodies/eeec6678cbb4deee7a8e3fdf1129e86191e5c5b9.txt"
+		}
+	]
+}

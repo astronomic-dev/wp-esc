@@ -1,0 +1,10 @@
+{
+ "name": "Sub Co",
+ "description": "",
+ "url": "http://localhost:4702/site",
+ "home": "http://localhost:4702/site",
+ "namespaces": [
+  "wp/v2"
+ ],
+ "routes": {}
+}

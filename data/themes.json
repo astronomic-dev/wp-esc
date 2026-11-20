@@ -1,0 +1,97 @@
+{
+	"version": 1,
+	"about": "Astronomic themes for the theme match. Mirrors apps/site/src/content/themes/*.yaml. Themes with listed: false are skipped. Signals: types (WordPress post type slugs), keywords (in the site name or tagline), plugins (parts of plugin slugs), blog (weight when the site has many posts), authors (extra weight when it has two or more writers), pluginCategories (inventory plugin categories).",
+	"themes": [
+		{
+			"slug": "agency",
+			"name": "Agency",
+			"listed": false,
+			"url": "https://astronomic.dev/themes/agency",
+			"fits": "Agency is a work-led site for small design and development studios.",
+			"types": ["portfolio", "project", "projects", "case_study", "case-study", "case_studies", "work"],
+			"keywords": ["studio", "agency"],
+			"plugins": [],
+			"pluginCategories": [],
+			"blog": 0,
+			"authors": 0
+		},
+		{
+			"slug": "vega",
+			"name": "Vega",
+			"listed": true,
+			"url": "https://astronomic.dev/themes/vega",
+			"fits": "Vega is a home search with a map for small real estate agencies, with homes, neighborhoods and agents.",
+			"types": ["property", "properties", "listing", "listings", "home", "homes", "agent", "agents", "neighborhood", "neighborhoods", "neighbourhood"],
+			"keywords": ["realty", "real estate", "realtor", "brokerage", "properties", "homes"],
+			"plugins": ["real-estate", "realestate", "estatik", "wp-property", "idx"],
+			"pluginCategories": [],
+			"blog": 0,
+			"authors": 0
+		},
+		{
+			"slug": "apogee",
+			"name": "Apogee",
+			"listed": true,
+			"url": "https://astronomic.dev/themes/apogee",
+			"fits": "Apogee is a bold site for design studios and creative agencies, with case studies, services, careers and a journal.",
+			"types": ["portfolio", "project", "projects", "case_study", "case-study", "case_studies", "work", "job", "jobs", "career", "careers"],
+			"keywords": ["studio", "design", "creative", "agency", "motion", "brand"],
+			"plugins": [],
+			"pluginCategories": [],
+			"blog": 0,
+			"authors": 0
+		},
+		{
+			"slug": "lodestar",
+			"name": "Lodestar",
+			"listed": true,
+			"url": "https://astronomic.dev/themes/lodestar",
+			"fits": "Lodestar is made for firms that sell expert services, with services, case studies, team and pricing pages.",
+			"types": ["service", "services", "team", "team_member", "team-member", "staff", "people", "case_study", "case-study", "case_studies", "testimonial", "testimonials", "industry", "industries", "practice_area", "practice-area", "attorney", "attorneys", "faq", "faqs"],
+			"keywords": ["consult", "advis", "law", "legal", "attorney", "accounting", "accountant", "cpa", "coach", "firm", "partners", "financial"],
+			"plugins": [],
+			"pluginCategories": [],
+			"blog": 0,
+			"authors": 0
+		},
+		{
+			"slug": "dispatch",
+			"name": "Dispatch",
+			"listed": true,
+			"url": "https://astronomic.dev/themes/dispatch",
+			"fits": "Dispatch is a newsletter-first site for publications with one to five writers, with free, members and paid stories.",
+			"types": ["issue", "issues", "newsletter", "newsletters", "story", "stories", "series", "column", "columns"],
+			"keywords": ["newsletter", "magazine", "journal", "gazette", "news", "dispatch", "weekly", "letter", "review", "press"],
+			"plugins": ["newsletter", "mailpoet"],
+			"pluginCategories": ["members"],
+			"blog": 2,
+			"authors": 2
+		},
+		{
+			"slug": "vesper",
+			"name": "Vesper",
+			"listed": true,
+			"url": "https://astronomic.dev/themes/vesper",
+			"fits": "Vesper is a free personal blog and portfolio in one, for people who write about their work.",
+			"types": ["portfolio", "project", "projects", "talk", "talks", "speaking", "uses", "gallery", "photo", "photos", "photography"],
+			"keywords": ["notes", "photo", "design", "developer", "portfolio", "personal", "writing"],
+			"plugins": [],
+			"pluginCategories": [],
+			"blog": 3,
+			"authors": 0
+		},
+		{
+			"slug": "starter",
+			"name": "Starter",
+			"listed": true,
+			"url": "https://astronomic.dev/themes/starter",
+			"fits": "Starter is a free product site with a blog and guides, for an app or an open-source project.",
+			"types": ["guide", "guides", "doc", "docs", "documentation", "tutorial", "tutorials", "changelog", "release", "releases", "kb", "knowledgebase"],
+			"keywords": ["app", "software", "open source", "open-source", "startup", "saas", "product", "platform"],
+			"plugins": [],
+			"pluginCategories": [],
+			"blog": 1,
+			"authors": 0
+		}
+	]
+}

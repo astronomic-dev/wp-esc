@@ -1,0 +1,1 @@
+{"code":"rest_invalid_param","message":"Invalid parameter(s): status","data":{"status":400,"params":{"status":"status[0] is not one of inherit, private, and trash."},"details":{"status":{"code":"rest_not_in_enum","message":"status[0] is not one of inherit, private, and trash.","data":null}}}}

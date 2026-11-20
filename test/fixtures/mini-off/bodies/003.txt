@@ -1,0 +1,2 @@
+Sitemap: http://localhost:4704/wp-sitemap.xml
+Sitemap: https://cdn.elsewhere.example.com/sitemap.xml

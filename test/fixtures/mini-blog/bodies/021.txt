@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="WordPress 6.8.3">
+
+</head>
+<body class="home">
+<article><p class="has-text-align-center">x</p><figure class="wp-block-image size-large"><img src="http://localhost:4701/wp-content/uploads/a.jpg"></figure><div class="wp-block-columns__inner wp-block-columns"></div></article>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+ "category": {
+  "name": "Categories",
+  "slug": "category",
+  "hierarchical": true,
+  "rest_base": "categories",
+  "rest_namespace": "wp/v2",
+  "types": [
+   "post"
+  ]
+ },
+ "post_tag": {
+  "name": "Tags",
+  "slug": "post_tag",
+  "hierarchical": false,
+  "rest_base": "tags",
+  "rest_namespace": "wp/v2",
+  "types": [
+   "post"
+  ]
+ },
+ "wp_pattern_category": {
+  "name": "Pattern Categories",
+  "slug": "wp_pattern_category",
+  "hierarchical": false,
+  "rest_base": "wp_pattern_category",
+  "rest_namespace": "wp/v2",
+  "types": [
+   "wp_block"
+  ]
+ }
+}

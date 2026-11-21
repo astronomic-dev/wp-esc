@@ -1,5 +1,9 @@
 # wp-esc: move from WordPress to Astro
 
+[![Leaving WordPress without losing a thing: a moving van on a desert highway, its open back full of boxes labeled posts, pages, media and URLs, driving toward a “New site” sign](.github/hero.jpg)](https://astronomic.dev/learn/wordpress)
+
+The full guide to moving from WordPress is at [astronomic.dev/learn/wordpress](https://astronomic.dev/learn/wordpress).
+
 Four skills for your coding agent that read a WordPress site and plan its move to [Astro](https://astro.build) or [EmDash](https://emdashcms.com). They tell you what is on the site, how hard the move is, what the new content model should be, and which redirects you need.
 
 Each skill is a short instruction file plus a small Node script. The scripts fetch, parse and count, so the same site gives the same results every run. Your agent reads the results, explains them, and writes the report.
@@ -112,3 +116,11 @@ The tests replay recorded responses from three test WordPress sites (`test/fixtu
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+## More from Astronomic
+
+- [Astronomic UI](https://astronomic.dev/ui): free Astro components and sections on one set of tokens.
+- [Astronomic Search](https://astronomic.dev/plugins/search): free, typo-tolerant site search for Astro.
+- [Vesper](https://astronomic.dev/themes/vesper): a free Astro theme for a personal blog and portfolio.
+- [Astronomic Starter](https://astronomic.dev/themes/starter): a free Astro starter for a small product site, with a blog and guides.
+- [All Astronomic themes](https://astronomic.dev/themes)
